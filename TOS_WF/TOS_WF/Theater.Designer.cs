@@ -42,8 +42,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.filmsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-<<<<<<< HEAD
-=======
             // pnlHeader
             // 
             this.pnlHeader.Appearance.BackColor = System.Drawing.Color.Red;
@@ -95,7 +93,6 @@
             // 
             this.filmsBindingSource.DataSource = typeof(TOS_WF.Models.Films);
             // 
->>>>>>> 34985498702c2dbe0ef463ac5f5fe4582e623116
             // Theater
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);

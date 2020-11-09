@@ -104,17 +104,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-    <Compile Include="Room.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Room.Designer.cs">
-      <DependentUpon>Room.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Theater.cs">
-=======
     <Compile Include="Booking.cs">
->>>>>>> 34985498702c2dbe0ef463ac5f5fe4582e623116
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Booking.Designer.cs">
