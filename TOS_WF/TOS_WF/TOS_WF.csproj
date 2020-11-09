@@ -136,18 +136,10 @@
     <Compile Include="Models\Schedule.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-<<<<<<< HEAD
-    <EmbeddedResource Include="Properties\licenses.licx" />
-    <EmbeddedResource Include="Room.resx">
-      <DependentUpon>Room.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Theater.resx">
-=======
     <Compile Include="Theater.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Theater.Designer.cs">
->>>>>>> 34985498702c2dbe0ef463ac5f5fe4582e623116
       <DependentUpon>Theater.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Booking.resx">
@@ -174,14 +166,11 @@
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="packages.config" />
-<<<<<<< HEAD
-=======
     <None Include="Properties\DataSources\TOS_WF.Models.Categories.datasource" />
     <None Include="Properties\DataSources\TOS_WF.Models.Films.datasource" />
     <None Include="Properties\DataSources\TOS_WF.Models.Graphics.datasource" />
     <None Include="Properties\DataSources\TOS_WF.Models.Persons.datasource" />
     <None Include="Properties\DataSources\TOS_WF.Models.Schedule.datasource" />
->>>>>>> 34985498702c2dbe0ef463ac5f5fe4582e623116
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
