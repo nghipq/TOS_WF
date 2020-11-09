@@ -46,7 +46,7 @@
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(1104, 88);
+            this.pnlHeader.Size = new System.Drawing.Size(1104, 131);
             this.pnlHeader.TabIndex = 0;
             // 
             // pnlFooter
@@ -54,9 +54,9 @@
             this.pnlFooter.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pnlFooter.ContentImage = ((System.Drawing.Image)(resources.GetObject("pnlFooter.ContentImage")));
             this.pnlFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlFooter.Location = new System.Drawing.Point(0, 544);
+            this.pnlFooter.Location = new System.Drawing.Point(0, 498);
             this.pnlFooter.Name = "pnlFooter";
-            this.pnlFooter.Size = new System.Drawing.Size(1104, 88);
+            this.pnlFooter.Size = new System.Drawing.Size(1104, 134);
             this.pnlFooter.TabIndex = 1;
             // 
             // pnlLeft
@@ -66,9 +66,9 @@
             this.pnlLeft.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pnlLeft.ContentImage = ((System.Drawing.Image)(resources.GetObject("pnlLeft.ContentImage")));
             this.pnlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlLeft.Location = new System.Drawing.Point(0, 88);
+            this.pnlLeft.Location = new System.Drawing.Point(0, 131);
             this.pnlLeft.Name = "pnlLeft";
-            this.pnlLeft.Size = new System.Drawing.Size(124, 456);
+            this.pnlLeft.Size = new System.Drawing.Size(124, 367);
             this.pnlLeft.TabIndex = 2;
             // 
             // pnlRight
@@ -77,9 +77,9 @@
             this.pnlRight.ContentImage = ((System.Drawing.Image)(resources.GetObject("pnlRight.ContentImage")));
             this.pnlRight.Cursor = System.Windows.Forms.Cursors.Default;
             this.pnlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlRight.Location = new System.Drawing.Point(980, 88);
+            this.pnlRight.Location = new System.Drawing.Point(980, 131);
             this.pnlRight.Name = "pnlRight";
-            this.pnlRight.Size = new System.Drawing.Size(124, 456);
+            this.pnlRight.Size = new System.Drawing.Size(124, 367);
             this.pnlRight.TabIndex = 3;
             // 
             // Booking
