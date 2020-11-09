@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.3.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.3.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
     <Reference Include="DevExpress.BonusSkins.v20.1" />
     <Reference Include="DevExpress.Data.Desktop.v20.1" />
     <Reference Include="DevExpress.Data.v20.1" />
@@ -42,17 +45,49 @@
     <Reference Include="DevExpress.Sparkline.v20.1.Core" />
     <Reference Include="DevExpress.XtraEditors.v20.1" />
     <Reference Include="DevExpress.Printing.v20.1.Core" />
-    <Reference Include="MaterialDesignColors, Version=1.2.7.1979, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
-      <HintPath>..\packages\MaterialDesignColors.1.2.7\lib\net45\MaterialDesignColors.dll</HintPath>
+    <Reference Include="DevExpress.XtraGrid.v20.1, Version=20.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v20.1, Version=20.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v20.1, Version=20.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v20.1, Version=20.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Google.Protobuf, Version=3.11.4.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.11.4\lib\net45\Google.Protobuf.dll</HintPath>
     </Reference>
-    <Reference Include="MaterialDesignThemes.Wpf, Version=3.2.0.1979, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
-      <HintPath>..\packages\MaterialDesignThemes.3.2.0\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
+    <Reference Include="K4os.Compression.LZ4, Version=1.1.11.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.1.1.11\lib\net46\K4os.Compression.LZ4.dll</HintPath>
     </Reference>
-    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.1.11.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.Streams.1.1.11\lib\net46\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.6.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Hash.xxHash.1.0.6\lib\net46\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.22.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.22\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Renci.SshNet, Version=2016.1.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
+      <HintPath>..\packages\SSH.NET.2016.1.0\lib\net40\Renci.SshNet.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -61,8 +96,15 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="Ubiety.Dns.Core, Version=2.2.1.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.22\lib\net452\Ubiety.Dns.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Zstandard.Net, Version=1.1.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.22\lib\net452\Zstandard.Net.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="Room.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,20 +112,64 @@
       <DependentUpon>Room.cs</DependentUpon>
     </Compile>
     <Compile Include="Theater.cs">
+=======
+    <Compile Include="Booking.cs">
+>>>>>>> 34985498702c2dbe0ef463ac5f5fe4582e623116
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Theater.Designer.cs">
-      <DependentUpon>Theater.cs</DependentUpon>
+    <Compile Include="Booking.Designer.cs">
+      <DependentUpon>Booking.cs</DependentUpon>
     </Compile>
+    <Compile Include="DAO\CategoryDAO.cs" />
+    <Compile Include="DAO\DateScheduleDAO.cs" />
+    <Compile Include="DAO\FilmDAO.cs" />
+    <Compile Include="DAO\GraphicsDAO.cs" />
+    <Compile Include="DAO\ScheduleDAO.cs" />
+    <Compile Include="DBConnection\DBConnection.cs" />
+    <Compile Include="Frames\FilmList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frames\FilmList.Designer.cs">
+      <DependentUpon>FilmList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frames\Ticket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frames\Ticket.Designer.cs">
+      <DependentUpon>Ticket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Categories.cs" />
+    <Compile Include="Models\DateSchedule.cs" />
+    <Compile Include="Models\Films.cs" />
+    <Compile Include="Models\Graphics.cs" />
+    <Compile Include="Models\Persons.cs" />
+    <Compile Include="Models\Schedule.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< HEAD
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Room.resx">
       <DependentUpon>Room.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Theater.resx">
+=======
+    <Compile Include="Theater.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Theater.Designer.cs">
+>>>>>>> 34985498702c2dbe0ef463ac5f5fe4582e623116
       <DependentUpon>Theater.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Booking.resx">
+      <DependentUpon>Booking.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frames\FilmList.resx">
+      <DependentUpon>FilmList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frames\Ticket.resx">
+      <DependentUpon>Ticket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -93,8 +179,19 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Theater.resx">
+      <DependentUpon>Theater.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="App.config" />
     <None Include="packages.config" />
+<<<<<<< HEAD
+=======
+    <None Include="Properties\DataSources\TOS_WF.Models.Categories.datasource" />
+    <None Include="Properties\DataSources\TOS_WF.Models.Films.datasource" />
+    <None Include="Properties\DataSources\TOS_WF.Models.Graphics.datasource" />
+    <None Include="Properties\DataSources\TOS_WF.Models.Persons.datasource" />
+    <None Include="Properties\DataSources\TOS_WF.Models.Schedule.datasource" />
+>>>>>>> 34985498702c2dbe0ef463ac5f5fe4582e623116
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -104,6 +201,100 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\bannercinema\1308323439imc-2.jpg" />
+    <Content Include="images\bannercinema\1821056084imc-1.jpg" />
+    <Content Include="images\bannercinema\8814069imc-3.png" />
+    <Content Include="images\banner\1028782143cgv-brand-team-phim-hay-thang-10--980x448_7.jpg" />
+    <Content Include="images\banner\1274045572980x448_81.jpg" />
+    <Content Include="images\banner\1550386001cbhs_rolling_banner.jpg" />
+    <Content Include="images\banner\1567868822ddxs-rolling-banner.jpg" />
+    <Content Include="images\banner\1572981353bicycle_trees_art_131605_1920x1080.jpg" />
+    <Content Include="images\banner\1736048049kJsGmBB.png" />
+    <Content Include="images\banner\1824166485deer_minimalism_vector_background_nature_93845_1920x1080.jpg" />
+    <Content Include="images\banner\1840312465sthd-_980x448__2.jpg" />
+    <Content Include="images\banner\1855640004cgv-brand-team-phim-hay-thang-10--980x448_7.jpg" />
+    <Content Include="images\banner\1868678407980x448_85.jpg" />
+    <Content Include="images\banner\2019117264980x448_85.jpg" />
+    <Content Include="images\banner\2025268660cat_funny_art_144024_1920x1080.jpg" />
+    <Content Include="images\banner\203959907345k-_980x448_.jpg" />
+    <Content Include="images\banner\2039649579tiectrangmau.jpg" />
+    <Content Include="images\banner\328826566cat_funny_art_144024_1920x1080.jpg" />
+    <Content Include="images\banner\51158162045k-_980x448_.jpg" />
+    <Content Include="images\banner\636146974kJsGmBB.png" />
+    <Content Include="images\banner\758528567cat_funny_art_144024_1920x1080.jpg" />
+    <Content Include="images\banner\960818154cbhs_rolling_banner.jpg" />
+    <Content Include="images\banner\985299040980x448_81.jpg" />
+    <Content Include="images\banner\9995511413919417841.jpg" />
+    <Content Include="images\banner\cinema.jpg" />
+    <Content Include="images\banner\cinema1.jpg" />
+    <Content Include="images\banner\cinema2.jpg" />
+    <Content Include="images\event\1189715179event3.jpg" />
+    <Content Include="images\event\1375038540event4.jpg" />
+    <Content Include="images\event\1759578947event6.jpg" />
+    <Content Include="images\event\1904522791event5.jpg" />
+    <Content Include="images\event\1912604544event1.png" />
+    <Content Include="images\event\2105018838event2.png" />
+    <Content Include="images\event\2142252253event2.png" />
+    <Content Include="images\event\442406913event3.jpg" />
+    <Content Include="images\event\545932375event4.jpg" />
+    <Content Include="images\event\64669258event1.png" />
+    <Content Include="images\event\771468670event5.jpg" />
+    <Content Include="images\event\813964693event6.jpg" />
+    <Content Include="images\event\event1.png" />
+    <Content Include="images\event\event2.png" />
+    <Content Include="images\event\event3.jpg" />
+    <Content Include="images\event\event4.jpg" />
+    <Content Include="images\event\event5.jpg" />
+    <Content Include="images\event\event6.jpg" />
+    <Content Include="images\poster\1058470760kJsGmBB.png" />
+    <Content Include="images\poster\1079890827thang-may.jpg" />
+    <Content Include="images\poster\1161631517kJsGmBB.png" />
+    <Content Include="images\poster\1488717835kJsGmBB.png" />
+    <Content Include="images\poster\1529330008kJsGmBB.png" />
+    <Content Include="images\poster\1566709258kJsGmBB.png" />
+    <Content Include="images\poster\1581839428kJsGmBB.png" />
+    <Content Include="images\poster\1593685141kJsGmBB.png" />
+    <Content Include="images\poster\1642507125kJsGmBB.png" />
+    <Content Include="images\poster\165483687300-phu-thuy.jpg" />
+    <Content Include="images\poster\166752245kJsGmBB.png" />
+    <Content Include="images\poster\1828088817kJsGmBB.png" />
+    <Content Include="images\poster\1833433214WonderWomen.jpg" />
+    <Content Include="images\poster\186513533nhungkevocam.jpg" />
+    <Content Include="images\poster\1918293462the-witches.jpg" />
+    <Content Include="images\poster\1924787285kynghinhodoi.jpg" />
+    <Content Include="images\poster\216150996trai-tim.jpg" />
+    <Content Include="images\poster\245333444ewewe.jpg" />
+    <Content Include="images\poster\300-phu-thuy.jpg" />
+    <Content Include="images\poster\323831416thang-may.jpg" />
+    <Content Include="images\poster\497690004kJsGmBB.png" />
+    <Content Include="images\poster\498037972monster-hunter.jpg" />
+    <Content Include="images\poster\69152636kJsGmBB.png" />
+    <Content Include="images\poster\954883467ngaquy.jpg" />
+    <Content Include="images\poster\Alone.jpg" />
+    <Content Include="images\poster\blackwindow.jpg" />
+    <Content Include="images\poster\bloodmoon.jpg" />
+    <Content Include="images\poster\empty.jpg" />
+    <Content Include="images\poster\ewewe.jpg" />
+    <Content Include="images\poster\F9.jpg" />
+    <Content Include="images\poster\kynghinhodoi.jpg" />
+    <Content Include="images\poster\monster-hunter.jpg" />
+    <Content Include="images\poster\ngaquy.jpg" />
+    <Content Include="images\poster\nhungkevocam.jpg" />
+    <Content Include="images\poster\thang-may.jpg" />
+    <Content Include="images\poster\the-witches.jpg" />
+    <Content Include="images\poster\trai-tim.jpg" />
+    <Content Include="images\poster\WonderWomen.jpg" />
+    <Content Include="images\static\1.jpg" />
+    <Content Include="images\static\anime-bg.jpg" />
+    <Content Include="images\static\background.png" />
+    <Content Include="images\static\bg-red.png" />
+    <Content Include="images\static\do-nhat.jpg" />
+    <Content Include="images\static\logo.png" />
+    <Content Include="images\static\or.jpg" />
+    <Content Include="images\static\pinky.png" />
+    <Content Include="images\static\white-background-2.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.3.2.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.3.2.0\build\MaterialDesignThemes.targets')" />
