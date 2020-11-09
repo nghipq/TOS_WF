@@ -14,6 +14,10 @@ namespace TOS_WF
         public Theater()
         {
             InitializeComponent();
+            frmRoom r = new frmRoom();
+           
+            r.Visible = true;
+
         }
     }
 }
