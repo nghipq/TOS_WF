@@ -91,18 +91,18 @@
             // 
             // filmsBindingSource
             // 
-            this.filmsBindingSource.DataSource = typeof(TOS_WF.Models.Films);
+            //this.filmsBindingSource.DataSource = typeof(TOS_WF.Models.Films);
             // 
             // Theater
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< HEAD
+
             this.ClientSize = new System.Drawing.Size(737, 342);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Theater";
             this.Text = "Form1";
-=======
+
             this.ClientSize = new System.Drawing.Size(873, 414);
             this.Controls.Add(this.pnlRight);
             this.Controls.Add(this.pnlLeft);
@@ -117,7 +117,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pnlLeft)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlRight)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.filmsBindingSource)).EndInit();
->>>>>>> 34985498702c2dbe0ef463ac5f5fe4582e623116
+
             this.ResumeLayout(false);
 
         }

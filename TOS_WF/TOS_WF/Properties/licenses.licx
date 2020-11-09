@@ -1,7 +1,6 @@
-<<<<<<< HEAD
+
 DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v20.1, Version=20.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
-=======
+
 DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v20.1, Version=20.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
 DevExpress.XtraGrid.GridControl, DevExpress.XtraGrid.v20.1, Version=20.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
 DevExpress.XtraEditors.GridLookUpEdit, DevExpress.XtraGrid.v20.1, Version=20.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
->>>>>>> 34985498702c2dbe0ef463ac5f5fe4582e623116
