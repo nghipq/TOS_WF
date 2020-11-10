@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ticket));
             this.pnlContent = new DevExpress.XtraEditors.PanelControl();
             this.lblFilm = new System.Windows.Forms.Label();
             this.lblUser = new System.Windows.Forms.Label();
@@ -45,14 +44,9 @@
             this.lbl2 = new System.Windows.Forms.Label();
             this.lbl1 = new System.Windows.Forms.Label();
             this.sqlDataSource1 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
-            this.pnlImg = new DevExpress.XtraEditors.PanelControl();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.scheduleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pnlContent)).BeginInit();
             this.pnlContent.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pnlImg)).BeginInit();
-            this.pnlImg.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.scheduleBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,9 +69,9 @@
             this.pnlContent.Controls.Add(this.lbl2);
             this.pnlContent.Controls.Add(this.lbl1);
             this.pnlContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContent.Location = new System.Drawing.Point(452, 0);
+            this.pnlContent.Location = new System.Drawing.Point(0, 0);
             this.pnlContent.Name = "pnlContent";
-            this.pnlContent.Size = new System.Drawing.Size(875, 609);
+            this.pnlContent.Size = new System.Drawing.Size(1327, 609);
             this.pnlContent.TabIndex = 1;
             // 
             // lblFilm
@@ -215,27 +209,6 @@
             // 
             this.sqlDataSource1.Name = "sqlDataSource1";
             // 
-            // pnlImg
-            // 
-            this.pnlImg.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.pnlImg.ContentImage = ((System.Drawing.Image)(resources.GetObject("pnlImg.ContentImage")));
-            this.pnlImg.Controls.Add(this.pictureBox1);
-            this.pnlImg.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlImg.Location = new System.Drawing.Point(0, 0);
-            this.pnlImg.Name = "pnlImg";
-            this.pnlImg.Size = new System.Drawing.Size(452, 609);
-            this.pnlImg.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(82, 124);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(347, 463);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // scheduleBindingSource
             // 
             this.scheduleBindingSource.DataSource = typeof(TOS_WF.Models.Schedule);
@@ -246,16 +219,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1327, 609);
             this.Controls.Add(this.pnlContent);
-            this.Controls.Add(this.pnlImg);
             this.Name = "Ticket";
             this.Text = "Ticket";
             this.Load += new System.EventHandler(this.Ticket_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pnlContent)).EndInit();
             this.pnlContent.ResumeLayout(false);
             this.pnlContent.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pnlImg)).EndInit();
-            this.pnlImg.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.scheduleBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -278,7 +247,5 @@
         private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.Label lbl;
         private System.Windows.Forms.Label lblFilm;
-        private DevExpress.XtraEditors.PanelControl pnlImg;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
