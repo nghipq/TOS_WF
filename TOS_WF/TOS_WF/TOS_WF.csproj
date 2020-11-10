@@ -120,6 +120,12 @@
     <Compile Include="Frames\FilmList.Designer.cs">
       <DependentUpon>FilmList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frames\ScheduleList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frames\ScheduleList.Designer.cs">
+      <DependentUpon>ScheduleList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frames\Ticket.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +151,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frames\FilmList.resx">
       <DependentUpon>FilmList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frames\ScheduleList.resx">
+      <DependentUpon>ScheduleList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frames\Ticket.resx">
       <DependentUpon>Ticket.cs</DependentUpon>
