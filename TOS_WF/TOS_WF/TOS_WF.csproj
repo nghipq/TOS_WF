@@ -111,6 +111,8 @@
     <Compile Include="Booking.Designer.cs">
       <DependentUpon>Booking.cs</DependentUpon>
     </Compile>
+    <Compile Include="DAO\BillDAO.cs" />
+    <Compile Include="DAO\BillDetailDAO.cs" />
     <Compile Include="DAO\CategoryDAO.cs" />
     <Compile Include="DAO\DateScheduleDAO.cs" />
     <Compile Include="DAO\FilmDAO.cs" />
@@ -136,6 +138,8 @@
     <Compile Include="Frames\Ticket.Designer.cs">
       <DependentUpon>Ticket.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Bill.cs" />
+    <Compile Include="Models\BillDetail.cs" />
     <Compile Include="Models\Categories.cs" />
     <Compile Include="Models\DateSchedule.cs" />
     <Compile Include="Models\Films.cs" />

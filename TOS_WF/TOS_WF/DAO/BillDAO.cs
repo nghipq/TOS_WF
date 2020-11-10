@@ -8,5 +8,6 @@ namespace TOS_WF.DAO
 {
     class BillDAO
     {
+
     }
 }

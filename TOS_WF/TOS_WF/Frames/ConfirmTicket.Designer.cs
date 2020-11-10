@@ -241,11 +241,6 @@
         #endregion
         private DevExpress.XtraEditors.PanelControl panelControl2;
         private System.Windows.Forms.Label lbl;
-        private System.Windows.Forms.Label lblTotal;
-        private System.Windows.Forms.Label lblSeat;
-        private System.Windows.Forms.Label lblRoom;
-        private System.Windows.Forms.Label lblSchedule;
-        private System.Windows.Forms.Label lblCinema;
         private System.Windows.Forms.Label lbl5;
         private System.Windows.Forms.Label lbl4;
         private System.Windows.Forms.Label lbl3;
@@ -255,5 +250,10 @@
         private System.Windows.Forms.Label txtFname;
         public System.Windows.Forms.Button btnConfirm;
         public System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Label lblCinema;
+        public System.Windows.Forms.Label lblTotal;
+        public System.Windows.Forms.Label lblSeat;
+        public System.Windows.Forms.Label lblRoom;
+        public System.Windows.Forms.Label lblSchedule;
     }
 }
