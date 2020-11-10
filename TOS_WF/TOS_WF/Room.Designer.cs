@@ -89,9 +89,9 @@
             this.pnlRoomSeat.BackColor = System.Drawing.Color.White;
             this.pnlRoomSeat.Controls.Add(this.lblScreen);
             this.pnlRoomSeat.Controls.Add(this.pnlSeat);
-            this.pnlRoomSeat.Location = new System.Drawing.Point(79, 26);
+            this.pnlRoomSeat.Location = new System.Drawing.Point(72, 26);
             this.pnlRoomSeat.Name = "pnlRoomSeat";
-            this.pnlRoomSeat.Size = new System.Drawing.Size(1232, 623);
+            this.pnlRoomSeat.Size = new System.Drawing.Size(1182, 623);
             this.pnlRoomSeat.TabIndex = 4;
             // 
             // lblScreen
@@ -105,11 +105,10 @@
             this.lblScreen.TabIndex = 5;
             this.lblScreen.Text = "SCREEN";
             this.lblScreen.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblScreen.Click += new System.EventHandler(this.lblScreen_Click);
             // 
             // pnlSeat
             // 
-            this.pnlSeat.Location = new System.Drawing.Point(404, 97);
+            this.pnlSeat.Location = new System.Drawing.Point(391, 99);
             this.pnlSeat.Name = "pnlSeat";
             this.pnlSeat.Size = new System.Drawing.Size(684, 494);
             this.pnlSeat.TabIndex = 0;

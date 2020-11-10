@@ -19,10 +19,8 @@ namespace TOS_WF
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmRoom());
             //Application.Run(new Theater());
-            //Application.Run(new Booking());
-
+            Application.Run(new Booking());
         }
     }
 }

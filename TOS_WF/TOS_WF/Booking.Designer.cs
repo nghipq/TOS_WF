@@ -37,6 +37,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlLeft)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlRight)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pnlLeft)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -67,7 +68,7 @@
             this.pnlLeft.Size = new System.Drawing.Size(404, 432);
             this.pnlLeft.TabIndex = 2;
             // 
-            // pnlRight
+            // pnlFooter
             // 
             this.pnlRight.Appearance.BackColor = System.Drawing.Color.Firebrick;
             this.pnlRight.Appearance.Options.UseBackColor = true;
@@ -80,20 +81,22 @@
             // 
             // Booking
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1104, 632);
+            this.ClientSize = new System.Drawing.Size(946, 514);
             this.Controls.Add(this.pnlRight);
             this.Controls.Add(this.pnlLeft);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
             this.IsMdiContainer = true;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Booking";
             this.Text = "Booking";
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlLeft)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlRight)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pnlLeft)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -56,6 +56,27 @@ namespace TOS_WF.DAO
             conn.Close();
             return TicketList;
         }
+        public int GetMaxValue(int id_T)
+        {
+            int maxprice = 0;
+            using (conn)
+            {
+                string query = "SELECT T_Price FROM `ticket` WHERE id_T=@id_T";
+
+                MySqlCommand command = new MySqlCommand(query);
+                command.Connection = conn;
+                conn.Open();
+                command.Parameters.AddWithValue("@id_T", id_T);
+                MySqlDataReader md = command.ExecuteReader();
+                if (md.Read()) { 
+                maxprice = Convert.ToInt32(md["T_Price"]);
+                }
+
+            }
+
+            conn.Close();
+            return maxprice;
+        }
 
 
     }
