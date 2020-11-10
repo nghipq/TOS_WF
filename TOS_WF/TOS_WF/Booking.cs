@@ -14,7 +14,7 @@ namespace TOS_WF
 {
     public partial class Booking : DevExpress.XtraEditors.XtraForm
     {
-        public Ticket pnlTicket;
+        public frmRoom pnlTicket;
 
         public Booking()
         {
@@ -23,7 +23,7 @@ namespace TOS_WF
             //this.FormBorderStyle = FormBorderStyle.Fixed3D;
             //this.WindowState = FormWindowState.Maximized;
 
-            pnlTicket = new Ticket();
+            pnlTicket = new frmRoom();
             pnlTicket.MdiParent = this;
             pnlTicket.Show();
         }
