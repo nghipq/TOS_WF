@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using DevExpress.UserSkins;
 using DevExpress.Skins;
 using DevExpress.LookAndFeel;
+using TOS_WF.DAO;
 
 namespace TOS_WF
 {
@@ -18,8 +19,9 @@ namespace TOS_WF
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Theater());
-            Application.Run(new Booking());
+            Application.Run(new Login());
+            //Application.Run(new Booking());
+
         }
     }
 }

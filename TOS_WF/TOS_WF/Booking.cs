@@ -14,6 +14,7 @@ namespace TOS_WF
 {
     public partial class Booking : DevExpress.XtraEditors.XtraForm
     {
+        public frmRoom pnlTicket1;
         //public Ticket pnlTicket;
         public ConfirmTicket pnlConTicket;
         public Ticket pnlTicket;
@@ -30,24 +31,24 @@ namespace TOS_WF
             //this.TopMost = true;
             //this.FormBorderStyle = FormBorderStyle.Fixed3D;
             //this.WindowState = FormWindowState.Maximized;
-
-            pnlConTicket = new ConfirmTicket();
-            pnlConTicket.MdiParent = this;
-            pnlConTicket.btnConfirm.Click += new EventHandler(this.btnConfirm_Click);
-            pnlConTicket.lblCinema.Text = cinemaName;
-            pnlConTicket.lblSchedule.Text = schedule;
-            pnlConTicket.lblRoom.Text = room;
-            pnlConTicket.lblSeat.Text = seat;
-            pnlConTicket.lblTotal.Text = total;
-            pnlConTicket.Show();
+            pnlTicket1 = new frmRoom();
+            pnlTicket1.MdiParent = this;
+            pnlTicket1.Show();
+            //pnlConTicket = new ConfirmTicket();
+            //pnlConTicket.MdiParent = this;
+            //pnlConTicket.btnConfirm.Click += new EventHandler(this.btnConfirm_Click);
+            //pnlConTicket.lblCinema.Text = cinemaName;
+            //pnlConTicket.lblSchedule.Text = schedule;
+            //pnlConTicket.lblRoom.Text = room;
+            //pnlConTicket.lblSeat.Text = seat;
+            //pnlConTicket.lblTotal.Text = total;
+            //pnlConTicket.Show();
 
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            pnlTicket = new Ticket();
-            pnlTicket.MdiParent = this;
-            pnlTicket.Show();
+            
         }
     }
 }
