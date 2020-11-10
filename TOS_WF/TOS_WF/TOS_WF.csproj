@@ -121,6 +121,8 @@
       <DependentUpon>Booking.cs</DependentUpon>
     </Compile>
     <Compile Include="DAO\AreaDAO.cs" />
+    <Compile Include="DAO\BillDAO.cs" />
+    <Compile Include="DAO\BillDetailDAO.cs" />
     <Compile Include="DAO\CategoryDAO.cs" />
     <Compile Include="DAO\DateScheduleDAO.cs" />
     <Compile Include="DAO\FilmDAO.cs" />
@@ -130,6 +132,12 @@
     <Compile Include="DAO\TicketDAO.cs" />
     <Compile Include="DAO\UserDAO.cs" />
     <Compile Include="DBConnection\DBConnection.cs" />
+    <Compile Include="Frames\ConfirmTicket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frames\ConfirmTicket.Designer.cs">
+      <DependentUpon>ConfirmTicket.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frames\FilmList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,6 +163,8 @@
       <DependentUpon>LoginUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Area.cs" />
+    <Compile Include="Models\Bill.cs" />
+    <Compile Include="Models\BillDetail.cs" />
     <Compile Include="Models\Categories.cs" />
     <Compile Include="Models\DateSchedule.cs" />
     <Compile Include="Models\Films.cs" />
@@ -177,6 +187,9 @@
     <EmbeddedResource Include="Booking.resx">
       <DependentUpon>Booking.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frames\ConfirmTicket.resx">
+      <DependentUpon>ConfirmTicket.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frames\FilmList.resx">
       <DependentUpon>FilmList.cs</DependentUpon>
     </EmbeddedResource>
@@ -198,6 +211,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Theater.resx">
       <DependentUpon>Theater.cs</DependentUpon>
