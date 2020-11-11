@@ -15,7 +15,7 @@ namespace TOS_WF.DAO
         {
             this.conn = new DBConnection.DBConnection().conn;
         }
-        public int CreateBillDetail(int id_T, int id_B, Boolean Status)
+        public int CreateBillDetail(int id_T, int id_B)
         {
             int result = 0;
             using (conn)
@@ -23,10 +23,10 @@ namespace TOS_WF.DAO
                 conn.Open();
                 string sql = "INSERT INTO BillDetail(id_T, id_B, Status) VALUES (@id_T,@id_B,@Status)";
                 MySqlCommand command = new MySqlCommand(sql, conn);
-
+                command.Connection = conn;
                 command.Parameters.AddWithValue("@id_T", id_T);
                 command.Parameters.AddWithValue("@id_B", id_B);
-                command.Parameters.AddWithValue("@Status", Status);
+                command.Parameters.AddWithValue("@Status", 1);
                 result = command.ExecuteNonQuery();
                 conn.Close();
             }
