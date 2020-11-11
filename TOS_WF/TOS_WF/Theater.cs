@@ -12,6 +12,8 @@ using TOS_WF.Models;
 using TOS_WF.DAO;
 using DevExpress.Utils.Extensions;
 using TOS_WF.Frames;
+using DevExpress.XtraGrid.Views.Tile;
+using DevExpress.XtraGrid.Columns;
 
 namespace TOS_WF
 {
@@ -19,7 +21,8 @@ namespace TOS_WF
     {
         List<DateSchedule> dates = new List<DateSchedule>();
         public FilmList pnlFilm;
-
+        public ScheduleList pnlSchedule;
+        public int dayIndex;
 
         public Theater()
         {
@@ -28,6 +31,10 @@ namespace TOS_WF
             InitializeComponent();
 
             pnlFilm = new FilmList();
+            pnlFilm.FilmItem.Click += new EventHandler(this.Schedule_Load);
+            //pnlSchedule = new ScheduleList();
+            //pnlSchedule.MdiParent = this;
+            //pnlSchedule.Show();
             pnlFilm.MdiParent = this;
             pnlFilm.Show();
             this.TopMost = true;
@@ -62,24 +69,36 @@ namespace TOS_WF
             //}
             });
             pnlBtnDate.Controls.AddRange(btn);
-
-
-
         }
 
         public void btnday_Click(object sender, EventArgs e)
         {
             Button btn = sender as Button;
-            string index = btn.Name.Substring(8);
+            dayIndex = Convert.ToInt32(btn.Name.Substring(8));
 
-            Load_Films(Convert.ToInt32(index));
+            Load_Films(dayIndex);
         }
 
         public void Load_Films(int dayIndex)
         {
-            
             pnlFilm.FilmsList.DataSource = dates[dayIndex].films;
-            
+        }
+
+        public void Load_Schedules(int dayIndex, int filmsIndex)
+        {
+            pnlSchedule = new ScheduleList();
+            pnlSchedule.MdiParent = this;
+            pnlSchedule.SchedulesList.DataSource = dates[dayIndex].films[filmsIndex].Schedules;
+            pnlSchedule.Show();
+        }
+
+        private void Schedule_Load(object sender, EventArgs e)
+        {
+            TileView tileView = sender as TileView;
+            int fId = Convert.ToInt32(tileView.GetRowCellValue(tileView.FocusedRowHandle, "id_F").ToString());
+            int filmsIndex = dates[dayIndex].films.FindIndex(item => item.id_F == fId);
+
+            Load_Schedules(dayIndex, filmsIndex);
         }
 
         private void Theater_Load(object sender, EventArgs e)

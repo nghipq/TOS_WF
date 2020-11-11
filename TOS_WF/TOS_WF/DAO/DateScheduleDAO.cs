@@ -23,7 +23,7 @@ namespace TOS_WF.DAO
 
             using (conn)
             {
-                string sql = "SELECT DISTINCT Sche_Date FROM Schedule WHERE Sche_Date >= CURRENT_DATE and id_C = @id_C";
+                string sql = "SELECT DISTINCT Sche_Date FROM Schedule WHERE Sche_Date >= CURRENT_DATE and id_C = @id_C ORDER BY Sche_Date ASC";
                 MySqlCommand com = new MySqlCommand(sql);
                 com.Connection = conn;
                 com.Parameters.AddWithValue("@id_C", id_C);

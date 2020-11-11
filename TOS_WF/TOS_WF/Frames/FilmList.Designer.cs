@@ -2,10 +2,6 @@
 {
     partial class FilmList
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
-        public System.ComponentModel.IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -49,28 +45,64 @@
             DevExpress.XtraGrid.Views.Tile.TileViewItemElement tileViewItemElement6 = new DevExpress.XtraGrid.Views.Tile.TileViewItemElement();
             DevExpress.XtraGrid.Views.Tile.TileViewItemElement tileViewItemElement7 = new DevExpress.XtraGrid.Views.Tile.TileViewItemElement();
             DevExpress.XtraGrid.Views.Tile.TileViewItemElement tileViewItemElement8 = new DevExpress.XtraGrid.Views.Tile.TileViewItemElement();
-            this.FilmsList = new DevExpress.XtraGrid.GridControl();
-            this.FilmItem = new DevExpress.XtraGrid.Views.Tile.TileView();
-            this.filmsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.colid_F = new DevExpress.XtraGrid.Columns.TileViewColumn();
+            this.colPicture = new DevExpress.XtraGrid.Columns.TileViewColumn();
             this.colF_Name = new DevExpress.XtraGrid.Columns.TileViewColumn();
+            this.colRating = new DevExpress.XtraGrid.Columns.TileViewColumn();
+            this.colF_Time = new DevExpress.XtraGrid.Columns.TileViewColumn();
+            this.colDescription = new DevExpress.XtraGrid.Columns.TileViewColumn();
+            this.FilmsList = new DevExpress.XtraGrid.GridControl();
+            this.filmsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.FilmItem = new DevExpress.XtraGrid.Views.Tile.TileView();
+            this.colid_F = new DevExpress.XtraGrid.Columns.TileViewColumn();
             this.colid_P = new DevExpress.XtraGrid.Columns.TileViewColumn();
             this.colP_Name = new DevExpress.XtraGrid.Columns.TileViewColumn();
             this.colReleaseDate = new DevExpress.XtraGrid.Columns.TileViewColumn();
-            this.colRating = new DevExpress.XtraGrid.Columns.TileViewColumn();
             this.colLimitAge = new DevExpress.XtraGrid.Columns.TileViewColumn();
             this.colAirDate = new DevExpress.XtraGrid.Columns.TileViewColumn();
             this.colEndDate = new DevExpress.XtraGrid.Columns.TileViewColumn();
-            this.colDescription = new DevExpress.XtraGrid.Columns.TileViewColumn();
             this.colStatus = new DevExpress.XtraGrid.Columns.TileViewColumn();
             this.colPoster = new DevExpress.XtraGrid.Columns.TileViewColumn();
-            this.colPicture = new DevExpress.XtraGrid.Columns.TileViewColumn();
-            this.colF_Time = new DevExpress.XtraGrid.Columns.TileViewColumn();
             this.colF_Trailer = new DevExpress.XtraGrid.Columns.TileViewColumn();
             ((System.ComponentModel.ISupportInitialize)(this.FilmsList)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FilmItem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.filmsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FilmItem)).BeginInit();
             this.SuspendLayout();
+            // 
+            // colPicture
+            // 
+            this.colPicture.FieldName = "Picture";
+            this.colPicture.Name = "colPicture";
+            this.colPicture.OptionsColumn.ReadOnly = true;
+            this.colPicture.Visible = true;
+            this.colPicture.VisibleIndex = 12;
+            // 
+            // colF_Name
+            // 
+            this.colF_Name.FieldName = "F_Name";
+            this.colF_Name.Name = "colF_Name";
+            this.colF_Name.Visible = true;
+            this.colF_Name.VisibleIndex = 1;
+            // 
+            // colRating
+            // 
+            this.colRating.FieldName = "Rating";
+            this.colRating.Name = "colRating";
+            this.colRating.Visible = true;
+            this.colRating.VisibleIndex = 5;
+            // 
+            // colF_Time
+            // 
+            this.colF_Time.FieldName = "F_Time";
+            this.colF_Time.Name = "colF_Time";
+            this.colF_Time.Visible = true;
+            this.colF_Time.VisibleIndex = 13;
+            // 
+            // colDescription
+            // 
+            this.colDescription.FieldName = "Description";
+            this.colDescription.Name = "colDescription";
+            this.colDescription.Visible = true;
+            this.colDescription.VisibleIndex = 9;
             // 
             // FilmsList
             // 
@@ -83,6 +115,10 @@
             this.FilmsList.TabIndex = 0;
             this.FilmsList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.FilmItem});
+            // 
+            // filmsBindingSource
+            // 
+            this.filmsBindingSource.DataSource = typeof(TOS_WF.Models.Films);
             // 
             // FilmItem
             // 
@@ -220,23 +256,12 @@
             this.FilmItem.TileTemplate.Add(tileViewItemElement7);
             this.FilmItem.TileTemplate.Add(tileViewItemElement8);
             // 
-            // filmsBindingSource
-            // 
-            this.filmsBindingSource.DataSource = typeof(TOS_WF.Models.Films);
-            // 
             // colid_F
             // 
             this.colid_F.FieldName = "id_F";
             this.colid_F.Name = "colid_F";
             this.colid_F.Visible = true;
             this.colid_F.VisibleIndex = 0;
-            // 
-            // colF_Name
-            // 
-            this.colF_Name.FieldName = "F_Name";
-            this.colF_Name.Name = "colF_Name";
-            this.colF_Name.Visible = true;
-            this.colF_Name.VisibleIndex = 1;
             // 
             // colid_P
             // 
@@ -259,13 +284,6 @@
             this.colReleaseDate.Visible = true;
             this.colReleaseDate.VisibleIndex = 4;
             // 
-            // colRating
-            // 
-            this.colRating.FieldName = "Rating";
-            this.colRating.Name = "colRating";
-            this.colRating.Visible = true;
-            this.colRating.VisibleIndex = 5;
-            // 
             // colLimitAge
             // 
             this.colLimitAge.FieldName = "LimitAge";
@@ -287,13 +305,6 @@
             this.colEndDate.Visible = true;
             this.colEndDate.VisibleIndex = 8;
             // 
-            // colDescription
-            // 
-            this.colDescription.FieldName = "Description";
-            this.colDescription.Name = "colDescription";
-            this.colDescription.Visible = true;
-            this.colDescription.VisibleIndex = 9;
-            // 
             // colStatus
             // 
             this.colStatus.FieldName = "Status";
@@ -307,21 +318,6 @@
             this.colPoster.Name = "colPoster";
             this.colPoster.Visible = true;
             this.colPoster.VisibleIndex = 11;
-            // 
-            // colPicture
-            // 
-            this.colPicture.FieldName = "Picture";
-            this.colPicture.Name = "colPicture";
-            this.colPicture.OptionsColumn.ReadOnly = true;
-            this.colPicture.Visible = true;
-            this.colPicture.VisibleIndex = 12;
-            // 
-            // colF_Time
-            // 
-            this.colF_Time.FieldName = "F_Time";
-            this.colF_Time.Name = "colF_Time";
-            this.colF_Time.Visible = true;
-            this.colF_Time.VisibleIndex = 13;
             // 
             // colF_Trailer
             // 
@@ -340,8 +336,8 @@
             this.Text = "FilmList";
             this.Load += new System.EventHandler(this.FilmList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.FilmsList)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FilmItem)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.filmsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FilmItem)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -366,5 +362,6 @@
         public DevExpress.XtraGrid.Columns.TileViewColumn colPicture;
         public DevExpress.XtraGrid.Columns.TileViewColumn colF_Time;
         public DevExpress.XtraGrid.Columns.TileViewColumn colF_Trailer;
+        private System.ComponentModel.IContainer components;
     }
 }
