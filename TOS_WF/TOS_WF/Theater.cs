@@ -23,18 +23,16 @@ namespace TOS_WF
         public FilmList pnlFilm;
         public ScheduleList pnlSchedule;
         public int dayIndex;
+        public Booking booking;
 
-        public Theater()
+        public Theater(int id_C)
         {
-            dates = new DateScheduleDAO().getDateScheduleByCinema(1);
+            dates = new DateScheduleDAO().getDateScheduleByCinema(id_C);
 
             InitializeComponent();
 
             pnlFilm = new FilmList();
-            pnlFilm.FilmItem.Click += new EventHandler(this.Schedule_Load);
-            //pnlSchedule = new ScheduleList();
-            //pnlSchedule.MdiParent = this;
-            //pnlSchedule.Show();
+            pnlFilm.filmItem.Click += new EventHandler(this.Schedule_Load);
             pnlFilm.MdiParent = this;
             pnlFilm.Show();
             this.TopMost = true;
@@ -89,6 +87,7 @@ namespace TOS_WF
             pnlSchedule = new ScheduleList();
             pnlSchedule.MdiParent = this;
             pnlSchedule.SchedulesList.DataSource = dates[dayIndex].films[filmsIndex].Schedules;
+            pnlSchedule.scheduleItem.Click += new EventHandler(this.Load_Booking);
             pnlSchedule.Show();
         }
 
@@ -99,6 +98,17 @@ namespace TOS_WF
             int filmsIndex = dates[dayIndex].films.FindIndex(item => item.id_F == fId);
 
             Load_Schedules(dayIndex, filmsIndex);
+        }
+
+        private void Load_Booking(object sender, EventArgs e)
+        {
+            TileView tileView = sender as TileView;
+            int Sche_id = Convert.ToInt32(tileView.GetRowCellValue(tileView.FocusedRowHandle, "id_Sche").ToString());
+
+            //Console.WriteLine(Sche_id);
+            this.Visible = false;
+            booking = new Booking(Sche_id);
+            booking.Show();
         }
 
         private void Theater_Load(object sender, EventArgs e)
