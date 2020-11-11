@@ -111,9 +111,9 @@
             this.lblTotal.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotal.Location = new System.Drawing.Point(403, 580);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(140, 27);
+            this.lblTotal.Size = new System.Drawing.Size(62, 27);
             this.lblTotal.TabIndex = 10;
-            this.lblTotal.Text = "400000 VND";
+            this.lblTotal.Text = "VND";
             // 
             // lblSeat
             // 

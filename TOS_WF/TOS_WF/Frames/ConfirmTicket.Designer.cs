@@ -32,7 +32,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.txtFname = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtName_U = new System.Windows.Forms.TextBox();
             this.lbl = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
             this.lblSeat = new System.Windows.Forms.Label();
@@ -53,7 +53,7 @@
             this.panelControl2.Controls.Add(this.button1);
             this.panelControl2.Controls.Add(this.btnConfirm);
             this.panelControl2.Controls.Add(this.txtFname);
-            this.panelControl2.Controls.Add(this.textBox1);
+            this.panelControl2.Controls.Add(this.txtName_U);
             this.panelControl2.Controls.Add(this.lbl);
             this.panelControl2.Controls.Add(this.lblTotal);
             this.panelControl2.Controls.Add(this.lblSeat);
@@ -110,13 +110,13 @@
             this.txtFname.Text = "Tên Phim Nè";
             this.txtFname.Click += new System.EventHandler(this.txtFname_Click);
             // 
-            // textBox1
+            // txtName_U
             // 
-            this.textBox1.Location = new System.Drawing.Point(411, 194);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(382, 23);
-            this.textBox1.TabIndex = 24;
+            this.txtName_U.Location = new System.Drawing.Point(411, 194);
+            this.txtName_U.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtName_U.Name = "txtName_U";
+            this.txtName_U.Size = new System.Drawing.Size(382, 23);
+            this.txtName_U.TabIndex = 24;
             // 
             // lbl
             // 
@@ -134,9 +134,9 @@
             this.lblTotal.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotal.Location = new System.Drawing.Point(406, 560);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(140, 27);
+            this.lblTotal.Size = new System.Drawing.Size(62, 27);
             this.lblTotal.TabIndex = 22;
-            this.lblTotal.Text = "400000 VND";
+            this.lblTotal.Text = "VND";
             // 
             // lblSeat
             // 
@@ -144,9 +144,8 @@
             this.lblSeat.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSeat.Location = new System.Drawing.Point(406, 486);
             this.lblSeat.Name = "lblSeat";
-            this.lblSeat.Size = new System.Drawing.Size(126, 27);
+            this.lblSeat.Size = new System.Drawing.Size(0, 27);
             this.lblSeat.TabIndex = 21;
-            this.lblSeat.Text = "45 46 47 48";
             // 
             // lblRoom
             // 
@@ -252,7 +251,7 @@
         private System.Windows.Forms.Label lbl3;
         private System.Windows.Forms.Label lbl2;
         private System.Windows.Forms.Label lbl1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtName_U;
         private System.Windows.Forms.Label txtFname;
         public System.Windows.Forms.Button btnConfirm;
         public System.Windows.Forms.Button button1;

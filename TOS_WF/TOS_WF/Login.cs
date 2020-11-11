@@ -25,12 +25,12 @@ namespace TOS_WF
         {
             
             LoginDAO ldao = new LoginDAO();
-            Theater theater = new Theater(1);
+            //Theater theater = new Theater(1);
             bool isLogin = ldao.Login(txtUsername.Text, txtPassword.Text);
             if (isLogin)
             {
                 this.Visible = false;
-                theater.Visible = true;
+                //theater.Visible = true;
             }
         }
     }
