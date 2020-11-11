@@ -10,34 +10,36 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using TOS_WF.Models;
 using TOS_WF.DAO;
-using DevExpress.Utils.Extensions;
 using TOS_WF.Frames;
 using DevExpress.XtraGrid.Views.Tile;
-using DevExpress.XtraGrid.Columns;
 
 namespace TOS_WF
 {
-    public partial class Theater : DevExpress.XtraEditors.XtraForm
+    public partial class Main : DevExpress.XtraEditors.XtraForm
     {
         List<DateSchedule> dates = new List<DateSchedule>();
-        public FilmList pnlFilm;
-        public ScheduleList pnlSchedule;
-        public int dayIndex;
-        public Booking booking;
+        public int id_C { get; set; }
+        public int id_Cus { get; set; }
+        public int id_Staff { get; set; }
+        public int dayIndex { get; set; }
+        public int filmsIndex { get; set; }
+        public int sche_Id{ get; set; }
+        public int room_Id { get; set; }
+        public string Choose_Seat { get; set; }
+        public string Choose_SeatId { get; set; }
+        public int billTotalPrice { get; set; }
+        public FilmList frmFilms { get; set; }
+        public ScheduleList frmSchedule { get; set; }
+        public frmRoom frmRoom { get; set; }
 
-        public Theater(int id_C)
+        public Main()
+        {
+            InitializeComponent();
+        }
+
+        public void Load_Cinema(int id_C)
         {
             dates = new DateScheduleDAO().getDateScheduleByCinema(id_C);
-
-            InitializeComponent();
-
-            pnlFilm = new FilmList();
-            pnlFilm.filmItem.Click += new EventHandler(this.Schedule_Load);
-            pnlFilm.MdiParent = this;
-            pnlFilm.Show();
-            this.TopMost = true;
-            this.FormBorderStyle = FormBorderStyle.Fixed3D;
-            this.WindowState = FormWindowState.Maximized;
         }
 
         public void Load_Dates()
@@ -64,7 +66,7 @@ namespace TOS_WF
                 btn[i].Show();
                 btn[i].Click += new EventHandler(this.btnday_Click);
                 i++;
-            //}
+                //}
             });
             pnlBtnDate.Controls.AddRange(btn);
         }
@@ -79,16 +81,30 @@ namespace TOS_WF
 
         public void Load_Films(int dayIndex)
         {
-            pnlFilm.FilmsList.DataSource = dates[dayIndex].films;
+            frmFilms.FilmsList.DataSource = dates[dayIndex].films;
         }
 
         public void Load_Schedules(int dayIndex, int filmsIndex)
         {
-            pnlSchedule = new ScheduleList();
-            pnlSchedule.MdiParent = this;
-            pnlSchedule.SchedulesList.DataSource = dates[dayIndex].films[filmsIndex].Schedules;
-            pnlSchedule.scheduleItem.Click += new EventHandler(this.Load_Booking);
-            pnlSchedule.Show();
+            
+            frmSchedule.SchedulesList.DataSource = dates[dayIndex].films[filmsIndex].Schedules;
+            frmSchedule.scheduleItem.Click += new EventHandler(this.Load_Booking); 
+        }
+
+        public void Load_FilmsScreen()
+        {
+            frmFilms = new FilmList();
+            frmFilms.MdiParent = this;
+            frmFilms.filmItem.Click += new EventHandler(this.Schedule_Load);
+            frmFilms.Show();
+        }
+
+        public void Load_ScheduleScreen()
+        {
+            frmFilms.Visible = false;
+            frmSchedule = new ScheduleList();
+            frmSchedule.MdiParent = this;
+            frmSchedule.Show();
         }
 
         private void Schedule_Load(object sender, EventArgs e)
@@ -97,24 +113,28 @@ namespace TOS_WF
             int fId = Convert.ToInt32(tileView.GetRowCellValue(tileView.FocusedRowHandle, "id_F").ToString());
             int filmsIndex = dates[dayIndex].films.FindIndex(item => item.id_F == fId);
 
+            Load_ScheduleScreen();
             Load_Schedules(dayIndex, filmsIndex);
         }
 
         private void Load_Booking(object sender, EventArgs e)
         {
             TileView tileView = sender as TileView;
-            int Sche_id = Convert.ToInt32(tileView.GetRowCellValue(tileView.FocusedRowHandle, "id_Sche").ToString());
+            sche_Id = Convert.ToInt32(tileView.GetRowCellValue(tileView.FocusedRowHandle, "id_Sche").ToString());
 
-            //Console.WriteLine(Sche_id);
-            this.Visible = false;
-            booking = new Booking(Sche_id);
-            booking.Show();
+            frmSchedule.Visible = false;
+            frmRoom = new frmRoom(sche_Id);
+            frmRoom.MdiParent = this;
+            frmRoom.Show();
         }
 
-        private void Theater_Load(object sender, EventArgs e)
+        private void Main_Load(object sender, EventArgs e)
         {
+            Load_Cinema(1);       
             Load_Dates();
+            Load_FilmsScreen();
             Load_Films(0);
+            
         }
     }
 }

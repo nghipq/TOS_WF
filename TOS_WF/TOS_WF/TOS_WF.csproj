@@ -127,11 +127,8 @@
     <Compile Include="DAO\DateScheduleDAO.cs" />
     <Compile Include="DAO\FilmDAO.cs" />
     <Compile Include="DAO\GraphicsDAO.cs" />
-
     <Compile Include="DAO\RoomDAO.cs" />
-
     <Compile Include="DAO\LoginDAO.cs" />
-
     <Compile Include="DAO\ScheduleDAO.cs" />
     <Compile Include="DAO\TicketDAO.cs" />
     <Compile Include="DAO\UserDAO.cs" />
@@ -171,6 +168,12 @@
     </Compile>
     <Compile Include="LoginUser.Designer.cs">
       <DependentUpon>LoginUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Area.cs" />
     <Compile Include="Models\Bill.cs" />
@@ -221,6 +224,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LoginUser.resx">
       <DependentUpon>LoginUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

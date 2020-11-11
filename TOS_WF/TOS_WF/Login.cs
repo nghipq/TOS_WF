@@ -25,7 +25,7 @@ namespace TOS_WF
         {
             
             LoginDAO ldao = new LoginDAO();
-            Theater theater = new Theater();
+            Theater theater = new Theater(1);
             bool isLogin = ldao.Login(txtUsername.Text, txtPassword.Text);
             if (isLogin)
             {

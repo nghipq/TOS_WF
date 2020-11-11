@@ -20,9 +20,11 @@ namespace TOS_WF
         int tempprice = 0;
         public static List<string> strl = new List<string>();
         public static List<string> ticketID = new List<string>();
+        public int Sche_id { get; set; }
 
-        public frmRoom()
+        public frmRoom(int Sche_id)
         {
+            this.Sche_id = Sche_id;
             InitializeComponent();
             this.TopMost = true;
             this.FormBorderStyle = FormBorderStyle.Fixed3D;
@@ -36,7 +38,7 @@ namespace TOS_WF
         {
             List<Ticket> t = new List<Ticket>();
             TicketDAO tDAO = new TicketDAO();
-            t = tDAO.GetAllTicket(18);//load by id lich chieu
+            t = tDAO.GetAllTicket(Sche_id);//load by id lich chieu
             Point[] p = new Point[t.Count]; //vi tri x,y cua 1 nut
             Button[] btn = new Button[t.Count];//so luong nut 
             int row = t[0].R_Row;//so hang
