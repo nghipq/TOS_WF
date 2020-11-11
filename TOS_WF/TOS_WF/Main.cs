@@ -37,11 +37,39 @@ namespace TOS_WF
             InitializeComponent();
         }
 
+        /*Load dữ liệu*/
+
+        /**
+         * Load các ngày có lịch chiếu của 1 rạp
+         */
         public void Load_Cinema(int id_C)
         {
             dates = new DateScheduleDAO().getDateScheduleByCinema(id_C);
         }
 
+        /**
+         * Load các phim có lịch chiếu của 1 ngày
+         */
+        public void Load_Films(int dayIndex)
+        {
+            frmFilms.FilmsList.DataSource = dates[dayIndex].films;
+        }
+
+        /**
+         * Load các lịch chiếu của 1 phim
+         */
+        public void Load_Schedules(int dayIndex, int filmsIndex)
+        {
+            
+            frmSchedule.SchedulesList.DataSource = dates[dayIndex].films[filmsIndex].Schedules;
+            frmSchedule.scheduleItem.Click += new EventHandler(this.Load_Booking); 
+        }
+        
+        /*Tạo giao diện*/
+
+        /**
+         * Tạo nút chọn ngày
+         */
         public void Load_Dates()
         {
             Button[] btn = new Button[dates.Count];
@@ -71,26 +99,9 @@ namespace TOS_WF
             pnlBtnDate.Controls.AddRange(btn);
         }
 
-        public void btnday_Click(object sender, EventArgs e)
-        {
-            Button btn = sender as Button;
-            dayIndex = Convert.ToInt32(btn.Name.Substring(8));
-
-            Load_Films(dayIndex);
-        }
-
-        public void Load_Films(int dayIndex)
-        {
-            frmFilms.FilmsList.DataSource = dates[dayIndex].films;
-        }
-
-        public void Load_Schedules(int dayIndex, int filmsIndex)
-        {
-            
-            frmSchedule.SchedulesList.DataSource = dates[dayIndex].films[filmsIndex].Schedules;
-            frmSchedule.scheduleItem.Click += new EventHandler(this.Load_Booking); 
-        }
-
+        /**
+         * Load màng hình chọn phim
+         */
         public void Load_FilmsScreen()
         {
             frmFilms = new FilmList();
@@ -99,6 +110,9 @@ namespace TOS_WF
             frmFilms.Show();
         }
 
+        /**
+         * Tạo màng hình chọn suất chiếu
+         */
         public void Load_ScheduleScreen()
         {
             frmFilms.Visible = false;
@@ -107,6 +121,22 @@ namespace TOS_WF
             frmSchedule.Show();
         }
 
+        /*Sự kiện click*/
+
+        /**
+         * Click chọn ngày
+         */
+        public void btnday_Click(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            dayIndex = Convert.ToInt32(btn.Name.Substring(8));
+
+            Load_Films(dayIndex);
+        }
+
+        /**
+         * Click chọn phim
+         */
         private void Schedule_Load(object sender, EventArgs e)
         {
             TileView tileView = sender as TileView;
@@ -117,6 +147,9 @@ namespace TOS_WF
             Load_Schedules(dayIndex, filmsIndex);
         }
 
+        /**
+         * Click chọn lịch chiếu
+         */
         private void Load_Booking(object sender, EventArgs e)
         {
             TileView tileView = sender as TileView;
