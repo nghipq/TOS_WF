@@ -2,10 +2,6 @@
 {
     partial class ScheduleList
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
-        private System.ComponentModel.IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -26,59 +22,80 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
+        public void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
             DevExpress.XtraEditors.TableLayout.TableColumnDefinition tableColumnDefinition1 = new DevExpress.XtraEditors.TableLayout.TableColumnDefinition();
             DevExpress.XtraEditors.TableLayout.TableColumnDefinition tableColumnDefinition2 = new DevExpress.XtraEditors.TableLayout.TableColumnDefinition();
             DevExpress.XtraEditors.TableLayout.TableColumnDefinition tableColumnDefinition3 = new DevExpress.XtraEditors.TableLayout.TableColumnDefinition();
             DevExpress.XtraEditors.TableLayout.TableRowDefinition tableRowDefinition1 = new DevExpress.XtraEditors.TableLayout.TableRowDefinition();
+            DevExpress.XtraEditors.TableLayout.TableRowDefinition tableRowDefinition2 = new DevExpress.XtraEditors.TableLayout.TableRowDefinition();
+            DevExpress.XtraEditors.TableLayout.TableRowDefinition tableRowDefinition3 = new DevExpress.XtraEditors.TableLayout.TableRowDefinition();
             DevExpress.XtraGrid.Views.Tile.TileViewItemElement tileViewItemElement1 = new DevExpress.XtraGrid.Views.Tile.TileViewItemElement();
-            this.colStartTime = new DevExpress.XtraGrid.Columns.TileViewColumn();
-            this.SchedulesList = new DevExpress.XtraGrid.GridControl();
             this.scheduleBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ScheduleItem = new DevExpress.XtraGrid.Views.Tile.TileView();
+            this.pnlLeft = new DevExpress.XtraEditors.PanelControl();
+            this.pnlRight = new DevExpress.XtraEditors.PanelControl();
+            this.SchedulesList = new DevExpress.XtraGrid.GridControl();
+            this.scheduleItem = new DevExpress.XtraGrid.Views.Tile.TileView();
+            this.scheduleBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.colid_Sche = new DevExpress.XtraGrid.Columns.TileViewColumn();
             this.colid_Ses = new DevExpress.XtraGrid.Columns.TileViewColumn();
             this.colid_F = new DevExpress.XtraGrid.Columns.TileViewColumn();
             this.colid_C = new DevExpress.XtraGrid.Columns.TileViewColumn();
             this.colid_R = new DevExpress.XtraGrid.Columns.TileViewColumn();
+            this.colStartTime = new DevExpress.XtraGrid.Columns.TileViewColumn();
             this.colStatus = new DevExpress.XtraGrid.Columns.TileViewColumn();
             this.colSche_Date = new DevExpress.XtraGrid.Columns.TileViewColumn();
             this.colvipSeat = new DevExpress.XtraGrid.Columns.TileViewColumn();
             this.colnormalPrice = new DevExpress.XtraGrid.Columns.TileViewColumn();
             this.colvipPrice = new DevExpress.XtraGrid.Columns.TileViewColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.SchedulesList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.scheduleBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ScheduleItem)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pnlLeft)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pnlRight)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SchedulesList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scheduleItem)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scheduleBindingSource1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // colStartTime
-            // 
-            this.colStartTime.FieldName = "StartTime";
-            this.colStartTime.Name = "colStartTime";
-            this.colStartTime.Visible = true;
-            this.colStartTime.VisibleIndex = 5;
-            // 
-            // SchedulesList
-            // 
-            this.SchedulesList.DataSource = this.scheduleBindingSource;
-            this.SchedulesList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SchedulesList.Location = new System.Drawing.Point(0, 0);
-            this.SchedulesList.MainView = this.ScheduleItem;
-            this.SchedulesList.Name = "SchedulesList";
-            this.SchedulesList.Size = new System.Drawing.Size(682, 382);
-            this.SchedulesList.TabIndex = 0;
-            this.SchedulesList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.ScheduleItem});
             // 
             // scheduleBindingSource
             // 
             this.scheduleBindingSource.DataSource = typeof(TOS_WF.Models.Schedule);
             // 
-            // ScheduleItem
+            // pnlLeft
             // 
-            this.ScheduleItem.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.pnlLeft.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pnlLeft.ContentImage = global::TOS_WF.Properties.Resources.bg_red;
+            this.pnlLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlLeft.Location = new System.Drawing.Point(0, 0);
+            this.pnlLeft.Name = "pnlLeft";
+            this.pnlLeft.Size = new System.Drawing.Size(102, 382);
+            this.pnlLeft.TabIndex = 0;
+            // 
+            // pnlRight
+            // 
+            this.pnlRight.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pnlRight.ContentImage = global::TOS_WF.Properties.Resources.bg_red;
+            this.pnlRight.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlRight.Location = new System.Drawing.Point(580, 0);
+            this.pnlRight.Name = "pnlRight";
+            this.pnlRight.Size = new System.Drawing.Size(102, 382);
+            this.pnlRight.TabIndex = 1;
+            // 
+            // SchedulesList
+            // 
+            this.SchedulesList.DataSource = this.scheduleBindingSource1;
+            this.SchedulesList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SchedulesList.Location = new System.Drawing.Point(102, 0);
+            this.SchedulesList.MainView = this.scheduleItem;
+            this.SchedulesList.Name = "SchedulesList";
+            this.SchedulesList.Size = new System.Drawing.Size(478, 382);
+            this.SchedulesList.TabIndex = 2;
+            this.SchedulesList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.scheduleItem});
+            // 
+            // scheduleItem
+            // 
+            this.scheduleItem.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colid_Sche,
             this.colid_Ses,
             this.colid_F,
@@ -90,26 +107,34 @@
             this.colvipSeat,
             this.colnormalPrice,
             this.colvipPrice});
-            this.ScheduleItem.GridControl = this.SchedulesList;
-            this.ScheduleItem.Name = "ScheduleItem";
-            this.ScheduleItem.OptionsTiles.GroupTextPadding = new System.Windows.Forms.Padding(12, 8, 12, 8);
-            this.ScheduleItem.OptionsTiles.IndentBetweenGroups = 0;
-            this.ScheduleItem.OptionsTiles.IndentBetweenItems = 0;
-            this.ScheduleItem.OptionsTiles.ItemSize = new System.Drawing.Size(530, 76);
-            this.ScheduleItem.OptionsTiles.LayoutMode = DevExpress.XtraGrid.Views.Tile.TileViewLayoutMode.List;
-            this.ScheduleItem.OptionsTiles.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.ScheduleItem.OptionsTiles.Padding = new System.Windows.Forms.Padding(0);
-            this.ScheduleItem.OptionsTiles.RowCount = 0;
-            this.ScheduleItem.TileColumns.Add(tableColumnDefinition1);
-            this.ScheduleItem.TileColumns.Add(tableColumnDefinition2);
-            this.ScheduleItem.TileColumns.Add(tableColumnDefinition3);
-            this.ScheduleItem.TileRows.Add(tableRowDefinition1);
+            this.scheduleItem.GridControl = this.SchedulesList;
+            this.scheduleItem.Name = "scheduleItem";
+            this.scheduleItem.OptionsTiles.GroupTextPadding = new System.Windows.Forms.Padding(12, 8, 12, 8);
+            this.scheduleItem.OptionsTiles.IndentBetweenGroups = 0;
+            this.scheduleItem.OptionsTiles.IndentBetweenItems = 0;
+            this.scheduleItem.OptionsTiles.ItemSize = new System.Drawing.Size(536, 100);
+            this.scheduleItem.OptionsTiles.LayoutMode = DevExpress.XtraGrid.Views.Tile.TileViewLayoutMode.List;
+            this.scheduleItem.OptionsTiles.Orientation = System.Windows.Forms.Orientation.Vertical;
+            this.scheduleItem.OptionsTiles.Padding = new System.Windows.Forms.Padding(0);
+            this.scheduleItem.OptionsTiles.RowCount = 0;
+            this.scheduleItem.TileColumns.Add(tableColumnDefinition1);
+            this.scheduleItem.TileColumns.Add(tableColumnDefinition2);
+            this.scheduleItem.TileColumns.Add(tableColumnDefinition3);
+            this.scheduleItem.TileRows.Add(tableRowDefinition1);
+            this.scheduleItem.TileRows.Add(tableRowDefinition2);
+            this.scheduleItem.TileRows.Add(tableRowDefinition3);
             tileViewItemElement1.Column = this.colStartTime;
+            tileViewItemElement1.ColumnIndex = 1;
             tileViewItemElement1.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
             tileViewItemElement1.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside;
+            tileViewItemElement1.RowIndex = 1;
             tileViewItemElement1.Text = "colStartTime";
             tileViewItemElement1.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            this.ScheduleItem.TileTemplate.Add(tileViewItemElement1);
+            this.scheduleItem.TileTemplate.Add(tileViewItemElement1);
+            // 
+            // scheduleBindingSource1
+            // 
+            this.scheduleBindingSource1.DataSource = typeof(TOS_WF.Models.Schedule);
             // 
             // colid_Sche
             // 
@@ -145,6 +170,13 @@
             this.colid_R.Name = "colid_R";
             this.colid_R.Visible = true;
             this.colid_R.VisibleIndex = 4;
+            // 
+            // colStartTime
+            // 
+            this.colStartTime.FieldName = "StartTime";
+            this.colStartTime.Name = "colStartTime";
+            this.colStartTime.Visible = true;
+            this.colStartTime.VisibleIndex = 5;
             // 
             // colStatus
             // 
@@ -187,18 +219,26 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(682, 382);
             this.Controls.Add(this.SchedulesList);
+            this.Controls.Add(this.pnlRight);
+            this.Controls.Add(this.pnlLeft);
             this.Name = "ScheduleList";
             this.Text = "ScheduleList";
-            ((System.ComponentModel.ISupportInitialize)(this.SchedulesList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.scheduleBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ScheduleItem)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pnlLeft)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pnlRight)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SchedulesList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scheduleItem)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scheduleBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private DevExpress.XtraGrid.Views.Tile.TileView ScheduleItem;
-        private System.Windows.Forms.BindingSource scheduleBindingSource;
+        public System.Windows.Forms.BindingSource scheduleBindingSource;
+        private System.ComponentModel.IContainer components;
+        private DevExpress.XtraEditors.PanelControl pnlLeft;
+        private DevExpress.XtraEditors.PanelControl pnlRight;
+        private System.Windows.Forms.BindingSource scheduleBindingSource1;
         private DevExpress.XtraGrid.Columns.TileViewColumn colid_Sche;
         private DevExpress.XtraGrid.Columns.TileViewColumn colid_Ses;
         private DevExpress.XtraGrid.Columns.TileViewColumn colid_F;
@@ -211,5 +251,6 @@
         private DevExpress.XtraGrid.Columns.TileViewColumn colnormalPrice;
         private DevExpress.XtraGrid.Columns.TileViewColumn colvipPrice;
         public DevExpress.XtraGrid.GridControl SchedulesList;
+        public DevExpress.XtraGrid.Views.Tile.TileView scheduleItem;
     }
 }

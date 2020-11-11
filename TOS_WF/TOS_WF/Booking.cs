@@ -24,14 +24,14 @@ namespace TOS_WF
         public string seat = "A1 A2 A3";
         public string total = "400000";
 
-        public Booking()
+        public Booking(int Sche_id)
         {
 
             InitializeComponent();
-            //this.TopMost = true;
-            //this.FormBorderStyle = FormBorderStyle.Fixed3D;
-            //this.WindowState = FormWindowState.Maximized;
-            pnlTicket1 = new frmRoom();
+            this.TopMost = true;
+            this.FormBorderStyle = FormBorderStyle.Fixed3D;
+            this.WindowState = FormWindowState.Maximized;
+            pnlTicket1 = new frmRoom(Sche_id);
             pnlTicket1.MdiParent = this;
             pnlTicket1.Show();
             //pnlConTicket = new ConfirmTicket();
