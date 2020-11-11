@@ -8,6 +8,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using TOS_WF.Models;
+using TOS_WF.DAO;
 
 namespace TOS_WF.Frames
 {
@@ -28,6 +30,14 @@ namespace TOS_WF.Frames
         private void txtFname_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnConfirm_Click(object sender, EventArgs e)
+        {
+            BillDAO bill = new BillDAO();
+            bill.CreateBill(1, 1, 0);
+            this.Visible = false;
+            
         }
     }
 }

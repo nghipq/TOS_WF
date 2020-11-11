@@ -67,8 +67,9 @@
             this.panelControl2.Controls.Add(this.lbl1);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
+            this.panelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1421, 749);
+            this.panelControl2.Size = new System.Drawing.Size(1156, 781);
             this.panelControl2.TabIndex = 1;
             // 
             // button1
@@ -76,9 +77,10 @@
             this.button1.BackColor = System.Drawing.Color.Red;
             this.button1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(47, 575);
+            this.button1.Location = new System.Drawing.Point(89, 647);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(286, 62);
+            this.button1.Size = new System.Drawing.Size(334, 55);
             this.button1.TabIndex = 29;
             this.button1.Text = "Hủy";
             this.button1.UseVisualStyleBackColor = false;
@@ -88,38 +90,41 @@
             this.btnConfirm.BackColor = System.Drawing.Color.LimeGreen;
             this.btnConfirm.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirm.ForeColor = System.Drawing.Color.White;
-            this.btnConfirm.Location = new System.Drawing.Point(365, 575);
+            this.btnConfirm.Location = new System.Drawing.Point(460, 647);
+            this.btnConfirm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(286, 62);
+            this.btnConfirm.Size = new System.Drawing.Size(334, 59);
             this.btnConfirm.TabIndex = 28;
             this.btnConfirm.Text = "Thanh Toán";
             this.btnConfirm.UseVisualStyleBackColor = false;
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
             // txtFname
             // 
             this.txtFname.AutoSize = true;
             this.txtFname.Font = new System.Drawing.Font("Times New Roman", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFname.Location = new System.Drawing.Point(44, 75);
+            this.txtFname.Location = new System.Drawing.Point(85, 96);
             this.txtFname.Name = "txtFname";
-            this.txtFname.Size = new System.Drawing.Size(244, 45);
+            this.txtFname.Size = new System.Drawing.Size(305, 57);
             this.txtFname.TabIndex = 25;
             this.txtFname.Text = "Tên Phim Nè";
             this.txtFname.Click += new System.EventHandler(this.txtFname_Click);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(323, 194);
+            this.textBox1.Location = new System.Drawing.Point(411, 194);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(328, 21);
+            this.textBox1.Size = new System.Drawing.Size(382, 23);
             this.textBox1.TabIndex = 24;
             // 
             // lbl
             // 
             this.lbl.AutoSize = true;
             this.lbl.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl.Location = new System.Drawing.Point(48, 188);
+            this.lbl.Location = new System.Drawing.Point(90, 186);
             this.lbl.Name = "lbl";
-            this.lbl.Size = new System.Drawing.Size(83, 24);
+            this.lbl.Size = new System.Drawing.Size(110, 31);
             this.lbl.TabIndex = 23;
             this.lbl.Text = "Họ Tên:";
             // 
@@ -127,9 +132,9 @@
             // 
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(319, 513);
+            this.lblTotal.Location = new System.Drawing.Point(406, 560);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(108, 21);
+            this.lblTotal.Size = new System.Drawing.Size(140, 27);
             this.lblTotal.TabIndex = 22;
             this.lblTotal.Text = "400000 VND";
             // 
@@ -137,9 +142,9 @@
             // 
             this.lblSeat.AutoSize = true;
             this.lblSeat.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSeat.Location = new System.Drawing.Point(319, 445);
+            this.lblSeat.Location = new System.Drawing.Point(406, 486);
             this.lblSeat.Name = "lblSeat";
-            this.lblSeat.Size = new System.Drawing.Size(97, 21);
+            this.lblSeat.Size = new System.Drawing.Size(126, 27);
             this.lblSeat.TabIndex = 21;
             this.lblSeat.Text = "45 46 47 48";
             // 
@@ -147,9 +152,9 @@
             // 
             this.lblRoom.AutoSize = true;
             this.lblRoom.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRoom.Location = new System.Drawing.Point(319, 383);
+            this.lblRoom.Location = new System.Drawing.Point(406, 414);
             this.lblRoom.Name = "lblRoom";
-            this.lblRoom.Size = new System.Drawing.Size(19, 21);
+            this.lblRoom.Size = new System.Drawing.Size(24, 27);
             this.lblRoom.TabIndex = 20;
             this.lblRoom.Text = "3";
             // 
@@ -157,9 +162,9 @@
             // 
             this.lblSchedule.AutoSize = true;
             this.lblSchedule.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSchedule.Location = new System.Drawing.Point(319, 322);
+            this.lblSchedule.Location = new System.Drawing.Point(406, 339);
             this.lblSchedule.Name = "lblSchedule";
-            this.lblSchedule.Size = new System.Drawing.Size(97, 21);
+            this.lblSchedule.Size = new System.Drawing.Size(128, 27);
             this.lblSchedule.TabIndex = 19;
             this.lblSchedule.Text = "8:00 - 10:00";
             // 
@@ -167,9 +172,9 @@
             // 
             this.lblCinema.AutoSize = true;
             this.lblCinema.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCinema.Location = new System.Drawing.Point(319, 259);
+            this.lblCinema.Location = new System.Drawing.Point(406, 264);
             this.lblCinema.Name = "lblCinema";
-            this.lblCinema.Size = new System.Drawing.Size(169, 21);
+            this.lblCinema.Size = new System.Drawing.Size(215, 27);
             this.lblCinema.TabIndex = 18;
             this.lblCinema.Text = "Vincom Hùng Vương";
             // 
@@ -177,9 +182,9 @@
             // 
             this.lbl5.AutoSize = true;
             this.lbl5.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl5.Location = new System.Drawing.Point(48, 510);
+            this.lbl5.Location = new System.Drawing.Point(90, 557);
             this.lbl5.Name = "lbl5";
-            this.lbl5.Size = new System.Drawing.Size(63, 24);
+            this.lbl5.Size = new System.Drawing.Size(83, 31);
             this.lbl5.TabIndex = 17;
             this.lbl5.Text = "Tổng:";
             // 
@@ -187,9 +192,9 @@
             // 
             this.lbl4.AutoSize = true;
             this.lbl4.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl4.Location = new System.Drawing.Point(48, 442);
+            this.lbl4.Location = new System.Drawing.Point(90, 482);
             this.lbl4.Name = "lbl4";
-            this.lbl4.Size = new System.Drawing.Size(77, 24);
+            this.lbl4.Size = new System.Drawing.Size(99, 31);
             this.lbl4.TabIndex = 16;
             this.lbl4.Text = "Số ghế:";
             // 
@@ -197,9 +202,9 @@
             // 
             this.lbl3.AutoSize = true;
             this.lbl3.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl3.Location = new System.Drawing.Point(48, 379);
+            this.lbl3.Location = new System.Drawing.Point(90, 409);
             this.lbl3.Name = "lbl3";
-            this.lbl3.Size = new System.Drawing.Size(127, 24);
+            this.lbl3.Size = new System.Drawing.Size(166, 31);
             this.lbl3.TabIndex = 15;
             this.lbl3.Text = "Phòng chiếu:";
             // 
@@ -207,9 +212,9 @@
             // 
             this.lbl2.AutoSize = true;
             this.lbl2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl2.Location = new System.Drawing.Point(48, 318);
+            this.lbl2.Location = new System.Drawing.Point(90, 334);
             this.lbl2.Name = "lbl2";
-            this.lbl2.Size = new System.Drawing.Size(113, 24);
+            this.lbl2.Size = new System.Drawing.Size(149, 31);
             this.lbl2.TabIndex = 14;
             this.lbl2.Text = "Xuất chiếu:";
             // 
@@ -217,18 +222,19 @@
             // 
             this.lbl1.AutoSize = true;
             this.lbl1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl1.Location = new System.Drawing.Point(48, 256);
+            this.lbl1.Location = new System.Drawing.Point(90, 260);
             this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(86, 24);
+            this.lbl1.Size = new System.Drawing.Size(116, 31);
             this.lbl1.TabIndex = 13;
             this.lbl1.Text = "Tên rạp:";
             // 
             // ConfirmTicket
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1421, 749);
+            this.ClientSize = new System.Drawing.Size(1156, 781);
             this.Controls.Add(this.panelControl2);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ConfirmTicket";
             this.Text = "ConfirmTicket";
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
