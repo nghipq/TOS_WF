@@ -22,12 +22,15 @@ namespace TOS_WF
         public static List<string> ticketID = new List<string>();
         public int Sche_id { get; set; }
         public int id_C { get; set; }
+        public string C_Name { get; set; }
         public int id_Cus { get; set; }
         public int id_Staff { get; set; }
         public int dayIndex { get; set; }
         public int filmsIndex { get; set; }
         public int sche_Id { get; set; }
+        public string sche_Name { get; set; }
         public int room_Id { get; set; }
+        public string Room_Name { get; set; }
         public int billTotalPrice { get; set; }
         public FilmList frmFilms { get; set; }
         public ScheduleList frmSchedule { get; set; }
@@ -111,10 +114,10 @@ namespace TOS_WF
             frmFilms.filmItem.Click += new EventHandler(this.Schedule_Load);
             frmFilms.Show();
         }
-        public void LoadRoom(int sche_Id)
+        public void LoadRoom(int sche_Id, string Room_Name)
         {
             frmSchedule.Visible = false;
-            frmRoom = new frmRoom(sche_Id);
+            frmRoom = new frmRoom(sche_Id, Room_Name);
             frmRoom.MdiParent = this;
             frmRoom.pbNext.Click+= new EventHandler(this.btnNext_Click);
             frmRoom.Show();
@@ -149,9 +152,23 @@ namespace TOS_WF
         {
             ticketID = frmRoom.ticketID;
             strl = frmRoom.strl;
-            frmRoom.Visible = false; 
-            frmConfirmTicket = new ConfirmTicket();
+            frmRoom.Visible = false;
+            string str = "";
+            string str1 = "";
+            //load seat
+            strl.ForEach(item =>
+            {
+                str += item + " ";
+            });
+            //load idseat
+            ticketID.ForEach(item =>
+            {
+                str1 += item + " ";
+            });
+            frmConfirmTicket = new ConfirmTicket(str,str1);
             frmConfirmTicket.MdiParent = this;
+            frmConfirmTicket.lblRoom.Text = Room_Name;
+            frmConfirmTicket.lblSchedule.Text = sche_Name;
             frmConfirmTicket.Show();
 
 
@@ -177,8 +194,9 @@ namespace TOS_WF
         {
             TileView tileView = sender as TileView;
             sche_Id = Convert.ToInt32(tileView.GetRowCellValue(tileView.FocusedRowHandle, "id_Sche").ToString());
-            LoadRoom(sche_Id);
-
+            sche_Name = tileView.GetRowCellValue(tileView.FocusedRowHandle, "StartTime").ToString();
+            Room_Name = new RoomDAO().getRoomById(Convert.ToInt32(tileView.GetRowCellValue(tileView.FocusedRowHandle, "id_R").ToString())).R_Name;
+            LoadRoom(sche_Id, Room_Name);
         }
 
 

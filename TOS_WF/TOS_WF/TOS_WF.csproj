@@ -239,6 +239,7 @@
     <None Include="App.config" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\TOS_WF.Models.Area.datasource" />
+    <None Include="Properties\DataSources\TOS_WF.Models.Bill.datasource" />
     <None Include="Properties\DataSources\TOS_WF.Models.Categories.datasource" />
     <None Include="Properties\DataSources\TOS_WF.Models.Films.datasource" />
     <None Include="Properties\DataSources\TOS_WF.Models.Graphics.datasource" />

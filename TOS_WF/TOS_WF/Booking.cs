@@ -20,8 +20,8 @@ namespace TOS_WF
         public string cinemaName = "Vincom";
         public string schedule = "8.00 - 11.00";
         public string room = "3";
-        public string seat = "A1 A2 A3";
-        public string total = "400000";
+        //public string seat = "A1 A2 A3";
+        //public string total = "400000";
 
         public Booking(int Sche_id)
         {
@@ -32,14 +32,14 @@ namespace TOS_WF
             //pnlTicket1 = new frmRoom();
             //pnlTicket1.MdiParent = this;
             //pnlTicket1.Show();
-            pnlConTicket = new ConfirmTicket();
+            //pnlConTicket = new ConfirmTicket();
             pnlConTicket.MdiParent = this;
             pnlConTicket.btnConfirm.Click += new EventHandler(this.btnConfirm_Click);
             pnlConTicket.lblCinema.Text = cinemaName;
             pnlConTicket.lblSchedule.Text = schedule;
             pnlConTicket.lblRoom.Text = room;
-            pnlConTicket.lblSeat.Text = seat;
-            pnlConTicket.lblTotal.Text = total;
+           
+            
             pnlConTicket.Show();
 
         }

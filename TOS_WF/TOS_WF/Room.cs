@@ -22,10 +22,11 @@ namespace TOS_WF
         public static List<string> ticketID = new List<string>();
         public int Sche_id { get; set; }
 
-        public frmRoom(int Sche_id)
+        public frmRoom(int Sche_id, string r_Name)
         {
             this.Sche_id = Sche_id;
             InitializeComponent();
+            this.lblRoom.Text = r_Name;
             this.TopMost = true;
             this.FormBorderStyle = FormBorderStyle.Fixed3D;
             this.WindowState = FormWindowState.Maximized;

@@ -10,17 +10,25 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using TOS_WF.Models;
 using TOS_WF.DAO;
+using DevExpress.XtraPrinting.Native.Lines;
 
 namespace TOS_WF.Frames
 {
     public partial class ConfirmTicket : DevExpress.XtraEditors.XtraForm
     {
-        public ConfirmTicket()
+        public string ticket_seat { get; set; }
+        public string ticket_id { get; set; }
+
+        public int T_Price { get; set; }
+        public ConfirmTicket(string ticket_seat,string ticket_id)
         {
             InitializeComponent();
             this.TopMost = true;
             this.FormBorderStyle = FormBorderStyle.Fixed3D;
             this.WindowState = FormWindowState.Maximized;
+            lblSeat.Text = ticket_seat;//hien thi ten ghe
+            //tinh tong tien
+            lblTotal.Text= new TicketDAO().calculateTotalPrice(ticket_id) + " VND"; 
         }
         private void ConfirmTicket_Load(object sender, EventArgs e)
         {
