@@ -37,6 +37,10 @@ namespace TOS_WF.Frames
             BillDAO bill = new BillDAO();
             bill.CreateBill(1, 1, 0);
             this.Visible = false;
+            int getvalue = bill.getMaxIdBill();
+            BillDetailDAO bd = new BillDetailDAO();
+            bd.CreateBillDetail(1, getvalue);
+            this.Visible = false;
             
         }
     }
