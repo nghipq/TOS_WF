@@ -18,19 +18,21 @@ namespace TOS_WF
     public partial class Main : DevExpress.XtraEditors.XtraForm
     {
         List<DateSchedule> dates = new List<DateSchedule>();
+        public static List<string> strl = new List<string>();
+        public static List<string> ticketID = new List<string>();
+        public int Sche_id { get; set; }
         public int id_C { get; set; }
         public int id_Cus { get; set; }
         public int id_Staff { get; set; }
         public int dayIndex { get; set; }
         public int filmsIndex { get; set; }
-        public int sche_Id{ get; set; }
+        public int sche_Id { get; set; }
         public int room_Id { get; set; }
-        public string Choose_Seat { get; set; }
-        public string Choose_SeatId { get; set; }
         public int billTotalPrice { get; set; }
         public FilmList frmFilms { get; set; }
         public ScheduleList frmSchedule { get; set; }
         public frmRoom frmRoom { get; set; }
+        public ConfirmTicket frmConfirmTicket { get; set; }
 
         public Main()
         {
@@ -60,11 +62,11 @@ namespace TOS_WF
          */
         public void Load_Schedules(int dayIndex, int filmsIndex)
         {
-            
+
             frmSchedule.SchedulesList.DataSource = dates[dayIndex].films[filmsIndex].Schedules;
-            frmSchedule.scheduleItem.Click += new EventHandler(this.Load_Booking); 
+            frmSchedule.scheduleItem.Click += new EventHandler(this.Load_Booking);
         }
-        
+
         /*Tạo giao diện*/
 
         /**
@@ -109,7 +111,14 @@ namespace TOS_WF
             frmFilms.filmItem.Click += new EventHandler(this.Schedule_Load);
             frmFilms.Show();
         }
-
+        public void LoadRoom(int sche_Id)
+        {
+            frmSchedule.Visible = false;
+            frmRoom = new frmRoom(sche_Id);
+            frmRoom.MdiParent = this;
+            frmRoom.pbNext.Click+= new EventHandler(this.btnNext_Click);
+            frmRoom.Show();
+        }
         /**
          * Tạo màng hình chọn suất chiếu
          */
@@ -133,6 +142,20 @@ namespace TOS_WF
 
             Load_Films(dayIndex);
         }
+        /**
+          * Sự kiện chuyên qua trang xác nhận
+          */
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            ticketID = frmRoom.ticketID;
+            strl = frmRoom.strl;
+            frmRoom.Visible = false; 
+            frmConfirmTicket = new ConfirmTicket();
+            frmConfirmTicket.MdiParent = this;
+            frmConfirmTicket.Show();
+
+
+        }
 
         /**
          * Click chọn phim
@@ -154,20 +177,18 @@ namespace TOS_WF
         {
             TileView tileView = sender as TileView;
             sche_Id = Convert.ToInt32(tileView.GetRowCellValue(tileView.FocusedRowHandle, "id_Sche").ToString());
+            LoadRoom(sche_Id);
 
-            frmSchedule.Visible = false;
-            frmRoom = new frmRoom(sche_Id);
-            frmRoom.MdiParent = this;
-            frmRoom.Show();
         }
+
 
         private void Main_Load(object sender, EventArgs e)
         {
-            Load_Cinema(1);       
+            Load_Cinema(1);
             Load_Dates();
             Load_FilmsScreen();
             Load_Films(0);
-            
+
         }
     }
 }

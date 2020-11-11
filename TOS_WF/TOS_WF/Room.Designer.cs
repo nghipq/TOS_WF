@@ -31,15 +31,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRoom));
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtShowSeat = new System.Windows.Forms.TextBox();
-            this.pbNext = new System.Windows.Forms.PictureBox();
-            this.pbBack = new System.Windows.Forms.PictureBox();
             this.pnlRoomSeat = new System.Windows.Forms.Panel();
             this.lblScreen = new System.Windows.Forms.Label();
             this.pnlSeat = new System.Windows.Forms.FlowLayoutPanel();
+            this.pbNext = new System.Windows.Forms.PictureBox();
+            this.pbBack = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
+            this.pnlRoomSeat.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbNext)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBack)).BeginInit();
-            this.pnlRoomSeat.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -63,26 +63,6 @@
             this.txtShowSeat.Size = new System.Drawing.Size(779, 42);
             this.txtShowSeat.TabIndex = 2;
             this.txtShowSeat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // pbNext
-            // 
-            this.pbNext.Image = ((System.Drawing.Image)(resources.GetObject("pbNext.Image")));
-            this.pbNext.Location = new System.Drawing.Point(927, 13);
-            this.pbNext.Name = "pbNext";
-            this.pbNext.Size = new System.Drawing.Size(67, 42);
-            this.pbNext.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbNext.TabIndex = 1;
-            this.pbNext.TabStop = false;
-            // 
-            // pbBack
-            // 
-            this.pbBack.Image = ((System.Drawing.Image)(resources.GetObject("pbBack.Image")));
-            this.pbBack.Location = new System.Drawing.Point(16, 13);
-            this.pbBack.Name = "pbBack";
-            this.pbBack.Size = new System.Drawing.Size(57, 41);
-            this.pbBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbBack.TabIndex = 0;
-            this.pbBack.TabStop = false;
             // 
             // pnlRoomSeat
             // 
@@ -113,6 +93,26 @@
             this.pnlSeat.Size = new System.Drawing.Size(684, 494);
             this.pnlSeat.TabIndex = 0;
             // 
+            // pbNext
+            // 
+            this.pbNext.Image = ((System.Drawing.Image)(resources.GetObject("pbNext.Image")));
+            this.pbNext.Location = new System.Drawing.Point(927, 13);
+            this.pbNext.Name = "pbNext";
+            this.pbNext.Size = new System.Drawing.Size(67, 42);
+            this.pbNext.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbNext.TabIndex = 1;
+            this.pbNext.TabStop = false;
+            // 
+            // pbBack
+            // 
+            this.pbBack.Image = ((System.Drawing.Image)(resources.GetObject("pbBack.Image")));
+            this.pbBack.Location = new System.Drawing.Point(16, 13);
+            this.pbBack.Name = "pbBack";
+            this.pbBack.Size = new System.Drawing.Size(57, 41);
+            this.pbBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbBack.TabIndex = 0;
+            this.pbBack.TabStop = false;
+            // 
             // frmRoom
             // 
             this.Appearance.BackColor = System.Drawing.Color.Firebrick;
@@ -128,21 +128,21 @@
             this.Text = "Room";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbNext)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbBack)).EndInit();
             this.pnlRoomSeat.ResumeLayout(false);
             this.pnlRoomSeat.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbNext)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBack)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pbNext;
         private System.Windows.Forms.PictureBox pbBack;
         private System.Windows.Forms.TextBox txtShowSeat;
         private System.Windows.Forms.Panel pnlRoomSeat;
         private System.Windows.Forms.Label lblScreen;
         private System.Windows.Forms.FlowLayoutPanel pnlSeat;
+        public System.Windows.Forms.PictureBox pbNext;
     }
 }
