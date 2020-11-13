@@ -20,6 +20,10 @@ namespace TOS_WF
         List<DateSchedule> dates = new List<DateSchedule>();
         public static List<string> strl = new List<string>();
         public static List<string> ticketID = new List<string>();
+        public static List<string> CinemaId = new List<string>();
+        public int A_id { get; set; }
+        public string username { get; set; }
+        public string password { get; set; }
         public int Sche_id { get; set; }
         public int id_C { get; set; }
         public string C_Name { get; set; }
@@ -36,10 +40,30 @@ namespace TOS_WF
         public ScheduleList frmSchedule { get; set; }
         public frmRoom frmRoom { get; set; }
         public ConfirmTicket frmConfirmTicket { get; set; }
-
+        public Login frmLogin { get; set; }
+        public Areas frmAreas { get; set; }
         public Main()
         {
             InitializeComponent();
+        }
+        /**
+         * Sự kiện ấn vào nút đăng nhập
+         */
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+
+            LoginDAO ldao = new LoginDAO();
+            //Theater theater = new Theater(1);
+            bool isLogin = ldao.Login(username, password);
+            Console.WriteLine(isLogin);
+            if (isLogin)
+            {
+                frmLogin.Visible = false;
+                Load_Cinema(1);
+                Load_Dates();
+                Load_FilmsScreen();
+                Load_Films(0);
+            }
         }
 
         /*Load dữ liệu*/
@@ -114,16 +138,45 @@ namespace TOS_WF
             frmFilms.filmItem.Click += new EventHandler(this.Schedule_Load);
             frmFilms.Show();
         }
+        public void LoadAreas()
+        {
+            frmAreas = new Areas();
+            frmAreas.MdiParent = this;
+            frmAreas.cbArea.DataSource = new AreaDAO().getAllArea();
+            frmAreas.cbArea.SelectedIndexChanged += new EventHandler(this.cbCinema_SelectedIndexChanged);
+            frmAreas.Show();
+        }
+        public void cbCinema_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            A_id = Convert.ToInt32(frmAreas.cbArea.SelectedValue);
+            frmAreas.cbCinema.Text = "";
+            frmAreas.cbCinema.DataSource = new CinemaDAO().GetAllCinemasByAId(A_id);
+            id_C = Convert.ToInt32(frmAreas.cbCinema.SelectedValue);
+            frmAreas.btnSubmit.Click += new EventHandler(this.btnSubmit_Click);
+            frmAreas.btnSubmit.Enabled = true;
+        }
+        public void btnSubmit_Click(object sender, EventArgs e)
+        {
+            
+            Login();
+        }
+        public void Login()
+        {
+            frmLogin = new Login();
+            frmLogin.MdiParent = this;
+            frmLogin.btnLogin.Click += new EventHandler(this.btnLogin_Click);
+            frmLogin.Show();
+        }
         public void LoadRoom(int sche_Id, string Room_Name)
         {
             frmSchedule.Visible = false;
             frmRoom = new frmRoom(sche_Id, Room_Name);
             frmRoom.MdiParent = this;
-            frmRoom.pbNext.Click+= new EventHandler(this.btnNext_Click);
+            frmRoom.pbNext.Click += new EventHandler(this.btnNext_Click);
             frmRoom.Show();
         }
         /**
-         * Tạo màng hình chọn suất chiếu
+         * Tạo màn hình chọn suất chiếu
          */
         public void Load_ScheduleScreen()
         {
@@ -165,7 +218,7 @@ namespace TOS_WF
             {
                 str1 += item + " ";
             });
-            frmConfirmTicket = new ConfirmTicket(str,str1);
+            frmConfirmTicket = new ConfirmTicket(str, str1);
             frmConfirmTicket.MdiParent = this;
             frmConfirmTicket.lblRoom.Text = Room_Name;
             frmConfirmTicket.lblSchedule.Text = sche_Name;
@@ -202,11 +255,7 @@ namespace TOS_WF
 
         private void Main_Load(object sender, EventArgs e)
         {
-            Load_Cinema(1);
-            Load_Dates();
-            Load_FilmsScreen();
-            Load_Films(0);
-
+            LoadAreas();
         }
     }
 }
