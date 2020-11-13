@@ -17,7 +17,7 @@ namespace TOS_WF.DAO
             this.conn = new DBConnection.DBConnection().conn;
         }
 
-        public int CreateBill(int id_Cus, int id_Staff, long Total)
+        public int CreateBill(int id_Cus, int id_Staff, string Total)
         {
             int result = 0;
             using (conn)

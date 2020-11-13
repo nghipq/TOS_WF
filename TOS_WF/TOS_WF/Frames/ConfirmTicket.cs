@@ -20,6 +20,9 @@ namespace TOS_WF.Frames
         public string ticket_id { get; set; }
 
         public int T_Price { get; set; }
+
+        public String F_Name { get; set; }
+        public int id_F { get; set; }
         public ConfirmTicket(string ticket_seat,string ticket_id)
         {
             InitializeComponent();
@@ -28,7 +31,15 @@ namespace TOS_WF.Frames
             this.WindowState = FormWindowState.Maximized;
             lblSeat.Text = ticket_seat;//hien thi ten ghe
             //tinh tong tien
-            lblTotal.Text= new TicketDAO().calculateTotalPrice(ticket_id) + " VND"; 
+            lblTotal.Text= new TicketDAO().calculateTotalPrice(ticket_id) + " VND";
+            //lblCinema.Text = new FilmDAO().getFilmById(id_F).ToString();
+            BillDAO bill = new BillDAO();
+            bill.CreateBill(1, 1, lblTotal.Text);
+            this.Visible = false;
+            int getvalue = bill.getMaxIdBill();
+            BillDetailDAO bd = new BillDetailDAO();
+            bd.CreateBillDetail(1, getvalue);
+            this.Visible = false;
         }
         private void ConfirmTicket_Load(object sender, EventArgs e)
         {
@@ -40,16 +51,18 @@ namespace TOS_WF.Frames
 
         }
 
-        private void btnConfirm_Click(object sender, EventArgs e)
-        {
-            BillDAO bill = new BillDAO();
-            bill.CreateBill(1, 1, 0);
-            this.Visible = false;
-            int getvalue = bill.getMaxIdBill();
-            BillDetailDAO bd = new BillDetailDAO();
-            bd.CreateBillDetail(1, getvalue);
-            this.Visible = false;
-            
-        }
+        //private void btnConfirm_Click(object sender, EventArgs e)
+        //{
+        //    lblTotal.Text = new TicketDAO().calculateTotalPrice(ticket_id) + " VND";
+        //    Console.WriteLine(lblTotal.Text);
+        //    //BillDAO bill = new BillDAO();
+        //    //bill.CreateBill(1, 1, lblTotal.Text);
+        //    //this.Visible = false;
+        //    //int getvalue = bill.getMaxIdBill();
+        //    //BillDetailDAO bd = new BillDetailDAO();
+        //    //bd.CreateBillDetail(1, getvalue);
+        //    //this.Visible = false;
+
+        //}
     }
 }

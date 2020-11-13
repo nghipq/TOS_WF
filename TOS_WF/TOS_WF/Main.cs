@@ -17,6 +17,7 @@ namespace TOS_WF
 {
     public partial class Main : DevExpress.XtraEditors.XtraForm
     {
+       
         List<DateSchedule> dates = new List<DateSchedule>();
         public static List<string> strl = new List<string>();
         public static List<string> ticketID = new List<string>();
@@ -40,8 +41,12 @@ namespace TOS_WF
         public ScheduleList frmSchedule { get; set; }
         public frmRoom frmRoom { get; set; }
         public ConfirmTicket frmConfirmTicket { get; set; }
+
         public Login frmLogin { get; set; }
         public Areas frmAreas { get; set; }
+
+        public frmTicket TicketN { get; set; }
+
         public Main()
         {
             InitializeComponent();
@@ -198,6 +203,7 @@ namespace TOS_WF
 
             Load_Films(dayIndex);
         }
+
         /**
           * Sự kiện chuyên qua trang xác nhận
           */
@@ -222,8 +228,8 @@ namespace TOS_WF
             frmConfirmTicket.MdiParent = this;
             frmConfirmTicket.lblRoom.Text = Room_Name;
             frmConfirmTicket.lblSchedule.Text = sche_Name;
+            frmConfirmTicket.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             frmConfirmTicket.Show();
-
 
         }
 
@@ -240,6 +246,32 @@ namespace TOS_WF
             Load_Schedules(dayIndex, filmsIndex);
         }
 
+        /**
+         *Click Thanh toan
+         */
+        private void btnConfirm_Click(object sender, EventArgs e)
+        {
+            
+            frmConfirmTicket.Visible = false;
+            string str = "";
+            string str1 = "";
+            //load seat
+            strl.ForEach(item =>
+            {
+                str += item + " ";
+            });
+            //load idseat
+            ticketID.ForEach(item =>
+            {
+                str1 += item + " ";
+            });
+            Console.WriteLine(str);
+            Console.WriteLine(str1);
+            TicketN = new frmTicket(str, str1);
+            TicketN.MdiParent = this;
+            TicketN.Show();
+
+        }
         /**
          * Click chọn lịch chiếu
          */

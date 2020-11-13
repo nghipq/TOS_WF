@@ -12,7 +12,7 @@ namespace TOS_WF.Models
         public int id_Cus { get; set; }
         public int id_Staff { get; set; }
         public DateTime DateBuy { get; set; }
-        public long Total { get; set; }
+        public string Total { get; set; }
         public bool Status { get; set; }
     }
 }
