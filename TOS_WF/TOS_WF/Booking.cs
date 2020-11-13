@@ -15,7 +15,7 @@ namespace TOS_WF
     public partial class Booking : DevExpress.XtraEditors.XtraForm
     {
         //public frmRoom pnlTicket1;
-        public Ticket pnlTicket;
+        public frmTicket pnlTicket;
         public ConfirmTicket pnlConTicket;
         public string cinemaName = "Vincom";
         public string schedule = "8.00 - 11.00";
@@ -46,9 +46,9 @@ namespace TOS_WF
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            pnlTicket = new Ticket();
-            pnlTicket.MdiParent = this;
-            pnlTicket.Show();
+            //pnlTicket = new frmTicket();
+            //pnlTicket.MdiParent = this;
+            //pnlTicket.Show();
         }
     }
 }
