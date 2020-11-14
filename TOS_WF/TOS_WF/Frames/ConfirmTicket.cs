@@ -44,6 +44,11 @@ namespace TOS_WF.Frames
 
         }
 
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+
+        }
+
         //private void btnConfirm_Click(object sender, EventArgs e)
         //{
         //    lblTotal.Text = new TicketDAO().calculateTotalPrice(ticket_id) + " VND";

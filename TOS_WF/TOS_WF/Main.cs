@@ -192,6 +192,7 @@ namespace TOS_WF
             frmRoom = new frmRoom(sche_Id, Room_Name);
             frmRoom.MdiParent = this;
             frmRoom.pbNext.Click += new EventHandler(this.btnNext_Click);
+            frmRoom.pbBack.Click += new EventHandler(this.btnBack_Click);
             frmRoom.Show();
         }
         /**
@@ -248,8 +249,14 @@ namespace TOS_WF
             frmConfirmTicket.lblSchedule.Text = sche_Name;
             frmConfirmTicket.lblFname.Text = F_Name;
             frmConfirmTicket.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
+            frmConfirmTicket.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             frmConfirmTicket.Show();
 
+        }
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            frmRoom.Visible = false;
+            frmSchedule.Show();
         }
 
         /**
@@ -311,6 +318,11 @@ namespace TOS_WF
             TicketN.lblFName.Text = F_Name;
             TicketN.Show();
 
+        }
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            frmConfirmTicket.Visible = false;
+            frmRoom.Show();
         }
         /**
          * Click chọn lịch chiếu

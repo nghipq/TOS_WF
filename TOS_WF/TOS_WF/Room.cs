@@ -139,9 +139,6 @@ namespace TOS_WF
 
         }
 
-        private void btnNext_Click(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

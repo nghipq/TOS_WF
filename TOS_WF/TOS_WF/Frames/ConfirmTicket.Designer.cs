@@ -29,7 +29,9 @@
         private void InitializeComponent()
         {
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
-            this.button1 = new System.Windows.Forms.Button();
+            this.lblBillId = new System.Windows.Forms.Label();
+            this.lblFname = new System.Windows.Forms.Label();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.lbl = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
@@ -42,8 +44,6 @@
             this.lbl3 = new System.Windows.Forms.Label();
             this.lbl2 = new System.Windows.Forms.Label();
             this.lbl1 = new System.Windows.Forms.Label();
-            this.lblFname = new System.Windows.Forms.Label();
-            this.lblBillId = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             this.SuspendLayout();
@@ -52,7 +52,7 @@
             // 
             this.panelControl2.Controls.Add(this.lblBillId);
             this.panelControl2.Controls.Add(this.lblFname);
-            this.panelControl2.Controls.Add(this.button1);
+            this.panelControl2.Controls.Add(this.btnCancel);
             this.panelControl2.Controls.Add(this.btnConfirm);
             this.panelControl2.Controls.Add(this.lbl);
             this.panelControl2.Controls.Add(this.lblTotal);
@@ -71,17 +71,36 @@
             this.panelControl2.Size = new System.Drawing.Size(991, 635);
             this.panelControl2.TabIndex = 1;
             // 
-            // button1
+            // lblBillId
             // 
-            this.button1.BackColor = System.Drawing.Color.Red;
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(76, 526);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(286, 45);
-            this.button1.TabIndex = 29;
-            this.button1.Text = "Hủy";
-            this.button1.UseVisualStyleBackColor = false;
+            this.lblBillId.AutoSize = true;
+            this.lblBillId.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBillId.Location = new System.Drawing.Point(348, 154);
+            this.lblBillId.Name = "lblBillId";
+            this.lblBillId.Size = new System.Drawing.Size(0, 20);
+            this.lblBillId.TabIndex = 31;
+            // 
+            // lblFname
+            // 
+            this.lblFname.AutoSize = true;
+            this.lblFname.Font = new System.Drawing.Font("Nirmala UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFname.Location = new System.Drawing.Point(104, 48);
+            this.lblFname.Name = "lblFname";
+            this.lblFname.Size = new System.Drawing.Size(0, 50);
+            this.lblFname.TabIndex = 30;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.Color.Red;
+            this.btnCancel.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.Location = new System.Drawing.Point(76, 526);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(286, 45);
+            this.btnCancel.TabIndex = 29;
+            this.btnCancel.Text = "Hủy";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnConfirm
             // 
@@ -200,24 +219,6 @@
             this.lbl1.TabIndex = 13;
             this.lbl1.Text = "Tên rạp:";
             // 
-            // lblFname
-            // 
-            this.lblFname.AutoSize = true;
-            this.lblFname.Font = new System.Drawing.Font("Nirmala UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFname.Location = new System.Drawing.Point(104, 48);
-            this.lblFname.Name = "lblFname";
-            this.lblFname.Size = new System.Drawing.Size(0, 50);
-            this.lblFname.TabIndex = 30;
-            // 
-            // lblBillId
-            // 
-            this.lblBillId.AutoSize = true;
-            this.lblBillId.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBillId.Location = new System.Drawing.Point(348, 154);
-            this.lblBillId.Name = "lblBillId";
-            this.lblBillId.Size = new System.Drawing.Size(0, 20);
-            this.lblBillId.TabIndex = 31;
-            // 
             // ConfirmTicket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -242,7 +243,7 @@
         private System.Windows.Forms.Label lbl2;
         private System.Windows.Forms.Label lbl1;
         public System.Windows.Forms.Button btnConfirm;
-        public System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Button btnCancel;
         public System.Windows.Forms.Label lblCinema;
         public System.Windows.Forms.Label lblTotal;
         public System.Windows.Forms.Label lblSeat;
