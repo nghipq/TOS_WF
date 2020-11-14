@@ -301,6 +301,7 @@ namespace TOS_WF
             {
                 bd.CreateBillDetail(Convert.ToInt32(item), getvalue);
                 str1 += item + " ";
+                new TicketDAO().changeStatusTicket(Convert.ToInt32(item));
             });
 
             

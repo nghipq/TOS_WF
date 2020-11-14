@@ -78,6 +78,25 @@ namespace TOS_WF.DAO
             conn.Close();
             return maxprice;
         }
+        public int changeStatusTicket(int id_T)
+        {
+            string sql = "UPDATE `Ticket` SET `Status`=@Status WHERE `id_T`= @id_T";
+            using (conn)
+            {
+                MySqlCommand command = new MySqlCommand(sql, conn);
+                //command.Connection = conn;
+                conn.Open();
+                //MySqlDataReader md = command.ExecuteReader();
+
+                command.Parameters.AddWithValue("@Status", 0);
+                command.Parameters.AddWithValue("@id_T", id_T);
+
+                int result = command.ExecuteNonQuery();
+                conn.Close();
+                return result;
+            }
+
+        }
 
 
         public int calculateTotalPrice(string tIds)
