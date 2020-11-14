@@ -64,7 +64,7 @@ namespace TOS_WF
             if (isLogin)
             {
                 frmLogin.Visible = false;
-                Load_Cinema(1);
+                Load_Cinema(id_C);
                 Load_Dates();
                 Load_FilmsScreen();
                 Load_Films(0);
@@ -86,7 +86,13 @@ namespace TOS_WF
          */
         public void Load_Films(int dayIndex)
         {
-            frmFilms.FilmsList.DataSource = dates[dayIndex].films;
+            try
+            {
+                frmFilms.FilmsList.DataSource = dates[dayIndex].films;
+            } catch (Exception e)
+            {
+
+            }
         }
 
         /**
@@ -149,6 +155,7 @@ namespace TOS_WF
             frmAreas.MdiParent = this;
             frmAreas.cbArea.DataSource = new AreaDAO().getAllArea();
             frmAreas.cbArea.SelectedIndexChanged += new EventHandler(this.cbCinema_SelectedIndexChanged);
+            frmAreas.btnSubmit.Click += new EventHandler(this.btnSubmit_Click);
             frmAreas.Show();
         }
         public void cbCinema_SelectedIndexChanged(object sender, EventArgs e)
@@ -156,15 +163,17 @@ namespace TOS_WF
             A_id = Convert.ToInt32(frmAreas.cbArea.SelectedValue);
             frmAreas.cbCinema.Text = "";
             frmAreas.cbCinema.DataSource = new CinemaDAO().GetAllCinemasByAId(A_id);
-            id_C = Convert.ToInt32(frmAreas.cbCinema.SelectedValue);
-            frmAreas.btnSubmit.Click += new EventHandler(this.btnSubmit_Click);
             frmAreas.btnSubmit.Enabled = true;
         }
+
         public void btnSubmit_Click(object sender, EventArgs e)
         {
-            
+            id_C = Convert.ToInt32(frmAreas.cbCinema.SelectedValue);
+
+            Console.WriteLine(id_C);
             Login();
         }
+
         public void Login()
         {
             frmLogin = new Login();
@@ -172,6 +181,7 @@ namespace TOS_WF
             frmLogin.btnLogin.Click += new EventHandler(this.btnLogin_Click);
             frmLogin.Show();
         }
+
         public void LoadRoom(int sche_Id, string Room_Name)
         {
             frmSchedule.Visible = false;
