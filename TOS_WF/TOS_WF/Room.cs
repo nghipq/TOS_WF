@@ -77,7 +77,7 @@ namespace TOS_WF
                     
                     if(t[j * col + z].Status == 0)
                     {
-                        btn[j * col + z].BackColor = Color.Gray;//ghe co gia dac biet
+                        btn[j * col + z].BackColor = Color.Gray;//ghe da duoc chon
                         btn[j * col + z].Enabled = false;//ghe da duoc chon
                     }
 

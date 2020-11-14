@@ -255,6 +255,8 @@ namespace TOS_WF
         }
         private void btnBack_Click(object sender, EventArgs e)
         {
+            strl.Clear();
+            ticketID.Clear();
             frmRoom.Visible = false;
             frmSchedule.Show();
         }
@@ -267,9 +269,7 @@ namespace TOS_WF
             TileView tileView = sender as TileView;
             id_F = Convert.ToInt32(tileView.GetRowCellValue(tileView.FocusedRowHandle, "id_F").ToString());
             F_Name = tileView.GetRowCellValue(tileView.FocusedRowHandle, "F_Name").ToString();
-
             int filmsIndex = dates[dayIndex].films.FindIndex(item => item.id_F == id_F);
-
             Load_ScheduleScreen();
             Load_Schedules(dayIndex, filmsIndex);
         }
