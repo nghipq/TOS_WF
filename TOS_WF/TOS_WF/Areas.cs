@@ -19,6 +19,8 @@ namespace TOS_WF
             this.TopMost = true;
             this.FormBorderStyle = FormBorderStyle.Fixed3D;
             this.WindowState = FormWindowState.Maximized;
+            panel2.BackColor = Color.FromArgb(25, Color.Black);
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
         }
 
         private void gridControl1_Click(object sender, EventArgs e)

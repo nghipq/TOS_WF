@@ -33,13 +33,6 @@ namespace TOS_WF.Frames
             //tinh tong tien
             lblTotal.Text= new TicketDAO().calculateTotalPrice(ticket_id) + " VND";
             //lblCinema.Text = new FilmDAO().getFilmById(id_F).ToString();
-            BillDAO bill = new BillDAO();
-            bill.CreateBill(1, 1, lblTotal.Text);
-            this.Visible = false;
-            int getvalue = bill.getMaxIdBill();
-            BillDetailDAO bd = new BillDetailDAO();
-            bd.CreateBillDetail(1, getvalue);
-            this.Visible = false;
         }
         private void ConfirmTicket_Load(object sender, EventArgs e)
         {

@@ -326,6 +326,7 @@
     <Content Include="images\poster\WonderWomen.jpg" />
     <Content Include="images\static\1.jpg" />
     <Content Include="images\static\anime-bg.jpg" />
+    <None Include="images\static\Background.jpg" />
     <Content Include="images\static\background.png" />
     <Content Include="images\static\bg-red.png" />
     <Content Include="images\static\do-nhat.jpg" />
