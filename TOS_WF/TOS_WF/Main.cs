@@ -37,10 +37,14 @@ namespace TOS_WF
         public int room_Id { get; set; }
         public string Room_Name { get; set; }
         public int billTotalPrice { get; set; }
+        public int id_F { get; set; }
+        public int id_B { get; set; }
+        public String F_Name { get; set; }
         public FilmList frmFilms { get; set; }
         public ScheduleList frmSchedule { get; set; }
         public frmRoom frmRoom { get; set; }
         public ConfirmTicket frmConfirmTicket { get; set; }
+
 
         public Login frmLogin { get; set; }
         public Areas frmAreas { get; set; }
@@ -169,8 +173,8 @@ namespace TOS_WF
         public void btnSubmit_Click(object sender, EventArgs e)
         {
             id_C = Convert.ToInt32(frmAreas.cbCinema.SelectedValue);
-
-            Console.WriteLine(id_C);
+            C_Name = frmAreas.cbCinema.Text;
+            Console.WriteLine(C_Name);
             Login();
         }
 
@@ -234,10 +238,15 @@ namespace TOS_WF
             {
                 str1 += item + " ";
             });
+            BillDAO bill = new BillDAO();
+            int getvalue = bill.getMaxIdBill();
             frmConfirmTicket = new ConfirmTicket(str, str1);
             frmConfirmTicket.MdiParent = this;
+            frmConfirmTicket.lblBillId.Text = getvalue.ToString(); 
+            frmConfirmTicket.lblCinema.Text = C_Name;
             frmConfirmTicket.lblRoom.Text = Room_Name;
             frmConfirmTicket.lblSchedule.Text = sche_Name;
+            frmConfirmTicket.lblFname.Text = F_Name;
             frmConfirmTicket.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             frmConfirmTicket.Show();
 
@@ -249,8 +258,10 @@ namespace TOS_WF
         private void Schedule_Load(object sender, EventArgs e)
         {
             TileView tileView = sender as TileView;
-            int fId = Convert.ToInt32(tileView.GetRowCellValue(tileView.FocusedRowHandle, "id_F").ToString());
-            int filmsIndex = dates[dayIndex].films.FindIndex(item => item.id_F == fId);
+            id_F = Convert.ToInt32(tileView.GetRowCellValue(tileView.FocusedRowHandle, "id_F").ToString());
+            F_Name = tileView.GetRowCellValue(tileView.FocusedRowHandle, "F_Name").ToString();
+
+            int filmsIndex = dates[dayIndex].films.FindIndex(item => item.id_F == id_F);
 
             Load_ScheduleScreen();
             Load_Schedules(dayIndex, filmsIndex);
@@ -271,14 +282,33 @@ namespace TOS_WF
                 str += item + " ";
             });
             //load idseat
+            
+
+            BillDAO bill = new BillDAO();
+            BillDetailDAO bd = new BillDetailDAO();
+            bill.CreateBill(1, 1, frmConfirmTicket.lblTotal.Text);
+            //this.Visible = false;
+            int getvalue = bill.getMaxIdBill();
+
             ticketID.ForEach(item =>
             {
+                bd.CreateBillDetail(Convert.ToInt32(item), getvalue);
                 str1 += item + " ";
             });
+
+            
+            
+            //this.Visible = false;
+
             Console.WriteLine(str);
             Console.WriteLine(str1);
             TicketN = new frmTicket(str, str1);
             TicketN.MdiParent = this;
+            TicketN.lblBillId.Text = getvalue.ToString();
+            TicketN.lblCinema.Text = C_Name;
+            TicketN.lblRoom.Text = Room_Name;
+            TicketN.lblSchedule.Text = sche_Name;
+            TicketN.lblFName.Text = F_Name;
             TicketN.Show();
 
         }

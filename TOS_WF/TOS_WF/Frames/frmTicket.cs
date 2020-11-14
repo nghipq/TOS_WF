@@ -36,5 +36,10 @@ namespace TOS_WF.Frames
         {
 
         }
+
+        private void pnlContent_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

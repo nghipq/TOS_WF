@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Areas));
             this.cinemaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.cinemaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.areaBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -66,19 +65,22 @@
             this.panel2.Controls.Add(this.lblArea);
             this.panel2.Controls.Add(this.cbCinema);
             this.panel2.Controls.Add(this.cbArea);
-            this.panel2.Location = new System.Drawing.Point(666, 259);
+            this.panel2.Location = new System.Drawing.Point(358, 123);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(557, 275);
+            this.panel2.Size = new System.Drawing.Size(477, 296);
             this.panel2.TabIndex = 1;
             // 
             // btnSubmit
             // 
-            this.btnSubmit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnSubmit.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnSubmit.Enabled = false;
-            this.btnSubmit.Font = new System.Drawing.Font("OCR A Extended", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubmit.Location = new System.Drawing.Point(187, 208);
+            this.btnSubmit.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubmit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnSubmit.Location = new System.Drawing.Point(128, 220);
+            this.btnSubmit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(221, 43);
+            this.btnSubmit.Size = new System.Drawing.Size(245, 48);
             this.btnSubmit.TabIndex = 5;
             this.btnSubmit.Text = "SUBMIT";
             this.btnSubmit.UseVisualStyleBackColor = false;
@@ -88,31 +90,35 @@
             // 
             this.lblChoose.AutoSize = true;
             this.lblChoose.BackColor = System.Drawing.Color.Transparent;
-            this.lblChoose.Font = new System.Drawing.Font("OCR A Extended", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblChoose.ForeColor = System.Drawing.Color.Red;
-            this.lblChoose.Location = new System.Drawing.Point(118, 17);
+            this.lblChoose.Font = new System.Drawing.Font("Nirmala UI", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChoose.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lblChoose.Location = new System.Drawing.Point(101, 14);
             this.lblChoose.Name = "lblChoose";
-            this.lblChoose.Size = new System.Drawing.Size(343, 41);
+            this.lblChoose.Size = new System.Drawing.Size(272, 47);
             this.lblChoose.TabIndex = 4;
             this.lblChoose.Text = "Choose Cinema";
             // 
             // lblCinema
             // 
             this.lblCinema.AutoSize = true;
-            this.lblCinema.Font = new System.Drawing.Font("OCR A Extended", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCinema.Location = new System.Drawing.Point(22, 146);
+            this.lblCinema.BackColor = System.Drawing.Color.Transparent;
+            this.lblCinema.Font = new System.Drawing.Font("Nirmala UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCinema.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lblCinema.Location = new System.Drawing.Point(19, 144);
             this.lblCinema.Name = "lblCinema";
-            this.lblCinema.Size = new System.Drawing.Size(115, 30);
+            this.lblCinema.Size = new System.Drawing.Size(96, 32);
             this.lblCinema.TabIndex = 3;
             this.lblCinema.Text = "Cinema";
             // 
             // lblArea
             // 
             this.lblArea.AutoSize = true;
-            this.lblArea.Font = new System.Drawing.Font("OCR A Extended", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblArea.Location = new System.Drawing.Point(22, 79);
+            this.lblArea.BackColor = System.Drawing.Color.Transparent;
+            this.lblArea.Font = new System.Drawing.Font("Nirmala UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblArea.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lblArea.Location = new System.Drawing.Point(19, 93);
             this.lblArea.Name = "lblArea";
-            this.lblArea.Size = new System.Drawing.Size(81, 30);
+            this.lblArea.Size = new System.Drawing.Size(63, 32);
             this.lblArea.TabIndex = 2;
             this.lblArea.Text = "Area";
             // 
@@ -121,11 +127,12 @@
             this.cbCinema.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.cinemaBindingSource1, "Id_C", true));
             this.cbCinema.DataSource = this.cinemaBindingSource;
             this.cbCinema.DisplayMember = "C_Name";
-            this.cbCinema.Font = new System.Drawing.Font("OCR A Extended", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbCinema.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCinema.FormattingEnabled = true;
-            this.cbCinema.Location = new System.Drawing.Point(149, 152);
+            this.cbCinema.Location = new System.Drawing.Point(128, 151);
+            this.cbCinema.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbCinema.Name = "cbCinema";
-            this.cbCinema.Size = new System.Drawing.Size(375, 32);
+            this.cbCinema.Size = new System.Drawing.Size(322, 33);
             this.cbCinema.TabIndex = 1;
             this.cbCinema.ValueMember = "Id_C";
             this.cbCinema.SelectedIndexChanged += new System.EventHandler(this.cbCinema_SelectedIndexChanged);
@@ -135,22 +142,24 @@
             this.cbArea.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.areaBindingSource, "A_Id", true));
             this.cbArea.DataSource = this.areaBindingSource;
             this.cbArea.DisplayMember = "A_Name";
-            this.cbArea.Font = new System.Drawing.Font("OCR A Extended", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbArea.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbArea.FormattingEnabled = true;
-            this.cbArea.Location = new System.Drawing.Point(149, 87);
+            this.cbArea.Location = new System.Drawing.Point(128, 93);
+            this.cbArea.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbArea.Name = "cbArea";
-            this.cbArea.Size = new System.Drawing.Size(375, 32);
+            this.cbArea.Size = new System.Drawing.Size(322, 33);
             this.cbArea.TabIndex = 0;
             this.cbArea.ValueMember = "A_Id";
             // 
             // Areas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Tile;
-            this.BackgroundImageStore = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImageStore")));
-            this.ClientSize = new System.Drawing.Size(1256, 620);
+            this.BackgroundImageStore = global::TOS_WF.Properties.Resources.Background;
+            this.ClientSize = new System.Drawing.Size(1077, 504);
             this.Controls.Add(this.panel2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Areas";
             this.Text = "Area";
             this.Load += new System.EventHandler(this.Areas_Load);

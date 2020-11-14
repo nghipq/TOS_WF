@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.pnlContent = new DevExpress.XtraEditors.PanelControl();
-            this.lblFilm = new System.Windows.Forms.Label();
-            this.lblUser = new System.Windows.Forms.Label();
+            this.lblFName = new System.Windows.Forms.Label();
+            this.lblBillId = new System.Windows.Forms.Label();
             this.lbl = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
             this.lblSeat = new System.Windows.Forms.Label();
@@ -55,8 +55,8 @@
             this.pnlContent.Appearance.BackColor = System.Drawing.Color.White;
             this.pnlContent.Appearance.Options.UseBackColor = true;
             this.pnlContent.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.pnlContent.Controls.Add(this.lblFilm);
-            this.pnlContent.Controls.Add(this.lblUser);
+            this.pnlContent.Controls.Add(this.lblFName);
+            this.pnlContent.Controls.Add(this.lblBillId);
             this.pnlContent.Controls.Add(this.lbl);
             this.pnlContent.Controls.Add(this.lblTotal);
             this.pnlContent.Controls.Add(this.lblSeat);
@@ -74,27 +74,26 @@
             this.pnlContent.Name = "pnlContent";
             this.pnlContent.Size = new System.Drawing.Size(1137, 495);
             this.pnlContent.TabIndex = 1;
+            this.pnlContent.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlContent_Paint);
             // 
-            // lblFilm
+            // lblFName
             // 
-            this.lblFilm.AutoSize = true;
-            this.lblFilm.Font = new System.Drawing.Font("Times New Roman", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFilm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblFilm.Location = new System.Drawing.Point(71, 67);
-            this.lblFilm.Name = "lblFilm";
-            this.lblFilm.Size = new System.Drawing.Size(289, 45);
-            this.lblFilm.TabIndex = 13;
-            this.lblFilm.Text = "Day la ten phim";
+            this.lblFName.AutoSize = true;
+            this.lblFName.Font = new System.Drawing.Font("Times New Roman", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblFName.Location = new System.Drawing.Point(71, 67);
+            this.lblFName.Name = "lblFName";
+            this.lblFName.Size = new System.Drawing.Size(0, 45);
+            this.lblFName.TabIndex = 13;
             // 
-            // lblUser
+            // lblBillId
             // 
-            this.lblUser.AutoSize = true;
-            this.lblUser.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUser.Location = new System.Drawing.Point(345, 172);
-            this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(62, 21);
-            this.lblUser.TabIndex = 12;
-            this.lblUser.Text = "Xu Kai";
+            this.lblBillId.AutoSize = true;
+            this.lblBillId.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBillId.Location = new System.Drawing.Point(345, 172);
+            this.lblBillId.Name = "lblBillId";
+            this.lblBillId.Size = new System.Drawing.Size(0, 21);
+            this.lblBillId.TabIndex = 12;
             // 
             // lbl
             // 
@@ -102,9 +101,9 @@
             this.lbl.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl.Location = new System.Drawing.Point(75, 169);
             this.lbl.Name = "lbl";
-            this.lbl.Size = new System.Drawing.Size(134, 25);
+            this.lbl.Size = new System.Drawing.Size(89, 25);
             this.lbl.TabIndex = 11;
-            this.lbl.Text = "Khách hàng:";
+            this.lbl.Text = "Mã Bill:";
             // 
             // lblTotal
             // 
@@ -130,9 +129,8 @@
             this.lblRoom.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRoom.Location = new System.Drawing.Point(345, 352);
             this.lblRoom.Name = "lblRoom";
-            this.lblRoom.Size = new System.Drawing.Size(19, 21);
+            this.lblRoom.Size = new System.Drawing.Size(0, 21);
             this.lblRoom.TabIndex = 8;
-            this.lblRoom.Text = "3";
             // 
             // lblSchedule
             // 
@@ -140,9 +138,8 @@
             this.lblSchedule.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSchedule.Location = new System.Drawing.Point(345, 292);
             this.lblSchedule.Name = "lblSchedule";
-            this.lblSchedule.Size = new System.Drawing.Size(97, 21);
+            this.lblSchedule.Size = new System.Drawing.Size(0, 21);
             this.lblSchedule.TabIndex = 7;
-            this.lblSchedule.Text = "8:00 - 10:00";
             // 
             // lblCinema
             // 
@@ -150,9 +147,8 @@
             this.lblCinema.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCinema.Location = new System.Drawing.Point(345, 232);
             this.lblCinema.Name = "lblCinema";
-            this.lblCinema.Size = new System.Drawing.Size(169, 21);
+            this.lblCinema.Size = new System.Drawing.Size(0, 21);
             this.lblCinema.TabIndex = 6;
-            this.lblCinema.Text = "Vincom Hùng Vương";
             // 
             // lbl5
             // 
@@ -238,14 +234,14 @@
         private System.Windows.Forms.Label lbl1;
         private System.Windows.Forms.Label lbl5;
         private System.Windows.Forms.Label lbl4;
-        private System.Windows.Forms.Label lblTotal;
-        private System.Windows.Forms.Label lblSeat;
-        private System.Windows.Forms.Label lblRoom;
-        private System.Windows.Forms.Label lblSchedule;
-        private System.Windows.Forms.Label lblCinema;
-        private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.Label lbl;
-        private System.Windows.Forms.Label lblFilm;
         public DevExpress.XtraEditors.PanelControl pnlContent;
+        public System.Windows.Forms.Label lblRoom;
+        public System.Windows.Forms.Label lblSchedule;
+        public System.Windows.Forms.Label lblCinema;
+        public System.Windows.Forms.Label lblBillId;
+        public System.Windows.Forms.Label lblTotal;
+        public System.Windows.Forms.Label lblSeat;
+        public System.Windows.Forms.Label lblFName;
     }
 }

@@ -31,8 +31,6 @@
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.button1 = new System.Windows.Forms.Button();
             this.btnConfirm = new System.Windows.Forms.Button();
-            this.txtFname = new System.Windows.Forms.Label();
-            this.txtName_U = new System.Windows.Forms.TextBox();
             this.lbl = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
             this.lblSeat = new System.Windows.Forms.Label();
@@ -44,16 +42,18 @@
             this.lbl3 = new System.Windows.Forms.Label();
             this.lbl2 = new System.Windows.Forms.Label();
             this.lbl1 = new System.Windows.Forms.Label();
+            this.lblFname = new System.Windows.Forms.Label();
+            this.lblBillId = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelControl2
             // 
+            this.panelControl2.Controls.Add(this.lblBillId);
+            this.panelControl2.Controls.Add(this.lblFname);
             this.panelControl2.Controls.Add(this.button1);
             this.panelControl2.Controls.Add(this.btnConfirm);
-            this.panelControl2.Controls.Add(this.txtFname);
-            this.panelControl2.Controls.Add(this.txtName_U);
             this.panelControl2.Controls.Add(this.lbl);
             this.panelControl2.Controls.Add(this.lblTotal);
             this.panelControl2.Controls.Add(this.lblSeat);
@@ -95,33 +95,15 @@
             this.btnConfirm.Text = "Thanh Toán";
             this.btnConfirm.UseVisualStyleBackColor = false;
             // 
-            // txtFname
-            // 
-            this.txtFname.AutoSize = true;
-            this.txtFname.Font = new System.Drawing.Font("Times New Roman", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFname.Location = new System.Drawing.Point(73, 78);
-            this.txtFname.Name = "txtFname";
-            this.txtFname.Size = new System.Drawing.Size(244, 45);
-            this.txtFname.TabIndex = 25;
-            this.txtFname.Text = "Tên Phim Nè";
-            this.txtFname.Click += new System.EventHandler(this.txtFname_Click);
-            // 
-            // txtName_U
-            // 
-            this.txtName_U.Location = new System.Drawing.Point(352, 158);
-            this.txtName_U.Name = "txtName_U";
-            this.txtName_U.Size = new System.Drawing.Size(328, 21);
-            this.txtName_U.TabIndex = 24;
-            // 
             // lbl
             // 
             this.lbl.AutoSize = true;
             this.lbl.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl.Location = new System.Drawing.Point(77, 151);
             this.lbl.Name = "lbl";
-            this.lbl.Size = new System.Drawing.Size(83, 24);
+            this.lbl.Size = new System.Drawing.Size(82, 24);
             this.lbl.TabIndex = 23;
-            this.lbl.Text = "Họ Tên:";
+            this.lbl.Text = "Mã Bill:";
             // 
             // lblTotal
             // 
@@ -147,9 +129,8 @@
             this.lblRoom.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRoom.Location = new System.Drawing.Point(348, 336);
             this.lblRoom.Name = "lblRoom";
-            this.lblRoom.Size = new System.Drawing.Size(19, 21);
+            this.lblRoom.Size = new System.Drawing.Size(0, 21);
             this.lblRoom.TabIndex = 20;
-            this.lblRoom.Text = "3";
             // 
             // lblSchedule
             // 
@@ -157,9 +138,8 @@
             this.lblSchedule.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSchedule.Location = new System.Drawing.Point(348, 275);
             this.lblSchedule.Name = "lblSchedule";
-            this.lblSchedule.Size = new System.Drawing.Size(97, 21);
+            this.lblSchedule.Size = new System.Drawing.Size(0, 21);
             this.lblSchedule.TabIndex = 19;
-            this.lblSchedule.Text = "8:00 - 10:00";
             // 
             // lblCinema
             // 
@@ -167,9 +147,8 @@
             this.lblCinema.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCinema.Location = new System.Drawing.Point(348, 214);
             this.lblCinema.Name = "lblCinema";
-            this.lblCinema.Size = new System.Drawing.Size(169, 21);
+            this.lblCinema.Size = new System.Drawing.Size(0, 21);
             this.lblCinema.TabIndex = 18;
-            this.lblCinema.Text = "Vincom Hùng Vương";
             // 
             // lbl5
             // 
@@ -221,6 +200,24 @@
             this.lbl1.TabIndex = 13;
             this.lbl1.Text = "Tên rạp:";
             // 
+            // lblFname
+            // 
+            this.lblFname.AutoSize = true;
+            this.lblFname.Font = new System.Drawing.Font("Nirmala UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFname.Location = new System.Drawing.Point(104, 48);
+            this.lblFname.Name = "lblFname";
+            this.lblFname.Size = new System.Drawing.Size(0, 50);
+            this.lblFname.TabIndex = 30;
+            // 
+            // lblBillId
+            // 
+            this.lblBillId.AutoSize = true;
+            this.lblBillId.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBillId.Location = new System.Drawing.Point(348, 154);
+            this.lblBillId.Name = "lblBillId";
+            this.lblBillId.Size = new System.Drawing.Size(0, 20);
+            this.lblBillId.TabIndex = 31;
+            // 
             // ConfirmTicket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -244,8 +241,6 @@
         private System.Windows.Forms.Label lbl3;
         private System.Windows.Forms.Label lbl2;
         private System.Windows.Forms.Label lbl1;
-        private System.Windows.Forms.TextBox txtName_U;
-        private System.Windows.Forms.Label txtFname;
         public System.Windows.Forms.Button btnConfirm;
         public System.Windows.Forms.Button button1;
         public System.Windows.Forms.Label lblCinema;
@@ -253,5 +248,7 @@
         public System.Windows.Forms.Label lblSeat;
         public System.Windows.Forms.Label lblRoom;
         public System.Windows.Forms.Label lblSchedule;
+        public System.Windows.Forms.Label lblFname;
+        public System.Windows.Forms.Label lblBillId;
     }
 }

@@ -22,6 +22,7 @@ namespace TOS_WF
             this.TopMost = true;
             this.FormBorderStyle = FormBorderStyle.Fixed3D;
             this.WindowState = FormWindowState.Maximized;
+            pnlLogin.BackColor = Color.FromArgb(25, Color.Black);
             this.pnlLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
             txtPassword.PasswordChar = '*';
         }
