@@ -6,6 +6,7 @@ using DevExpress.UserSkins;
 using DevExpress.Skins;
 using DevExpress.LookAndFeel;
 using TOS_WF.DAO;
+using TOS_WF.Frames;
 
 namespace TOS_WF
 {

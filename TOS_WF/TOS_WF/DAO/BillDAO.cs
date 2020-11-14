@@ -17,7 +17,7 @@ namespace TOS_WF.DAO
             this.conn = new DBConnection.DBConnection().conn;
         }
 
-        public int CreateBill(int id_Cus, int id_Staff, long Total)
+        public int CreateBill(int id_Cus, int id_Staff, string Total)
         {
             int result = 0;
             using (conn)
@@ -44,7 +44,26 @@ namespace TOS_WF.DAO
             }
             conn.Close();
 
-            return result;
+
+            return getMaxIdBill();
+        }
+        public int getMaxIdBill()
+        {
+            int getvalue = 0;
+            string sql = "SELECT MAX(id_B) as id_B FROM Bill";
+            using (conn)
+            {
+                MySqlCommand command = new MySqlCommand(sql, conn);
+                //command.Connection = conn;
+                conn.Open();
+                MySqlDataReader md = command.ExecuteReader();
+                if (md.Read())
+                {
+                    getvalue = Convert.ToInt32(md["id_B"]);
+                }
+            }
+            conn.Close();
+            return getvalue;
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using DevExpress.Utils.Extensions;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -61,7 +62,7 @@ namespace TOS_WF.DAO
             int maxprice = 0;
             using (conn)
             {
-                string query = "SELECT T_Price FROM `ticket` WHERE id_T=@id_T";
+                string query = "SELECT T_Price FROM `Ticket` WHERE id_T=@id_T";
 
                 MySqlCommand command = new MySqlCommand(query);
                 command.Connection = conn;
@@ -69,7 +70,7 @@ namespace TOS_WF.DAO
                 command.Parameters.AddWithValue("@id_T", id_T);
                 MySqlDataReader md = command.ExecuteReader();
                 if (md.Read()) { 
-                maxprice = Convert.ToInt32(md["T_Price"]);
+                maxprice += Convert.ToInt32(md["T_Price"]);
                 }
 
             }
@@ -79,5 +80,26 @@ namespace TOS_WF.DAO
         }
 
 
+        public int calculateTotalPrice(string tIds)
+        {
+            int rs = 0;
+
+            //foreach(
+            //    string tId in tIds
+            //)
+            //{
+            //    Console.WriteLine(tId);
+            //};
+            string[] tIdList = tIds.Split(' ');
+            tIdList = tIdList.Reverse().Skip(1).Reverse().ToArray();
+            foreach (
+                string tId in tIdList
+            )
+            {
+
+                rs += GetMaxValue(Convert.ToInt32(tId));
+            }
+            return rs;
+        }
     }
 }

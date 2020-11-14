@@ -36,6 +36,7 @@
             this.pnlRoomSeat = new System.Windows.Forms.Panel();
             this.lblScreen = new System.Windows.Forms.Label();
             this.pnlSeat = new System.Windows.Forms.FlowLayoutPanel();
+            this.lblRoom = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbNext)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBack)).BeginInit();
@@ -87,6 +88,7 @@
             // pnlRoomSeat
             // 
             this.pnlRoomSeat.BackColor = System.Drawing.Color.White;
+            this.pnlRoomSeat.Controls.Add(this.lblRoom);
             this.pnlRoomSeat.Controls.Add(this.lblScreen);
             this.pnlRoomSeat.Controls.Add(this.pnlSeat);
             this.pnlRoomSeat.Location = new System.Drawing.Point(72, 26);
@@ -113,6 +115,15 @@
             this.pnlSeat.Size = new System.Drawing.Size(684, 494);
             this.pnlSeat.TabIndex = 0;
             // 
+            // lblRoom
+            // 
+            this.lblRoom.AutoSize = true;
+            this.lblRoom.Location = new System.Drawing.Point(59, 38);
+            this.lblRoom.Name = "lblRoom";
+            this.lblRoom.Size = new System.Drawing.Size(57, 17);
+            this.lblRoom.TabIndex = 6;
+            this.lblRoom.Text = "lblRoom";
+            // 
             // frmRoom
             // 
             this.Appearance.BackColor = System.Drawing.Color.Firebrick;
@@ -138,11 +149,12 @@
 
         #endregion
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pbNext;
         private System.Windows.Forms.PictureBox pbBack;
         private System.Windows.Forms.TextBox txtShowSeat;
         private System.Windows.Forms.Panel pnlRoomSeat;
         private System.Windows.Forms.Label lblScreen;
         private System.Windows.Forms.FlowLayoutPanel pnlSeat;
+        public System.Windows.Forms.PictureBox pbNext;
+        private System.Windows.Forms.Label lblRoom;
     }
 }

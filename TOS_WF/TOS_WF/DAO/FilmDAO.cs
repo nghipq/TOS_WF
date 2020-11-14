@@ -65,6 +65,33 @@ namespace TOS_WF.DAO
 
             return Flist;
         }
+        public Films getFilmById(int id_F)
+        {
+            Films film = null;
+            using (conn)
+            {
+                string query = "SELECT `F_Name` FROM `films` WHERE id_F=@id_F";
+
+                MySqlCommand command = new MySqlCommand(query);
+                command.Connection = conn;
+                conn.Open();
+                command.Parameters.AddWithValue("@id_F", id_F);
+                MySqlDataReader dr = command.ExecuteReader();
+                if (dr.Read())
+                {
+
+                    film = new Films
+                    {
+                        id_F = id_F,
+                        F_Name = dr["F_Name"].ToString()
+                    };
+                }
+
+            }
+
+            conn.Close();
+            return film;
+        }
 
         public List<Films> getFilmByCinemaAndDate(int id_C, DateTime date)
         {

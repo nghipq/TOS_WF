@@ -14,24 +14,16 @@ namespace TOS_WF
 {
     public partial class Login : DevExpress.XtraEditors.XtraForm
     {
+        public string username { get; set; }
+        public string password { get; set; }
         public Login()
         {
             InitializeComponent();
+            this.TopMost = true;
+            this.FormBorderStyle = FormBorderStyle.Fixed3D;
+            this.WindowState = FormWindowState.Maximized;
             this.pnlLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
             txtPassword.PasswordChar = '*';
-        }
-
-        private void btnLogin_Click(object sender, EventArgs e)
-        {
-            
-            LoginDAO ldao = new LoginDAO();
-            Theater theater = new Theater(1);
-            bool isLogin = ldao.Login(txtUsername.Text, txtPassword.Text);
-            if (isLogin)
-            {
-                this.Visible = false;
-                theater.Visible = true;
-            }
         }
     }
 }

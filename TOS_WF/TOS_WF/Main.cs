@@ -17,24 +17,58 @@ namespace TOS_WF
 {
     public partial class Main : DevExpress.XtraEditors.XtraForm
     {
+       
         List<DateSchedule> dates = new List<DateSchedule>();
+        public static List<string> strl = new List<string>();
+        public static List<string> ticketID = new List<string>();
+        public static List<string> CinemaId = new List<string>();
+        public int A_id { get; set; }
+        public string username { get; set; }
+        public string password { get; set; }
+        public int Sche_id { get; set; }
         public int id_C { get; set; }
+        public string C_Name { get; set; }
         public int id_Cus { get; set; }
         public int id_Staff { get; set; }
         public int dayIndex { get; set; }
         public int filmsIndex { get; set; }
-        public int sche_Id{ get; set; }
+        public int sche_Id { get; set; }
+        public string sche_Name { get; set; }
         public int room_Id { get; set; }
-        public string Choose_Seat { get; set; }
-        public string Choose_SeatId { get; set; }
+        public string Room_Name { get; set; }
         public int billTotalPrice { get; set; }
         public FilmList frmFilms { get; set; }
         public ScheduleList frmSchedule { get; set; }
         public frmRoom frmRoom { get; set; }
+        public ConfirmTicket frmConfirmTicket { get; set; }
+
+        public Login frmLogin { get; set; }
+        public Areas frmAreas { get; set; }
+
+        public frmTicket TicketN { get; set; }
 
         public Main()
         {
             InitializeComponent();
+        }
+        /**
+         * Sự kiện ấn vào nút đăng nhập
+         */
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+
+            LoginDAO ldao = new LoginDAO();
+            //Theater theater = new Theater(1);
+            bool isLogin = ldao.Login(username, password);
+            Console.WriteLine(isLogin);
+            if (isLogin)
+            {
+                frmLogin.Visible = false;
+                Load_Cinema(1);
+                Load_Dates();
+                Load_FilmsScreen();
+                Load_Films(0);
+            }
         }
 
         /*Load dữ liệu*/
@@ -60,11 +94,11 @@ namespace TOS_WF
          */
         public void Load_Schedules(int dayIndex, int filmsIndex)
         {
-            
+
             frmSchedule.SchedulesList.DataSource = dates[dayIndex].films[filmsIndex].Schedules;
-            frmSchedule.scheduleItem.Click += new EventHandler(this.Load_Booking); 
+            frmSchedule.scheduleItem.Click += new EventHandler(this.Load_Booking);
         }
-        
+
         /*Tạo giao diện*/
 
         /**
@@ -109,9 +143,45 @@ namespace TOS_WF
             frmFilms.filmItem.Click += new EventHandler(this.Schedule_Load);
             frmFilms.Show();
         }
-
+        public void LoadAreas()
+        {
+            frmAreas = new Areas();
+            frmAreas.MdiParent = this;
+            frmAreas.cbArea.DataSource = new AreaDAO().getAllArea();
+            frmAreas.cbArea.SelectedIndexChanged += new EventHandler(this.cbCinema_SelectedIndexChanged);
+            frmAreas.Show();
+        }
+        public void cbCinema_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            A_id = Convert.ToInt32(frmAreas.cbArea.SelectedValue);
+            frmAreas.cbCinema.Text = "";
+            frmAreas.cbCinema.DataSource = new CinemaDAO().GetAllCinemasByAId(A_id);
+            id_C = Convert.ToInt32(frmAreas.cbCinema.SelectedValue);
+            frmAreas.btnSubmit.Click += new EventHandler(this.btnSubmit_Click);
+            frmAreas.btnSubmit.Enabled = true;
+        }
+        public void btnSubmit_Click(object sender, EventArgs e)
+        {
+            
+            Login();
+        }
+        public void Login()
+        {
+            frmLogin = new Login();
+            frmLogin.MdiParent = this;
+            frmLogin.btnLogin.Click += new EventHandler(this.btnLogin_Click);
+            frmLogin.Show();
+        }
+        public void LoadRoom(int sche_Id, string Room_Name)
+        {
+            frmSchedule.Visible = false;
+            frmRoom = new frmRoom(sche_Id, Room_Name);
+            frmRoom.MdiParent = this;
+            frmRoom.pbNext.Click += new EventHandler(this.btnNext_Click);
+            frmRoom.Show();
+        }
         /**
-         * Tạo màng hình chọn suất chiếu
+         * Tạo màn hình chọn suất chiếu
          */
         public void Load_ScheduleScreen()
         {
@@ -135,6 +205,35 @@ namespace TOS_WF
         }
 
         /**
+          * Sự kiện chuyên qua trang xác nhận
+          */
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            ticketID = frmRoom.ticketID;
+            strl = frmRoom.strl;
+            frmRoom.Visible = false;
+            string str = "";
+            string str1 = "";
+            //load seat
+            strl.ForEach(item =>
+            {
+                str += item + " ";
+            });
+            //load idseat
+            ticketID.ForEach(item =>
+            {
+                str1 += item + " ";
+            });
+            frmConfirmTicket = new ConfirmTicket(str, str1);
+            frmConfirmTicket.MdiParent = this;
+            frmConfirmTicket.lblRoom.Text = Room_Name;
+            frmConfirmTicket.lblSchedule.Text = sche_Name;
+            frmConfirmTicket.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
+            frmConfirmTicket.Show();
+
+        }
+
+        /**
          * Click chọn phim
          */
         private void Schedule_Load(object sender, EventArgs e)
@@ -148,26 +247,47 @@ namespace TOS_WF
         }
 
         /**
+         *Click Thanh toan
+         */
+        private void btnConfirm_Click(object sender, EventArgs e)
+        {
+            
+            frmConfirmTicket.Visible = false;
+            string str = "";
+            string str1 = "";
+            //load seat
+            strl.ForEach(item =>
+            {
+                str += item + " ";
+            });
+            //load idseat
+            ticketID.ForEach(item =>
+            {
+                str1 += item + " ";
+            });
+            Console.WriteLine(str);
+            Console.WriteLine(str1);
+            TicketN = new frmTicket(str, str1);
+            TicketN.MdiParent = this;
+            TicketN.Show();
+
+        }
+        /**
          * Click chọn lịch chiếu
          */
         private void Load_Booking(object sender, EventArgs e)
         {
             TileView tileView = sender as TileView;
             sche_Id = Convert.ToInt32(tileView.GetRowCellValue(tileView.FocusedRowHandle, "id_Sche").ToString());
-
-            frmSchedule.Visible = false;
-            frmRoom = new frmRoom(sche_Id);
-            frmRoom.MdiParent = this;
-            frmRoom.Show();
+            sche_Name = tileView.GetRowCellValue(tileView.FocusedRowHandle, "StartTime").ToString();
+            Room_Name = new RoomDAO().getRoomById(Convert.ToInt32(tileView.GetRowCellValue(tileView.FocusedRowHandle, "id_R").ToString())).R_Name;
+            LoadRoom(sche_Id, Room_Name);
         }
+
 
         private void Main_Load(object sender, EventArgs e)
         {
-            Load_Cinema(1);       
-            Load_Dates();
-            Load_FilmsScreen();
-            Load_Films(0);
-            
+            LoadAreas();
         }
     }
 }
