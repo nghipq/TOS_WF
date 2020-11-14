@@ -18,7 +18,5 @@ namespace TOS_WF.DBConnection
 
             this.conn = new MySqlConnection(mainconn);
         }
-
-        public void 
     }
 }
