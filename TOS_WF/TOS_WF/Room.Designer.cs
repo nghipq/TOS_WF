@@ -105,7 +105,6 @@
             // 
             // panel1
             // 
-            this.panel1.BackgroundImage = global::TOS_WF.Properties.Resources.Untitled;
             this.panel1.Location = new System.Drawing.Point(29, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(950, 146);
@@ -134,8 +133,6 @@
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Tile;
-            this.BackgroundImageStore = global::TOS_WF.Properties.Resources.Background;
             this.ClientSize = new System.Drawing.Size(1263, 639);
             this.Controls.Add(this.pnlRoomSeat);
             this.Controls.Add(this.panel2);

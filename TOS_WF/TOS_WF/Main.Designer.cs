@@ -55,12 +55,13 @@
             // btnLogout
             // 
             this.btnLogout.BackColor = System.Drawing.Color.White;
-            this.btnLogout.Image = global::TOS_WF.Properties.Resources.logout_button;
-            this.btnLogout.Location = new System.Drawing.Point(1832, 11);
+            this.btnLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnLogout.ForeColor = System.Drawing.Color.White;
+            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
+            this.btnLogout.Location = new System.Drawing.Point(1824, 3);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(88, 32);
+            this.btnLogout.Size = new System.Drawing.Size(96, 40);
             this.btnLogout.TabIndex = 2;
-            this.btnLogout.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Visible = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
