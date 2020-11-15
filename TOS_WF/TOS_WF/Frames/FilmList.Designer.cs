@@ -75,38 +75,48 @@
             // colPicture
             // 
             this.colPicture.FieldName = "Picture";
+            this.colPicture.MinWidth = 23;
             this.colPicture.Name = "colPicture";
             this.colPicture.OptionsColumn.ReadOnly = true;
             this.colPicture.Visible = true;
             this.colPicture.VisibleIndex = 12;
+            this.colPicture.Width = 87;
             // 
             // colF_Name
             // 
             this.colF_Name.FieldName = "F_Name";
+            this.colF_Name.MinWidth = 23;
             this.colF_Name.Name = "colF_Name";
             this.colF_Name.Visible = true;
             this.colF_Name.VisibleIndex = 1;
+            this.colF_Name.Width = 87;
             // 
             // colF_Time
             // 
             this.colF_Time.FieldName = "F_Time";
+            this.colF_Time.MinWidth = 23;
             this.colF_Time.Name = "colF_Time";
             this.colF_Time.Visible = true;
             this.colF_Time.VisibleIndex = 13;
+            this.colF_Time.Width = 87;
             // 
             // colRating
             // 
             this.colRating.FieldName = "Rating";
+            this.colRating.MinWidth = 23;
             this.colRating.Name = "colRating";
             this.colRating.Visible = true;
             this.colRating.VisibleIndex = 5;
+            this.colRating.Width = 87;
             // 
             // colDescription
             // 
             this.colDescription.FieldName = "Description";
+            this.colDescription.MinWidth = 23;
             this.colDescription.Name = "colDescription";
             this.colDescription.Visible = true;
             this.colDescription.VisibleIndex = 9;
+            this.colDescription.Width = 87;
             // 
             // filmsBindingSource
             // 
@@ -118,8 +128,9 @@
             this.pnlLeft.ContentImage = global::TOS_WF.Properties.Resources.Background;
             this.pnlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlLeft.Location = new System.Drawing.Point(0, 0);
+            this.pnlLeft.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlLeft.Name = "pnlLeft";
-            this.pnlLeft.Size = new System.Drawing.Size(102, 429);
+            this.pnlLeft.Size = new System.Drawing.Size(119, 528);
             this.pnlLeft.TabIndex = 0;
             // 
             // pnlRight
@@ -127,19 +138,23 @@
             this.pnlRight.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pnlRight.ContentImage = global::TOS_WF.Properties.Resources.Background1;
             this.pnlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlRight.Location = new System.Drawing.Point(753, 0);
+            this.pnlRight.Location = new System.Drawing.Point(878, 0);
+            this.pnlRight.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlRight.Name = "pnlRight";
-            this.pnlRight.Size = new System.Drawing.Size(102, 429);
+            this.pnlRight.Size = new System.Drawing.Size(119, 528);
             this.pnlRight.TabIndex = 1;
             // 
             // FilmsList
             // 
             this.FilmsList.DataSource = this.filmsBindingSource;
             this.FilmsList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.FilmsList.Location = new System.Drawing.Point(102, 0);
+            this.FilmsList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.FilmsList.Font = new System.Drawing.Font("OCR A Extended", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FilmsList.Location = new System.Drawing.Point(119, 0);
             this.FilmsList.MainView = this.filmItem;
+            this.FilmsList.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.FilmsList.Name = "FilmsList";
-            this.FilmsList.Size = new System.Drawing.Size(651, 429);
+            this.FilmsList.Size = new System.Drawing.Size(759, 528);
             this.FilmsList.TabIndex = 2;
             this.FilmsList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.filmItem});
@@ -162,6 +177,7 @@
             this.colPicture,
             this.colF_Time,
             this.colF_Trailer});
+            this.filmItem.DetailHeight = 431;
             this.filmItem.GridControl = this.FilmsList;
             this.filmItem.Name = "filmItem";
             this.filmItem.OptionsTiles.GroupTextPadding = new System.Windows.Forms.Padding(12, 8, 12, 8);
@@ -207,7 +223,9 @@
             tileViewItemElement1.RowIndex = 2;
             tileViewItemElement1.Text = "colPicture";
             tileViewItemElement1.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            tileViewItemElement2.Appearance.Normal.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tileViewItemElement2.Appearance.Hovered.Font = new System.Drawing.Font("OCR A Extended", 7.8F);
+            tileViewItemElement2.Appearance.Hovered.Options.UseFont = true;
+            tileViewItemElement2.Appearance.Normal.Font = new System.Drawing.Font("OCR A Extended", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tileViewItemElement2.Appearance.Normal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             tileViewItemElement2.Appearance.Normal.Options.UseFont = true;
             tileViewItemElement2.Appearance.Normal.Options.UseForeColor = true;
@@ -218,7 +236,9 @@
             tileViewItemElement2.Text = "colF_Name";
             tileViewItemElement2.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleLeft;
             tileViewItemElement2.TextLocation = new System.Drawing.Point(10, 0);
-            tileViewItemElement3.Appearance.Normal.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tileViewItemElement3.Appearance.Hovered.Font = new System.Drawing.Font("OCR A Extended", 7.8F);
+            tileViewItemElement3.Appearance.Hovered.Options.UseFont = true;
+            tileViewItemElement3.Appearance.Normal.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tileViewItemElement3.Appearance.Normal.Options.UseFont = true;
             tileViewItemElement3.ColumnIndex = 1;
             tileViewItemElement3.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
@@ -227,7 +247,9 @@
             tileViewItemElement3.Text = "Thời Lượng";
             tileViewItemElement3.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleLeft;
             tileViewItemElement3.TextLocation = new System.Drawing.Point(10, 0);
-            tileViewItemElement4.Appearance.Normal.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tileViewItemElement4.Appearance.Hovered.Font = new System.Drawing.Font("OCR A Extended", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tileViewItemElement4.Appearance.Hovered.Options.UseFont = true;
+            tileViewItemElement4.Appearance.Normal.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tileViewItemElement4.Appearance.Normal.Options.UseFont = true;
             tileViewItemElement4.ColumnIndex = 1;
             tileViewItemElement4.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
@@ -236,7 +258,9 @@
             tileViewItemElement4.Text = "Đánh Giá";
             tileViewItemElement4.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleLeft;
             tileViewItemElement4.TextLocation = new System.Drawing.Point(10, 0);
-            tileViewItemElement5.Appearance.Normal.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tileViewItemElement5.Appearance.Hovered.Font = new System.Drawing.Font("OCR A Extended", 7.8F);
+            tileViewItemElement5.Appearance.Hovered.Options.UseFont = true;
+            tileViewItemElement5.Appearance.Normal.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tileViewItemElement5.Appearance.Normal.Options.UseFont = true;
             tileViewItemElement5.ColumnIndex = 1;
             tileViewItemElement5.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
@@ -245,7 +269,9 @@
             tileViewItemElement5.Text = "Nội Dung";
             tileViewItemElement5.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
             tileViewItemElement5.TextLocation = new System.Drawing.Point(10, 10);
-            tileViewItemElement6.Appearance.Normal.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tileViewItemElement6.Appearance.Hovered.Font = new System.Drawing.Font("OCR A Extended", 7.8F);
+            tileViewItemElement6.Appearance.Hovered.Options.UseFont = true;
+            tileViewItemElement6.Appearance.Normal.Font = new System.Drawing.Font("OCR A Extended", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tileViewItemElement6.Appearance.Normal.Options.UseFont = true;
             tileViewItemElement6.Column = this.colF_Time;
             tileViewItemElement6.ColumnIndex = 2;
@@ -255,7 +281,9 @@
             tileViewItemElement6.Text = "colF_Time";
             tileViewItemElement6.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleLeft;
             tileViewItemElement6.TextLocation = new System.Drawing.Point(10, 0);
-            tileViewItemElement7.Appearance.Normal.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tileViewItemElement7.Appearance.Hovered.Font = new System.Drawing.Font("OCR A Extended", 7.8F);
+            tileViewItemElement7.Appearance.Hovered.Options.UseFont = true;
+            tileViewItemElement7.Appearance.Normal.Font = new System.Drawing.Font("OCR A Extended", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tileViewItemElement7.Appearance.Normal.Options.UseFont = true;
             tileViewItemElement7.Column = this.colRating;
             tileViewItemElement7.ColumnIndex = 2;
@@ -265,7 +293,9 @@
             tileViewItemElement7.Text = "colRating";
             tileViewItemElement7.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleLeft;
             tileViewItemElement7.TextLocation = new System.Drawing.Point(10, 0);
-            tileViewItemElement8.Appearance.Normal.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tileViewItemElement8.Appearance.Hovered.Font = new System.Drawing.Font("OCR A Extended", 7.8F);
+            tileViewItemElement8.Appearance.Hovered.Options.UseFont = true;
+            tileViewItemElement8.Appearance.Normal.Font = new System.Drawing.Font("OCR A Extended", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tileViewItemElement8.Appearance.Normal.Options.UseFont = true;
             tileViewItemElement8.Column = this.colDescription;
             tileViewItemElement8.ColumnIndex = 2;
@@ -287,81 +317,102 @@
             // colid_F
             // 
             this.colid_F.FieldName = "id_F";
+            this.colid_F.MinWidth = 23;
             this.colid_F.Name = "colid_F";
             this.colid_F.Visible = true;
             this.colid_F.VisibleIndex = 0;
+            this.colid_F.Width = 87;
             // 
             // colid_P
             // 
             this.colid_P.FieldName = "id_P";
+            this.colid_P.MinWidth = 23;
             this.colid_P.Name = "colid_P";
             this.colid_P.Visible = true;
             this.colid_P.VisibleIndex = 2;
+            this.colid_P.Width = 87;
             // 
             // colP_Name
             // 
             this.colP_Name.FieldName = "P_Name";
+            this.colP_Name.MinWidth = 23;
             this.colP_Name.Name = "colP_Name";
             this.colP_Name.Visible = true;
             this.colP_Name.VisibleIndex = 3;
+            this.colP_Name.Width = 87;
             // 
             // colReleaseDate
             // 
             this.colReleaseDate.FieldName = "ReleaseDate";
+            this.colReleaseDate.MinWidth = 23;
             this.colReleaseDate.Name = "colReleaseDate";
             this.colReleaseDate.Visible = true;
             this.colReleaseDate.VisibleIndex = 4;
+            this.colReleaseDate.Width = 87;
             // 
             // colLimitAge
             // 
             this.colLimitAge.FieldName = "LimitAge";
+            this.colLimitAge.MinWidth = 23;
             this.colLimitAge.Name = "colLimitAge";
             this.colLimitAge.Visible = true;
             this.colLimitAge.VisibleIndex = 6;
+            this.colLimitAge.Width = 87;
             // 
             // colAirDate
             // 
             this.colAirDate.FieldName = "AirDate";
+            this.colAirDate.MinWidth = 23;
             this.colAirDate.Name = "colAirDate";
             this.colAirDate.Visible = true;
             this.colAirDate.VisibleIndex = 7;
+            this.colAirDate.Width = 87;
             // 
             // colEndDate
             // 
             this.colEndDate.FieldName = "EndDate";
+            this.colEndDate.MinWidth = 23;
             this.colEndDate.Name = "colEndDate";
             this.colEndDate.Visible = true;
             this.colEndDate.VisibleIndex = 8;
+            this.colEndDate.Width = 87;
             // 
             // colStatus
             // 
             this.colStatus.FieldName = "Status";
+            this.colStatus.MinWidth = 23;
             this.colStatus.Name = "colStatus";
             this.colStatus.Visible = true;
             this.colStatus.VisibleIndex = 10;
+            this.colStatus.Width = 87;
             // 
             // colPoster
             // 
             this.colPoster.FieldName = "Poster";
+            this.colPoster.MinWidth = 23;
             this.colPoster.Name = "colPoster";
             this.colPoster.Visible = true;
             this.colPoster.VisibleIndex = 11;
+            this.colPoster.Width = 87;
             // 
             // colF_Trailer
             // 
             this.colF_Trailer.FieldName = "F_Trailer";
+            this.colF_Trailer.MinWidth = 23;
             this.colF_Trailer.Name = "colF_Trailer";
             this.colF_Trailer.Visible = true;
             this.colF_Trailer.VisibleIndex = 14;
+            this.colF_Trailer.Width = 87;
             // 
             // FilmList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(855, 429);
+            this.ClientSize = new System.Drawing.Size(997, 528);
             this.Controls.Add(this.FilmsList);
             this.Controls.Add(this.pnlRight);
             this.Controls.Add(this.pnlLeft);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FilmList";
             this.Text = "FilmList";
             this.Load += new System.EventHandler(this.FilmList_Load);

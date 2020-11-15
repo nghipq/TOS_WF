@@ -38,6 +38,8 @@ namespace TOS_WF
         public frmRoom()
         {
             InitializeComponent();
+            strl.Clear();
+            ticketID.Clear();
         }
 
 

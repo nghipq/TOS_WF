@@ -55,12 +55,18 @@
             // btnLogout
             // 
             this.btnLogout.BackColor = System.Drawing.Color.White;
-            this.btnLogout.Image = global::TOS_WF.Properties.Resources.logout_button;
-            this.btnLogout.Location = new System.Drawing.Point(1832, 11);
+            this.btnLogout.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLogout.BackgroundImage")));
+            this.btnLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLogout.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnLogout.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnLogout.FlatAppearance.BorderSize = 0;
+            this.btnLogout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.ForeColor = System.Drawing.Color.White;
+            this.btnLogout.Location = new System.Drawing.Point(1788, 3);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(88, 32);
+            this.btnLogout.Size = new System.Drawing.Size(111, 40);
             this.btnLogout.TabIndex = 2;
-            this.btnLogout.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Visible = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
@@ -80,12 +86,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Tile;
+            this.BackgroundImageStore = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImageStore")));
             this.ClientSize = new System.Drawing.Size(1932, 543);
             this.Controls.Add(this.Header);
             this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Main";
-            this.Text = "Main";
+            this.Text = "     ";
             this.Load += new System.EventHandler(this.Main_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Header)).EndInit();
             this.Header.ResumeLayout(false);

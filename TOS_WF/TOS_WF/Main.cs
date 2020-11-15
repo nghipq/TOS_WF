@@ -266,16 +266,16 @@ namespace TOS_WF
             });
             //load idseat
             ticketID.ForEach(item =>
-            {
+            { 
                 str1 += item + " ";
             });
 
 
             BillDAO bill = new BillDAO();
-            int getvalue = bill.getMaxIdBill();
+
             frmConfirmTicket = new ConfirmTicket(str, str1);
             frmConfirmTicket.MdiParent = this;
-            frmConfirmTicket.lblBillId.Text = getvalue.ToString();
+
             frmConfirmTicket.lblCinema.Text = C_Name;
             frmConfirmTicket.lblRoom.Text = Room_Name;
             frmConfirmTicket.lblSchedule.Text = sche_Name;
@@ -390,11 +390,11 @@ namespace TOS_WF
         {
             try
             {
-                strl.Clear();
-                ticketID.Clear();
-                CinemaId.Clear();
-                A_id = 0;
-                Sche_id = 0;
+                this.strl.Clear();
+                this.ticketID.Clear();
+                this.CinemaId.Clear();
+                this.A_id = 0;
+                this.Sche_id = 0;
                 id_C = 0;
                 C_Name = "";
                 id_Cus = 0;
@@ -407,6 +407,8 @@ namespace TOS_WF
                 billTotalPrice = 0;
                 id_F = 0;
                 id_B = 0;
+                Main main = new Main();
+                pnlBtnDate.Controls.Clear();
                 frmSchedule.Dispose();
                 this.pnlBtnDate.Hide();
                 frmConfirmTicket.Dispose();
