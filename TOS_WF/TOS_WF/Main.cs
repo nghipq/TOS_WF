@@ -68,6 +68,7 @@ namespace TOS_WF
          */
         private void btnLogin_Click(object sender, EventArgs e)
         {
+
             String username = frmLogin.txtUsername.Text;
             String password = frmLogin.txtPassword.Text;
             Console.WriteLine(username);
@@ -79,6 +80,7 @@ namespace TOS_WF
             Console.WriteLine(isLogin);
             if (isLogin)
             {
+                timeClock.Start();
                 this.pnlBtnDate.Show();
                 frmLogin.Visible = false;
                 this.btnLogout.Visible = true;
@@ -89,15 +91,6 @@ namespace TOS_WF
             }
             else
             {
-                Console.Beep();
-                Console.Beep();
-                Console.Beep();
-                Console.Beep();
-                Console.Beep();
-                Console.Beep();
-                Console.Beep();
-                Console.Beep();
-                Console.Beep();
                 Console.Beep();
                 MessageBox.Show("Wrong username or password", "Error !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 frmLogin.Visible = true;
@@ -211,6 +204,7 @@ namespace TOS_WF
 
         public void Login()
         {
+
             frmLogin = new Login();
             frmLogin.MdiParent = this;
             frmLogin.btnLogin.Click += new EventHandler(this.btnLogin_Click);
@@ -267,7 +261,7 @@ namespace TOS_WF
             });
             //load idseat
             ticketID.ForEach(item =>
-            { 
+            {
                 str1 += item + " ";
             });
 
@@ -295,7 +289,7 @@ namespace TOS_WF
             strl.ForEach(item =>
             {
                 Console.WriteLine(item + " ");
-                
+
             });
             ticketID.ForEach(item =>
             {
@@ -401,6 +395,9 @@ namespace TOS_WF
         {
             try
             {
+                timeClock.Stop();
+                lblMinutes.Text = "05";
+                lblSec.Text = "00";
                 this.strl.Clear();
                 this.ticketID.Clear();
                 this.CinemaId.Clear();
@@ -435,9 +432,64 @@ namespace TOS_WF
 
         }
 
-        private void Header_Paint(object sender, PaintEventArgs e)
+        private void timeClock_Tick(object sender, EventArgs e)
         {
+            int a = Int32.Parse(lblSec.Text);//sec
+            int b = Int32.Parse(lblMinutes.Text);//min
+            a--;
+            if (a < 0)
+            {
+                a = 59;
+                b--;
+            }
+            if (a < 10)
+                lblSec.Text = "0" + a;
+            else
+                lblSec.Text = a + "";
+            if (b < 10)
+                lblMinutes.Text = "0" + b;
+            else
+                lblMinutes.Text = b + "";
+            if (a == 0 && b == 0)
+            {
+                timeClock.Stop();
+                MessageBox.Show("Time out");
+                try
+                {
+                    lblMinutes.Text = "05";
+                    lblSec.Text = "00";
+                    this.strl.Clear();
+                    this.ticketID.Clear();
+                    this.CinemaId.Clear();
+                    this.A_id = 0;
+                    this.Sche_id = 0;
+                    id_C = 0;
+                    C_Name = "";
+                    id_Cus = 0;
+                    id_Staff = 0;
+                    dayIndex = 0;
+                    filmsIndex = 0;
+                    sche_Id = 0;
+                    sche_Name = "";
+                    room_Id = 0;
+                    billTotalPrice = 0;
+                    id_F = 0;
+                    id_B = 0;
+                    Main main = new Main();
+                    pnlBtnDate.Controls.Clear();
+                    frmSchedule.Dispose();
+                    this.pnlBtnDate.Hide();
+                    frmConfirmTicket.Dispose();
+                    frmFilms.Dispose();
+                    frmRoom.Dispose();
+                    this.frmAreas.Visible = true;
+                    this.btnLogout.Hide();
+                }
+                catch (Exception)
+                {
 
+                }
+            }
         }
     }
 

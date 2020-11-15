@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.Header = new DevExpress.XtraEditors.PanelControl();
             this.lblSec = new System.Windows.Forms.Label();
@@ -35,6 +36,7 @@
             this.lblMinutes = new System.Windows.Forms.Label();
             this.btnLogout = new System.Windows.Forms.Button();
             this.pnlBtnDate = new System.Windows.Forms.FlowLayoutPanel();
+            this.timeClock = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.Header)).BeginInit();
             this.Header.SuspendLayout();
             this.SuspendLayout();
@@ -56,7 +58,36 @@
             this.Header.Name = "Header";
             this.Header.Size = new System.Drawing.Size(1932, 105);
             this.Header.TabIndex = 0;
-            this.Header.Paint += new System.Windows.Forms.PaintEventHandler(this.Header_Paint);
+            // 
+            // lblSec
+            // 
+            this.lblSec.AutoSize = true;
+            this.lblSec.Font = new System.Drawing.Font("OCR A Extended", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSec.Location = new System.Drawing.Point(62, 13);
+            this.lblSec.Name = "lblSec";
+            this.lblSec.Size = new System.Drawing.Size(34, 23);
+            this.lblSec.TabIndex = 5;
+            this.lblSec.Text = "00";
+            // 
+            // lblEmpty
+            // 
+            this.lblEmpty.AutoSize = true;
+            this.lblEmpty.Font = new System.Drawing.Font("OCR A Extended", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmpty.Location = new System.Drawing.Point(43, 15);
+            this.lblEmpty.Name = "lblEmpty";
+            this.lblEmpty.Size = new System.Drawing.Size(22, 23);
+            this.lblEmpty.TabIndex = 4;
+            this.lblEmpty.Text = ":";
+            // 
+            // lblMinutes
+            // 
+            this.lblMinutes.AutoSize = true;
+            this.lblMinutes.Font = new System.Drawing.Font("OCR A Extended", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMinutes.Location = new System.Drawing.Point(13, 13);
+            this.lblMinutes.Name = "lblMinutes";
+            this.lblMinutes.Size = new System.Drawing.Size(34, 23);
+            this.lblMinutes.TabIndex = 3;
+            this.lblMinutes.Text = "05";
             // 
             // lblSec
             // 
@@ -119,6 +150,11 @@
             this.pnlBtnDate.Size = new System.Drawing.Size(780, 50);
             this.pnlBtnDate.TabIndex = 1;
             // 
+            // timeClock
+            // 
+            this.timeClock.Interval = 1000;
+            this.timeClock.Tick += new System.EventHandler(this.timeClock_Tick);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -147,5 +183,6 @@
         private System.Windows.Forms.Label lblSec;
         private System.Windows.Forms.Label lblEmpty;
         private System.Windows.Forms.Label lblMinutes;
+        public System.Windows.Forms.Timer timeClock;
     }
 }
