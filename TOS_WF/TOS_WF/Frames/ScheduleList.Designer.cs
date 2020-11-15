@@ -36,7 +36,7 @@
             this.colStartTime = new DevExpress.XtraGrid.Columns.TileViewColumn();
             this.scheduleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlLeft = new DevExpress.XtraEditors.PanelControl();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnback = new System.Windows.Forms.Button();
             this.pnlRight = new DevExpress.XtraEditors.PanelControl();
             this.SchedulesList = new DevExpress.XtraGrid.GridControl();
             this.scheduleBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -77,7 +77,7 @@
             // 
             this.pnlLeft.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pnlLeft.ContentImage = global::TOS_WF.Properties.Resources.Background;
-            this.pnlLeft.Controls.Add(this.button1);
+            this.pnlLeft.Controls.Add(this.btnback);
             this.pnlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlLeft.Location = new System.Drawing.Point(0, 0);
             this.pnlLeft.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -85,19 +85,18 @@
             this.pnlLeft.Size = new System.Drawing.Size(119, 479);
             this.pnlLeft.TabIndex = 0;
             // 
-            // button1
+            // btnback
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(12, 346);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(74, 74);
-            this.button1.TabIndex = 0;
-            this.button1.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnback.BackColor = System.Drawing.Color.Transparent;
+            this.btnback.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnback.BackgroundImage")));
+            this.btnback.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnback.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnback.Location = new System.Drawing.Point(12, 346);
+            this.btnback.Name = "btnback";
+            this.btnback.Size = new System.Drawing.Size(74, 74);
+            this.btnback.TabIndex = 0;
+            this.btnback.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.btnback.UseVisualStyleBackColor = false;
             // 
             // pnlRight
             // 
@@ -160,6 +159,8 @@
             this.scheduleItem.TileRows.Add(tableRowDefinition1);
             this.scheduleItem.TileRows.Add(tableRowDefinition2);
             this.scheduleItem.TileRows.Add(tableRowDefinition3);
+            tileViewItemElement1.Appearance.Normal.Font = new System.Drawing.Font("OCR A Extended", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tileViewItemElement1.Appearance.Normal.Options.UseFont = true;
             tileViewItemElement1.Column = this.colStartTime;
             tileViewItemElement1.ColumnIndex = 1;
             tileViewItemElement1.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
@@ -300,6 +301,6 @@
         private DevExpress.XtraGrid.Columns.TileViewColumn colvipPrice;
         public DevExpress.XtraGrid.GridControl SchedulesList;
         public DevExpress.XtraGrid.Views.Tile.TileView scheduleItem;
-        private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Button btnback;
     }
 }

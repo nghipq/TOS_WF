@@ -113,6 +113,7 @@
             this.pnlBtnDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlBtnDate.AutoSize = true;
             this.pnlBtnDate.BackColor = System.Drawing.Color.White;
+            this.pnlBtnDate.Font = new System.Drawing.Font("OCR A Extended", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlBtnDate.Location = new System.Drawing.Point(1085, 50);
             this.pnlBtnDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlBtnDate.Name = "pnlBtnDate";
