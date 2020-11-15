@@ -134,9 +134,10 @@ namespace TOS_WF
          */
         public void Load_Schedules(int dayIndex, int filmsIndex)
         {
-
+            frmSchedule.btnback.Click += new EventHandler(this.btnBack2_Click);
             frmSchedule.SchedulesList.DataSource = dates[dayIndex].films[filmsIndex].Schedules;
             frmSchedule.scheduleItem.Click += new EventHandler(this.Load_Booking);
+
         }
 
         /*Tạo giao diện*/
@@ -286,6 +287,7 @@ namespace TOS_WF
 
 
         }
+
         private void btnBack_Click(object sender, EventArgs e)
         {
             strl.Clear();
@@ -304,6 +306,14 @@ namespace TOS_WF
             frmRoom.Visible = false;
             frmSchedule.Show();
         }
+        private void btnBack2_Click(object sender, EventArgs e)
+        {
+            strl.Clear();
+            ticketID.Clear();
+            frmSchedule.Visible = false;
+            frmFilms.Show();
+        }
+
 
         /**
          * Click chọn phim
@@ -313,6 +323,7 @@ namespace TOS_WF
             TileView tileView = sender as TileView;
             id_F = Convert.ToInt32(tileView.GetRowCellValue(tileView.FocusedRowHandle, "id_F").ToString());
             F_Name = tileView.GetRowCellValue(tileView.FocusedRowHandle, "F_Name").ToString();
+
             int filmsIndex = dates[dayIndex].films.FindIndex(item => item.id_F == id_F);
             Load_ScheduleScreen();
             Load_Schedules(dayIndex, filmsIndex);
