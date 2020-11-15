@@ -328,11 +328,13 @@
     <Content Include="images\static\anime-bg.jpg" />
     <None Include="images\static\Background.jpg" />
     <Content Include="images\static\background.png" />
+    <None Include="images\static\Background1.jpg" />
     <Content Include="images\static\bg-red.png" />
     <Content Include="images\static\do-nhat.jpg" />
     <Content Include="images\static\logo.png" />
     <Content Include="images\static\or.jpg" />
     <Content Include="images\static\pinky.png" />
+    <None Include="images\static\Untitled.png" />
     <Content Include="images\static\white-background-2.jpg" />
   </ItemGroup>
   <ItemGroup>
