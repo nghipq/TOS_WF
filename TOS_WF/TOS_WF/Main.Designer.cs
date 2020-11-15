@@ -89,36 +89,6 @@
             this.lblMinutes.TabIndex = 3;
             this.lblMinutes.Text = "05";
             // 
-            // lblSec
-            // 
-            this.lblSec.AutoSize = true;
-            this.lblSec.Font = new System.Drawing.Font("OCR A Extended", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSec.Location = new System.Drawing.Point(62, 13);
-            this.lblSec.Name = "lblSec";
-            this.lblSec.Size = new System.Drawing.Size(34, 23);
-            this.lblSec.TabIndex = 5;
-            this.lblSec.Text = "00";
-            // 
-            // lblEmpty
-            // 
-            this.lblEmpty.AutoSize = true;
-            this.lblEmpty.Font = new System.Drawing.Font("OCR A Extended", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmpty.Location = new System.Drawing.Point(43, 15);
-            this.lblEmpty.Name = "lblEmpty";
-            this.lblEmpty.Size = new System.Drawing.Size(22, 23);
-            this.lblEmpty.TabIndex = 4;
-            this.lblEmpty.Text = ":";
-            // 
-            // lblMinutes
-            // 
-            this.lblMinutes.AutoSize = true;
-            this.lblMinutes.Font = new System.Drawing.Font("OCR A Extended", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMinutes.Location = new System.Drawing.Point(13, 13);
-            this.lblMinutes.Name = "lblMinutes";
-            this.lblMinutes.Size = new System.Drawing.Size(34, 23);
-            this.lblMinutes.TabIndex = 3;
-            this.lblMinutes.Text = "00";
-            // 
             // btnLogout
             // 
             this.btnLogout.BackColor = System.Drawing.Color.White;
