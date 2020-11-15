@@ -30,6 +30,9 @@ namespace TOS_WF
             this.TopMost = true;
             this.FormBorderStyle = FormBorderStyle.Fixed3D;
             this.WindowState = FormWindowState.Maximized;
+            this.pnlRoomSeat.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pnlSeat.Anchor = System.Windows.Forms.AnchorStyles.None;
             CreateSeat();
         }
 

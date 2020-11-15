@@ -25,6 +25,8 @@ namespace TOS_WF.Frames
             this.WindowState = FormWindowState.Maximized;
             lblSeat.Text = ticket_seat;//hien thi ten ghe
             lblTotal.Text = new TicketDAO().calculateTotalPrice(ticket_id) + " VND";
+            this.pnlContent.Anchor = System.Windows.Forms.AnchorStyles.None;
+            pnlContent.BackColor = Color.FromArgb(10, Color.White);
         }
 
         private void Ticket_Load(object sender, EventArgs e)

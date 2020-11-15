@@ -50,6 +50,7 @@
             // 
             // panelControl2
             // 
+            this.panelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl2.Controls.Add(this.lblBillId);
             this.panelControl2.Controls.Add(this.lblFname);
             this.panelControl2.Controls.Add(this.btnCancel);

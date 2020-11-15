@@ -45,25 +45,25 @@
             DevExpress.XtraGrid.Views.Tile.TileViewItemElement tileViewItemElement6 = new DevExpress.XtraGrid.Views.Tile.TileViewItemElement();
             DevExpress.XtraGrid.Views.Tile.TileViewItemElement tileViewItemElement7 = new DevExpress.XtraGrid.Views.Tile.TileViewItemElement();
             DevExpress.XtraGrid.Views.Tile.TileViewItemElement tileViewItemElement8 = new DevExpress.XtraGrid.Views.Tile.TileViewItemElement();
+            this.colPicture = new DevExpress.XtraGrid.Columns.TileViewColumn();
+            this.colF_Name = new DevExpress.XtraGrid.Columns.TileViewColumn();
+            this.colF_Time = new DevExpress.XtraGrid.Columns.TileViewColumn();
+            this.colRating = new DevExpress.XtraGrid.Columns.TileViewColumn();
+            this.colDescription = new DevExpress.XtraGrid.Columns.TileViewColumn();
             this.filmsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlLeft = new DevExpress.XtraEditors.PanelControl();
             this.pnlRight = new DevExpress.XtraEditors.PanelControl();
             this.FilmsList = new DevExpress.XtraGrid.GridControl();
             this.filmItem = new DevExpress.XtraGrid.Views.Tile.TileView();
             this.colid_F = new DevExpress.XtraGrid.Columns.TileViewColumn();
-            this.colF_Name = new DevExpress.XtraGrid.Columns.TileViewColumn();
             this.colid_P = new DevExpress.XtraGrid.Columns.TileViewColumn();
             this.colP_Name = new DevExpress.XtraGrid.Columns.TileViewColumn();
             this.colReleaseDate = new DevExpress.XtraGrid.Columns.TileViewColumn();
-            this.colRating = new DevExpress.XtraGrid.Columns.TileViewColumn();
             this.colLimitAge = new DevExpress.XtraGrid.Columns.TileViewColumn();
             this.colAirDate = new DevExpress.XtraGrid.Columns.TileViewColumn();
             this.colEndDate = new DevExpress.XtraGrid.Columns.TileViewColumn();
-            this.colDescription = new DevExpress.XtraGrid.Columns.TileViewColumn();
             this.colStatus = new DevExpress.XtraGrid.Columns.TileViewColumn();
             this.colPoster = new DevExpress.XtraGrid.Columns.TileViewColumn();
-            this.colPicture = new DevExpress.XtraGrid.Columns.TileViewColumn();
-            this.colF_Time = new DevExpress.XtraGrid.Columns.TileViewColumn();
             this.colF_Trailer = new DevExpress.XtraGrid.Columns.TileViewColumn();
             ((System.ComponentModel.ISupportInitialize)(this.filmsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlLeft)).BeginInit();
@@ -72,6 +72,42 @@
             ((System.ComponentModel.ISupportInitialize)(this.filmItem)).BeginInit();
             this.SuspendLayout();
             // 
+            // colPicture
+            // 
+            this.colPicture.FieldName = "Picture";
+            this.colPicture.Name = "colPicture";
+            this.colPicture.OptionsColumn.ReadOnly = true;
+            this.colPicture.Visible = true;
+            this.colPicture.VisibleIndex = 12;
+            // 
+            // colF_Name
+            // 
+            this.colF_Name.FieldName = "F_Name";
+            this.colF_Name.Name = "colF_Name";
+            this.colF_Name.Visible = true;
+            this.colF_Name.VisibleIndex = 1;
+            // 
+            // colF_Time
+            // 
+            this.colF_Time.FieldName = "F_Time";
+            this.colF_Time.Name = "colF_Time";
+            this.colF_Time.Visible = true;
+            this.colF_Time.VisibleIndex = 13;
+            // 
+            // colRating
+            // 
+            this.colRating.FieldName = "Rating";
+            this.colRating.Name = "colRating";
+            this.colRating.Visible = true;
+            this.colRating.VisibleIndex = 5;
+            // 
+            // colDescription
+            // 
+            this.colDescription.FieldName = "Description";
+            this.colDescription.Name = "colDescription";
+            this.colDescription.Visible = true;
+            this.colDescription.VisibleIndex = 9;
+            // 
             // filmsBindingSource
             // 
             this.filmsBindingSource.DataSource = typeof(TOS_WF.Models.Films);
@@ -79,7 +115,7 @@
             // pnlLeft
             // 
             this.pnlLeft.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.pnlLeft.ContentImage = global::TOS_WF.Properties.Resources.bg_red;
+            this.pnlLeft.ContentImage = global::TOS_WF.Properties.Resources.Background;
             this.pnlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlLeft.Location = new System.Drawing.Point(0, 0);
             this.pnlLeft.Name = "pnlLeft";
@@ -89,7 +125,7 @@
             // pnlRight
             // 
             this.pnlRight.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.pnlRight.ContentImage = global::TOS_WF.Properties.Resources.bg_red;
+            this.pnlRight.ContentImage = global::TOS_WF.Properties.Resources.Background1;
             this.pnlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnlRight.Location = new System.Drawing.Point(753, 0);
             this.pnlRight.Name = "pnlRight";
@@ -255,13 +291,6 @@
             this.colid_F.Visible = true;
             this.colid_F.VisibleIndex = 0;
             // 
-            // colF_Name
-            // 
-            this.colF_Name.FieldName = "F_Name";
-            this.colF_Name.Name = "colF_Name";
-            this.colF_Name.Visible = true;
-            this.colF_Name.VisibleIndex = 1;
-            // 
             // colid_P
             // 
             this.colid_P.FieldName = "id_P";
@@ -282,13 +311,6 @@
             this.colReleaseDate.Name = "colReleaseDate";
             this.colReleaseDate.Visible = true;
             this.colReleaseDate.VisibleIndex = 4;
-            // 
-            // colRating
-            // 
-            this.colRating.FieldName = "Rating";
-            this.colRating.Name = "colRating";
-            this.colRating.Visible = true;
-            this.colRating.VisibleIndex = 5;
             // 
             // colLimitAge
             // 
@@ -311,13 +333,6 @@
             this.colEndDate.Visible = true;
             this.colEndDate.VisibleIndex = 8;
             // 
-            // colDescription
-            // 
-            this.colDescription.FieldName = "Description";
-            this.colDescription.Name = "colDescription";
-            this.colDescription.Visible = true;
-            this.colDescription.VisibleIndex = 9;
-            // 
             // colStatus
             // 
             this.colStatus.FieldName = "Status";
@@ -331,21 +346,6 @@
             this.colPoster.Name = "colPoster";
             this.colPoster.Visible = true;
             this.colPoster.VisibleIndex = 11;
-            // 
-            // colPicture
-            // 
-            this.colPicture.FieldName = "Picture";
-            this.colPicture.Name = "colPicture";
-            this.colPicture.OptionsColumn.ReadOnly = true;
-            this.colPicture.Visible = true;
-            this.colPicture.VisibleIndex = 12;
-            // 
-            // colF_Time
-            // 
-            this.colF_Time.FieldName = "F_Time";
-            this.colF_Time.Name = "colF_Time";
-            this.colF_Time.Visible = true;
-            this.colF_Time.VisibleIndex = 13;
             // 
             // colF_Trailer
             // 

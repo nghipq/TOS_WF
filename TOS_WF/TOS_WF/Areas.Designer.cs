@@ -65,7 +65,7 @@
             this.panel2.Controls.Add(this.lblArea);
             this.panel2.Controls.Add(this.cbCinema);
             this.panel2.Controls.Add(this.cbArea);
-            this.panel2.Location = new System.Drawing.Point(358, 123);
+            this.panel2.Location = new System.Drawing.Point(1, 1);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(477, 296);
@@ -157,7 +157,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Tile;
             this.BackgroundImageStore = global::TOS_WF.Properties.Resources.Background;
-            this.ClientSize = new System.Drawing.Size(1077, 504);
+            this.ClientSize = new System.Drawing.Size(476, 295);
             this.Controls.Add(this.panel2);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Areas";

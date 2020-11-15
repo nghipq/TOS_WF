@@ -34,8 +34,8 @@
             this.pbNext = new System.Windows.Forms.PictureBox();
             this.pbBack = new System.Windows.Forms.PictureBox();
             this.pnlRoomSeat = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.lblRoom = new System.Windows.Forms.Label();
-            this.lblScreen = new System.Windows.Forms.Label();
             this.pnlSeat = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbNext)).BeginInit();
@@ -49,7 +49,7 @@
             this.panel2.Controls.Add(this.txtShowSeat);
             this.panel2.Controls.Add(this.pbNext);
             this.panel2.Controls.Add(this.pbBack);
-            this.panel2.Location = new System.Drawing.Point(176, 544);
+            this.panel2.Location = new System.Drawing.Point(134, 543);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(865, 53);
@@ -92,8 +92,8 @@
             // pnlRoomSeat
             // 
             this.pnlRoomSeat.BackColor = System.Drawing.Color.White;
+            this.pnlRoomSeat.Controls.Add(this.panel1);
             this.pnlRoomSeat.Controls.Add(this.lblRoom);
-            this.pnlRoomSeat.Controls.Add(this.lblScreen);
             this.pnlRoomSeat.Controls.Add(this.pnlSeat);
             this.pnlRoomSeat.Location = new System.Drawing.Point(62, 21);
             this.pnlRoomSeat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -101,33 +101,29 @@
             this.pnlRoomSeat.Size = new System.Drawing.Size(1013, 506);
             this.pnlRoomSeat.TabIndex = 4;
             // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = global::TOS_WF.Properties.Resources.Untitled;
+            this.panel1.Location = new System.Drawing.Point(29, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(950, 146);
+            this.panel1.TabIndex = 7;
+            // 
             // lblRoom
             // 
             this.lblRoom.AutoSize = true;
-            this.lblRoom.Location = new System.Drawing.Point(51, 31);
+            this.lblRoom.Location = new System.Drawing.Point(13, 192);
             this.lblRoom.Name = "lblRoom";
             this.lblRoom.Size = new System.Drawing.Size(44, 13);
             this.lblRoom.TabIndex = 6;
             this.lblRoom.Text = "lblRoom";
             // 
-            // lblScreen
-            // 
-            this.lblScreen.AutoSize = true;
-            this.lblScreen.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScreen.ForeColor = System.Drawing.Color.Firebrick;
-            this.lblScreen.Location = new System.Drawing.Point(410, 19);
-            this.lblScreen.Name = "lblScreen";
-            this.lblScreen.Size = new System.Drawing.Size(157, 40);
-            this.lblScreen.TabIndex = 5;
-            this.lblScreen.Text = "SCREEN";
-            this.lblScreen.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
             // pnlSeat
             // 
-            this.pnlSeat.Location = new System.Drawing.Point(335, 80);
+            this.pnlSeat.Location = new System.Drawing.Point(135, 154);
             this.pnlSeat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlSeat.Name = "pnlSeat";
-            this.pnlSeat.Size = new System.Drawing.Size(586, 401);
+            this.pnlSeat.Size = new System.Drawing.Size(756, 327);
             this.pnlSeat.TabIndex = 0;
             // 
             // frmRoom
@@ -136,6 +132,8 @@
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Tile;
+            this.BackgroundImageStore = global::TOS_WF.Properties.Resources.Background;
             this.ClientSize = new System.Drawing.Size(1162, 607);
             this.Controls.Add(this.pnlRoomSeat);
             this.Controls.Add(this.panel2);
@@ -158,10 +156,10 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txtShowSeat;
         private System.Windows.Forms.Panel pnlRoomSeat;
-        private System.Windows.Forms.Label lblScreen;
         private System.Windows.Forms.FlowLayoutPanel pnlSeat;
         public System.Windows.Forms.PictureBox pbNext;
         private System.Windows.Forms.Label lblRoom;
         public System.Windows.Forms.PictureBox pbBack;
+        private System.Windows.Forms.Panel panel1;
     }
 }
