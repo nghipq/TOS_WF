@@ -116,7 +116,7 @@
             this.pnlLogin.Controls.Add(this.lblPass);
             this.pnlLogin.Controls.Add(this.lblUsername);
             this.pnlLogin.Controls.Add(this.lblLogin);
-            this.pnlLogin.Location = new System.Drawing.Point(64, 11);
+            this.pnlLogin.Location = new System.Drawing.Point(2, 2);
             this.pnlLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlLogin.Name = "pnlLogin";
             this.pnlLogin.Size = new System.Drawing.Size(681, 439);
@@ -130,7 +130,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Tile;
             this.BackgroundImageStore = global::TOS_WF.Properties.Resources.Background;
-            this.ClientSize = new System.Drawing.Size(797, 468);
+            this.ClientSize = new System.Drawing.Size(683, 442);
             this.Controls.Add(this.pnlLogin);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Login";

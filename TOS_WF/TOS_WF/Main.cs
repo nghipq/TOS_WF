@@ -261,6 +261,17 @@ namespace TOS_WF
         {
             strl.Clear();
             ticketID.Clear();
+            strl.ForEach(item =>
+            {
+                Console.WriteLine(item + " ");
+                
+            });
+            ticketID.ForEach(item =>
+            {
+                Console.WriteLine(item + " ");
+
+            });
+
             frmRoom.Visible = false;
             frmSchedule.Show();
         }
@@ -300,7 +311,6 @@ namespace TOS_WF
             bill.CreateBill(1, 1, frmConfirmTicket.lblTotal.Text);
             //this.Visible = false;
             int getvalue = bill.getMaxIdBill();
-
             ticketID.ForEach(item =>
             {
                 bd.CreateBillDetail(Convert.ToInt32(item), getvalue);
