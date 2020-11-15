@@ -30,6 +30,7 @@ namespace TOS_WF.Frames
         public ConfirmTicket(string ticket_seat,string ticket_id)
         {
             InitializeComponent();
+
             this.TopMost = true;
             this.FormBorderStyle = FormBorderStyle.Fixed3D;
             this.WindowState = FormWindowState.Maximized;
@@ -51,6 +52,76 @@ namespace TOS_WF.Frames
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelControl2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lblBillId_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblFname_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnConfirm_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTotal_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblSeat_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblRoom_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblSchedule_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblCinema_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl1_Click(object sender, EventArgs e)
         {
 
         }

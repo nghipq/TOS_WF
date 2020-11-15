@@ -338,6 +338,9 @@
     <Content Include="images\static\1.jpg" />
     <Content Include="images\static\anime-bg.jpg" />
     <None Include="images\static\Background.jpg" />
+    <Content Include="images\static\backbtn.png" />
+    <Content Include="images\static\backbtnWhite.png" />
+    <Content Include="images\static\backbtnWhite2.png" />
     <Content Include="images\static\background.png" />
     <None Include="images\static\Background1.jpg" />
     <Content Include="images\static\bg-red.png" />

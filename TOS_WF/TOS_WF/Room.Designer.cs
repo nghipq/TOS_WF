@@ -41,6 +41,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbNext)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBack)).BeginInit();
             this.pnlRoomSeat.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -49,10 +50,10 @@
             this.panel2.Controls.Add(this.txtShowSeat);
             this.panel2.Controls.Add(this.pbNext);
             this.panel2.Controls.Add(this.pbBack);
-            this.panel2.Location = new System.Drawing.Point(134, 543);
+            this.panel2.Location = new System.Drawing.Point(136, 543);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1009, 65);
+            this.panel2.Size = new System.Drawing.Size(1007, 65);
             this.panel2.TabIndex = 2;
             // 
             // txtShowSeat
@@ -60,7 +61,7 @@
             this.txtShowSeat.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtShowSeat.Enabled = false;
             this.txtShowSeat.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtShowSeat.Location = new System.Drawing.Point(127, 14);
+            this.txtShowSeat.Location = new System.Drawing.Point(126, 14);
             this.txtShowSeat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtShowSeat.Name = "txtShowSeat";
             this.txtShowSeat.Size = new System.Drawing.Size(779, 42);
@@ -82,7 +83,7 @@
             // pbBack
             // 
             this.pbBack.Image = ((System.Drawing.Image)(resources.GetObject("pbBack.Image")));
-            this.pbBack.Location = new System.Drawing.Point(16, 14);
+            this.pbBack.Location = new System.Drawing.Point(31, 14);
             this.pbBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbBack.Name = "pbBack";
             this.pbBack.Size = new System.Drawing.Size(57, 41);
@@ -95,7 +96,6 @@
             // 
             this.pnlRoomSeat.BackColor = System.Drawing.Color.White;
             this.pnlRoomSeat.Controls.Add(this.panel1);
-            this.pnlRoomSeat.Controls.Add(this.lblRoom);
             this.pnlRoomSeat.Controls.Add(this.pnlSeat);
             this.pnlRoomSeat.Location = new System.Drawing.Point(72, 26);
             this.pnlRoomSeat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -105,23 +105,28 @@
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(29, 3);
+            this.panel1.BackgroundImage = global::TOS_WF.Properties.Resources.Untitled;
+            this.panel1.Controls.Add(this.lblRoom);
+            this.panel1.Location = new System.Drawing.Point(85, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(950, 146);
+            this.panel1.Size = new System.Drawing.Size(966, 148);
             this.panel1.TabIndex = 7;
             // 
             // lblRoom
             // 
             this.lblRoom.AutoSize = true;
-            this.lblRoom.Location = new System.Drawing.Point(13, 192);
+            this.lblRoom.Font = new System.Drawing.Font("Nirmala UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRoom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.lblRoom.Location = new System.Drawing.Point(440, 98);
             this.lblRoom.Name = "lblRoom";
-            this.lblRoom.Size = new System.Drawing.Size(57, 17);
+            this.lblRoom.Size = new System.Drawing.Size(119, 38);
             this.lblRoom.TabIndex = 6;
             this.lblRoom.Text = "lblRoom";
             // 
             // pnlSeat
             // 
-            this.pnlSeat.Location = new System.Drawing.Point(135, 154);
+            this.pnlSeat.Location = new System.Drawing.Point(212, 154);
             this.pnlSeat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlSeat.Name = "pnlSeat";
             this.pnlSeat.Size = new System.Drawing.Size(756, 327);
@@ -133,6 +138,8 @@
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Tile;
+            this.BackgroundImageStore = global::TOS_WF.Properties.Resources.Background;
             this.ClientSize = new System.Drawing.Size(1263, 639);
             this.Controls.Add(this.pnlRoomSeat);
             this.Controls.Add(this.panel2);
@@ -146,7 +153,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbNext)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBack)).EndInit();
             this.pnlRoomSeat.ResumeLayout(false);
-            this.pnlRoomSeat.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }

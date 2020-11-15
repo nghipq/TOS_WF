@@ -41,7 +41,8 @@
             // btnLogin
             // 
             this.btnLogin.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnLogin.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.btnLogin.Font = new System.Drawing.Font("OCR A Extended", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
             this.btnLogin.Location = new System.Drawing.Point(201, 420);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -50,27 +51,26 @@
             this.btnLogin.TabIndex = 12;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
-            //this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // lblPass
             // 
             this.lblPass.AutoSize = true;
-            this.lblPass.Font = new System.Drawing.Font("Nirmala UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPass.Font = new System.Drawing.Font("OCR A Extended", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblPass.Location = new System.Drawing.Point(132, 265);
+            this.lblPass.Location = new System.Drawing.Point(118, 268);
             this.lblPass.Name = "lblPass";
-            this.lblPass.Size = new System.Drawing.Size(143, 41);
+            this.lblPass.Size = new System.Drawing.Size(191, 35);
             this.lblPass.TabIndex = 9;
             this.lblPass.Text = "Password";
             // 
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
-            this.lblUsername.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsername.Font = new System.Drawing.Font("OCR A Extended", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lblUsername.Location = new System.Drawing.Point(118, 161);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(170, 46);
+            this.lblUsername.Size = new System.Drawing.Size(191, 35);
             this.lblUsername.TabIndex = 8;
             this.lblUsername.Text = "Username";
             // 
@@ -78,14 +78,14 @@
             // 
             this.lblLogin.AutoSize = true;
             this.lblLogin.BackColor = System.Drawing.Color.Transparent;
-            this.lblLogin.Font = new System.Drawing.Font("Nirmala UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogin.Font = new System.Drawing.Font("OCR A Extended", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lblLogin.Location = new System.Drawing.Point(233, 47);
             this.lblLogin.Margin = new System.Windows.Forms.Padding(20, 0, 20, 0);
             this.lblLogin.MaximumSize = new System.Drawing.Size(300, 199);
             this.lblLogin.MinimumSize = new System.Drawing.Size(300, 50);
             this.lblLogin.Name = "lblLogin";
-            this.lblLogin.Size = new System.Drawing.Size(300, 81);
+            this.lblLogin.Size = new System.Drawing.Size(300, 63);
             this.lblLogin.TabIndex = 7;
             this.lblLogin.Text = "Login";
             this.lblLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
