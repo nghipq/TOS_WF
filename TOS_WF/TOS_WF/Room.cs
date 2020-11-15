@@ -77,8 +77,8 @@ namespace TOS_WF
                         btn[j * col + z].BackColor = Color.Red;//ghe co gia dac biet
 
                     }
-                    
-                    if(t[j * col + z].Status == 0)
+
+                    if (t[j * col + z].Status == 0)
                     {
                         btn[j * col + z].BackColor = Color.Gray;//ghe da duoc chon
                         btn[j * col + z].Enabled = false;//ghe da duoc chon
@@ -110,7 +110,13 @@ namespace TOS_WF
                     strl.Add(btn.Text);
                     ticketID.Add(btn.Name);
                     btn.BackColor = Color.Yellow;//da chon ghe
+                    //pbNext.Enabled = true;
+                   
                     dem++;
+                    if (dem > 0)
+                    {
+                        pbNext.Visible = true;
+                    }
                 }
                 else
                 {
@@ -123,15 +129,23 @@ namespace TOS_WF
                 int getprice = new TicketDAO().GetMaxValue(Convert.ToInt32(btn.Name));
                 if (getprice == tempprice)
                 {
+
                     btn.BackColor = Color.Red;//chua chon ghe dac biet
                 }
                 else
                 {
+
                     btn.BackColor = Color.White;//chua chon
                 }
+                //pbNext.Enabled = false;
+               
                 dem--;
                 strl.Remove(btn.Text);
                 ticketID.Remove(btn.Name);
+                if (dem == 0)
+                {
+                    pbNext.Visible = false;
+                }
             }
             strl.ForEach(item =>
             {
@@ -142,6 +156,10 @@ namespace TOS_WF
 
         }
 
-       
+        private void pbBack_Click(object sender, EventArgs e)
+        {
+            strl.Clear();
+            ticketID.Clear();
+        }
     }
 }

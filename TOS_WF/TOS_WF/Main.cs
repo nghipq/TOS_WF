@@ -17,7 +17,7 @@ namespace TOS_WF
 {
     public partial class Main : DevExpress.XtraEditors.XtraForm
     {
-       
+
         List<DateSchedule> dates = new List<DateSchedule>();
         public static List<string> strl = new List<string>();
         public static List<string> ticketID = new List<string>();
@@ -93,7 +93,8 @@ namespace TOS_WF
             try
             {
                 frmFilms.FilmsList.DataSource = dates[dayIndex].films;
-            } catch (Exception e)
+            }
+            catch (Exception e)
             {
 
             }
@@ -239,11 +240,13 @@ namespace TOS_WF
             {
                 str1 += item + " ";
             });
+
+
             BillDAO bill = new BillDAO();
             int getvalue = bill.getMaxIdBill();
             frmConfirmTicket = new ConfirmTicket(str, str1);
             frmConfirmTicket.MdiParent = this;
-            frmConfirmTicket.lblBillId.Text = getvalue.ToString(); 
+            frmConfirmTicket.lblBillId.Text = getvalue.ToString();
             frmConfirmTicket.lblCinema.Text = C_Name;
             frmConfirmTicket.lblRoom.Text = Room_Name;
             frmConfirmTicket.lblSchedule.Text = sche_Name;
@@ -252,11 +255,23 @@ namespace TOS_WF
             frmConfirmTicket.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             frmConfirmTicket.Show();
 
+
         }
         private void btnBack_Click(object sender, EventArgs e)
         {
             strl.Clear();
             ticketID.Clear();
+            strl.ForEach(item =>
+            {
+                Console.WriteLine(item + " ");
+                
+            });
+            ticketID.ForEach(item =>
+            {
+                Console.WriteLine(item + " ");
+
+            });
+
             frmRoom.Visible = false;
             frmSchedule.Show();
         }
@@ -279,7 +294,7 @@ namespace TOS_WF
          */
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            
+
             frmConfirmTicket.Visible = false;
             string str = "";
             string str1 = "";
@@ -289,14 +304,13 @@ namespace TOS_WF
                 str += item + " ";
             });
             //load idseat
-            
+
 
             BillDAO bill = new BillDAO();
             BillDetailDAO bd = new BillDetailDAO();
             bill.CreateBill(1, 1, frmConfirmTicket.lblTotal.Text);
             //this.Visible = false;
             int getvalue = bill.getMaxIdBill();
-
             ticketID.ForEach(item =>
             {
                 bd.CreateBillDetail(Convert.ToInt32(item), getvalue);
@@ -304,8 +318,8 @@ namespace TOS_WF
                 new TicketDAO().changeStatusTicket(Convert.ToInt32(item));
             });
 
-            
-            
+
+
             //this.Visible = false;
 
             Console.WriteLine(str);
