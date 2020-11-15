@@ -178,7 +178,7 @@
     <Compile Include="Models\DateSchedule.cs" />
     <Compile Include="Models\Films.cs" />
     <Compile Include="Models\Graphics.cs" />
-    <Compile Include="Models\Help.cs" />
+    <Compile Include="Models\HelpModel.cs" />
     <Compile Include="Models\Persons.cs" />
     <Compile Include="Models\Room.cs" />
     <Compile Include="Models\Schedule.cs" />
@@ -238,6 +238,7 @@
     <None Include="Properties\DataSources\TOS_WF.Models.Cinema.datasource" />
     <None Include="Properties\DataSources\TOS_WF.Models.Films.datasource" />
     <None Include="Properties\DataSources\TOS_WF.Models.Graphics.datasource" />
+    <None Include="Properties\DataSources\TOS_WF.Models.Help.datasource" />
     <None Include="Properties\DataSources\TOS_WF.Models.Persons.datasource" />
     <None Include="Properties\DataSources\TOS_WF.Models.Schedule.datasource" />
     <None Include="Properties\Settings.settings">

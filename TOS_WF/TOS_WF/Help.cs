@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using TOS_WF.DAO;
+using TOS_WF.Models;
 
 namespace TOS_WF
 {
@@ -17,7 +18,14 @@ namespace TOS_WF
         public Help()
         {
             InitializeComponent();
-            this.gdHelp.DataSource = new AreaDAO().getAllArea();
+          
+            this.gdHelp.DataSource = new HelpList();
+
+        }
+
+        private void gridControl1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
