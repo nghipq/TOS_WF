@@ -71,7 +71,7 @@
             // pnlLeft
             // 
             this.pnlLeft.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.pnlLeft.ContentImage = global::TOS_WF.Properties.Resources.bg_red;
+            this.pnlLeft.ContentImage = global::TOS_WF.Properties.Resources.Background;
             this.pnlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlLeft.Location = new System.Drawing.Point(0, 0);
             this.pnlLeft.Name = "pnlLeft";
@@ -81,7 +81,7 @@
             // pnlRight
             // 
             this.pnlRight.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.pnlRight.ContentImage = global::TOS_WF.Properties.Resources.bg_red;
+            this.pnlRight.ContentImage = global::TOS_WF.Properties.Resources.Background1;
             this.pnlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnlRight.Location = new System.Drawing.Point(580, 0);
             this.pnlRight.Name = "pnlRight";

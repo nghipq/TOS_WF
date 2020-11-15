@@ -37,6 +37,8 @@ namespace TOS_WF.Frames
             //tinh tong tien
             lblTotal.Text= new TicketDAO().calculateTotalPrice(ticket_id) + " VND";
             //lblCinema.Text = new FilmDAO().getFilmById(id_F).ToString();
+            this.panelControl2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            panelControl2.BackColor = Color.FromArgb(10, Color.White);
         }
         private void ConfirmTicket_Load(object sender, EventArgs e)
         {

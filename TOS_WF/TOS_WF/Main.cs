@@ -62,26 +62,6 @@ namespace TOS_WF
             this.TopMost = true;
             this.FormBorderStyle = FormBorderStyle.Fixed3D;
             this.WindowState = FormWindowState.Maximized;
-            strl = new List<string>();
-            ticketID = new List<string>();
-            CinemaId = new List<string>();
-            A_id = 0;
-            //public string username { get; set; }
-            //public string password { get; set; }
-            Sche_id = 0;
-            id_C = 0;
-            C_Name = "";
-            id_Cus = 0;
-            id_Staff = 0;
-            dayIndex = 0;
-            filmsIndex = 0;
-
-            sche_Id = 0;
-            sche_Name = "";
-            room_Id = 0;
-            billTotalPrice = 0;
-            id_F = 0;
-            id_B = 0;
         }
         /**
          * Sự kiện ấn vào nút đăng nhập
@@ -99,6 +79,7 @@ namespace TOS_WF
             Console.WriteLine(isLogin);
             if (isLogin)
             {
+                this.pnlBtnDate.Show();
                 frmLogin.Visible = false;
                 this.btnLogout.Visible = true;
                 Load_Cinema(id_C);
@@ -288,6 +269,8 @@ namespace TOS_WF
             {
                 str1 += item + " ";
             });
+
+
             BillDAO bill = new BillDAO();
             int getvalue = bill.getMaxIdBill();
             frmConfirmTicket = new ConfirmTicket(str, str1);
@@ -301,11 +284,23 @@ namespace TOS_WF
             frmConfirmTicket.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             frmConfirmTicket.Show();
 
+
         }
         private void btnBack_Click(object sender, EventArgs e)
         {
             strl.Clear();
             ticketID.Clear();
+            strl.ForEach(item =>
+            {
+                Console.WriteLine(item + " ");
+                
+            });
+            ticketID.ForEach(item =>
+            {
+                Console.WriteLine(item + " ");
+
+            });
+
             frmRoom.Visible = false;
             frmSchedule.Show();
         }
@@ -345,7 +340,6 @@ namespace TOS_WF
             bill.CreateBill(1, 1, frmConfirmTicket.lblTotal.Text);
             //this.Visible = false;
             int getvalue = bill.getMaxIdBill();
-
             ticketID.ForEach(item =>
             {
                 bd.CreateBillDetail(Convert.ToInt32(item), getvalue);
@@ -396,8 +390,23 @@ namespace TOS_WF
         {
             try
             {
-
-
+                strl.Clear();
+                ticketID.Clear();
+                CinemaId.Clear();
+                A_id = 0;
+                Sche_id = 0;
+                id_C = 0;
+                C_Name = "";
+                id_Cus = 0;
+                id_Staff = 0;
+                dayIndex = 0;
+                filmsIndex = 0;
+                sche_Id = 0;
+                sche_Name = "";
+                room_Id = 0;
+                billTotalPrice = 0;
+                id_F = 0;
+                id_B = 0;
                 frmSchedule.Dispose();
                 this.pnlBtnDate.Hide();
                 frmConfirmTicket.Dispose();
