@@ -35,6 +35,10 @@ namespace TOS_WF
             this.pnlSeat.Anchor = System.Windows.Forms.AnchorStyles.None;
             CreateSeat();
         }
+        public frmRoom()
+        {
+            InitializeComponent();
+        }
 
 
 

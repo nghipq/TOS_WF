@@ -19,7 +19,7 @@ namespace TOS_WF.DAO
             using (conn)
             {
                 conn.Open();
-                string sql = "Select * from User where `Username` = @Username && `Password` = MD5(@Password) && Permission = 2 || Permission = 1";
+                string sql = "Select * from User where `Username` = @Username && `Password` = MD5(@Password) && (Permission = 2 OR Permission = 1)";
                 MySqlCommand command = new MySqlCommand(sql, conn);
 
                 command.Parameters.AddWithValue("@Username", Username);

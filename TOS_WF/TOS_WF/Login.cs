@@ -14,8 +14,8 @@ namespace TOS_WF
 {
     public partial class Login : DevExpress.XtraEditors.XtraForm
     {
-        public string username { get; set; }
-        public string password { get; set; }
+        //public string username { get; set; }
+        //public string password { get; set; }
         public Login()
         {
             InitializeComponent();
@@ -26,5 +26,6 @@ namespace TOS_WF
             this.pnlLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
             txtPassword.PasswordChar = '*';
         }
+
     }
 }

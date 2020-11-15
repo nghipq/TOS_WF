@@ -17,6 +17,10 @@ namespace TOS_WF.Frames
         public string ticket_seat { get; set; }
         public string ticket_id { get; set; }
         public int T_Price { get; set; }
+        public frmTicket()
+        {
+            InitializeComponent();
+        }
         public frmTicket(string ticket_seat, string ticket_id)
         {
             InitializeComponent();

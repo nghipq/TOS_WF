@@ -123,6 +123,16 @@ namespace TOS_WF.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap logout_button {
+            get {
+                object obj = ResourceManager.GetObject("logout_button", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pinky {
             get {
                 object obj = ResourceManager.GetObject("pinky", resourceCulture);
