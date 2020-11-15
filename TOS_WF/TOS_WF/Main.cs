@@ -17,14 +17,14 @@ namespace TOS_WF
 {
     public partial class Main : DevExpress.XtraEditors.XtraForm
     {
-       
+
         List<DateSchedule> dates = new List<DateSchedule>();
-        public static List<string> strl = new List<string>();
-        public static List<string> ticketID = new List<string>();
-        public static List<string> CinemaId = new List<string>();
+        public List<string> strl = new List<string>();
+        public List<string> ticketID = new List<string>();
+        public List<string> CinemaId = new List<string>();
         public int A_id { get; set; }
-        public string username { get; set; }
-        public string password { get; set; }
+        //public string username { get; set; }
+        //public string password { get; set; }
         public int Sche_id { get; set; }
         public int id_C { get; set; }
         public string C_Name { get; set; }
@@ -44,34 +44,82 @@ namespace TOS_WF
         public ScheduleList frmSchedule { get; set; }
         public frmRoom frmRoom { get; set; }
         public ConfirmTicket frmConfirmTicket { get; set; }
-
-
         public Login frmLogin { get; set; }
         public Areas frmAreas { get; set; }
-
+        public Main frmMain { get; set; }
         public frmTicket TicketN { get; set; }
 
         public Main()
         {
             InitializeComponent();
+            frmFilms = new FilmList();
+            frmSchedule = new ScheduleList();
+            frmRoom = new frmRoom();
+            frmLogin = new Login();
+            frmAreas = new Areas();
+            TicketN = new frmTicket();
+            frmConfirmTicket = new ConfirmTicket();
+            this.TopMost = true;
+            this.FormBorderStyle = FormBorderStyle.Fixed3D;
+            this.WindowState = FormWindowState.Maximized;
+            strl = new List<string>();
+            ticketID = new List<string>();
+            CinemaId = new List<string>();
+            A_id = 0;
+            //public string username { get; set; }
+            //public string password { get; set; }
+            Sche_id = 0;
+            id_C = 0;
+            C_Name = "";
+            id_Cus = 0;
+            id_Staff = 0;
+            dayIndex = 0;
+            filmsIndex = 0;
+
+            sche_Id = 0;
+            sche_Name = "";
+            room_Id = 0;
+            billTotalPrice = 0;
+            id_F = 0;
+            id_B = 0;
         }
         /**
          * Sự kiện ấn vào nút đăng nhập
          */
         private void btnLogin_Click(object sender, EventArgs e)
         {
-
+            String username = frmLogin.txtUsername.Text;
+            String password = frmLogin.txtPassword.Text;
+            Console.WriteLine(username);
+            Console.WriteLine(password);
             LoginDAO ldao = new LoginDAO();
             //Theater theater = new Theater(1);
             bool isLogin = ldao.Login(username, password);
+
             Console.WriteLine(isLogin);
             if (isLogin)
             {
                 frmLogin.Visible = false;
+                this.btnLogout.Visible = true;
                 Load_Cinema(id_C);
                 Load_Dates();
                 Load_FilmsScreen();
                 Load_Films(0);
+            }
+            else
+            {
+                Console.Beep();
+                Console.Beep();
+                Console.Beep();
+                Console.Beep();
+                Console.Beep();
+                Console.Beep();
+                Console.Beep();
+                Console.Beep();
+                Console.Beep();
+                Console.Beep();
+                MessageBox.Show("Wrong username or password", "Error !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                frmLogin.Visible = true;
             }
         }
 
@@ -93,7 +141,8 @@ namespace TOS_WF
             try
             {
                 frmFilms.FilmsList.DataSource = dates[dayIndex].films;
-            } catch (Exception e)
+            }
+            catch (Exception e)
             {
 
             }
@@ -243,7 +292,7 @@ namespace TOS_WF
             int getvalue = bill.getMaxIdBill();
             frmConfirmTicket = new ConfirmTicket(str, str1);
             frmConfirmTicket.MdiParent = this;
-            frmConfirmTicket.lblBillId.Text = getvalue.ToString(); 
+            frmConfirmTicket.lblBillId.Text = getvalue.ToString();
             frmConfirmTicket.lblCinema.Text = C_Name;
             frmConfirmTicket.lblRoom.Text = Room_Name;
             frmConfirmTicket.lblSchedule.Text = sche_Name;
@@ -279,7 +328,7 @@ namespace TOS_WF
          */
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            
+
             frmConfirmTicket.Visible = false;
             string str = "";
             string str1 = "";
@@ -289,7 +338,7 @@ namespace TOS_WF
                 str += item + " ";
             });
             //load idseat
-            
+
 
             BillDAO bill = new BillDAO();
             BillDetailDAO bd = new BillDetailDAO();
@@ -304,8 +353,8 @@ namespace TOS_WF
                 new TicketDAO().changeStatusTicket(Convert.ToInt32(item));
             });
 
-            
-            
+
+
             //this.Visible = false;
 
             Console.WriteLine(str);
@@ -342,5 +391,34 @@ namespace TOS_WF
         {
             LoadAreas();
         }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+
+                frmSchedule.Dispose();
+                this.pnlBtnDate.Hide();
+                frmConfirmTicket.Dispose();
+                frmFilms.Dispose();
+                frmRoom.Dispose();
+                this.frmAreas.Visible = true;
+                this.btnLogout.Hide();
+            }
+            catch (Exception)
+            {
+
+            }
+
+        }
+
+        private void Header_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
+
+
+
 }

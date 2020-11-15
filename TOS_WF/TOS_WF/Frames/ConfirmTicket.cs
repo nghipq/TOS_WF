@@ -23,6 +23,10 @@ namespace TOS_WF.Frames
 
         public String F_Name { get; set; }
         public int id_F { get; set; }
+        public ConfirmTicket()
+        {
+            InitializeComponent();
+        }
         public ConfirmTicket(string ticket_seat,string ticket_id)
         {
             InitializeComponent();

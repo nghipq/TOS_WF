@@ -32,6 +32,10 @@ namespace TOS_WF
             this.WindowState = FormWindowState.Maximized;
             CreateSeat();
         }
+        public frmRoom()
+        {
+            InitializeComponent();
+        }
 
 
 
