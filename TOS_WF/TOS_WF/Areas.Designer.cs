@@ -75,7 +75,7 @@
             // 
             this.btnSubmit.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnSubmit.Enabled = false;
-            this.btnSubmit.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubmit.Font = new System.Drawing.Font("OCR A Extended", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnSubmit.Location = new System.Drawing.Point(149, 271);
             this.btnSubmit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -90,11 +90,11 @@
             // 
             this.lblChoose.AutoSize = true;
             this.lblChoose.BackColor = System.Drawing.Color.Transparent;
-            this.lblChoose.Font = new System.Drawing.Font("Nirmala UI", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChoose.Font = new System.Drawing.Font("OCR A Extended", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblChoose.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lblChoose.Location = new System.Drawing.Point(118, 17);
             this.lblChoose.Name = "lblChoose";
-            this.lblChoose.Size = new System.Drawing.Size(342, 60);
+            this.lblChoose.Size = new System.Drawing.Size(384, 46);
             this.lblChoose.TabIndex = 4;
             this.lblChoose.Text = "Choose Cinema";
             // 
@@ -102,11 +102,11 @@
             // 
             this.lblCinema.AutoSize = true;
             this.lblCinema.BackColor = System.Drawing.Color.Transparent;
-            this.lblCinema.Font = new System.Drawing.Font("Nirmala UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCinema.Font = new System.Drawing.Font("OCR A Extended", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCinema.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lblCinema.Location = new System.Drawing.Point(22, 177);
             this.lblCinema.Name = "lblCinema";
-            this.lblCinema.Size = new System.Drawing.Size(118, 41);
+            this.lblCinema.Size = new System.Drawing.Size(123, 32);
             this.lblCinema.TabIndex = 3;
             this.lblCinema.Text = "Cinema";
             // 
@@ -114,11 +114,11 @@
             // 
             this.lblArea.AutoSize = true;
             this.lblArea.BackColor = System.Drawing.Color.Transparent;
-            this.lblArea.Font = new System.Drawing.Font("Nirmala UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblArea.Font = new System.Drawing.Font("OCR A Extended", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblArea.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lblArea.Location = new System.Drawing.Point(22, 114);
             this.lblArea.Name = "lblArea";
-            this.lblArea.Size = new System.Drawing.Size(78, 41);
+            this.lblArea.Size = new System.Drawing.Size(87, 32);
             this.lblArea.TabIndex = 2;
             this.lblArea.Text = "Area";
             // 
