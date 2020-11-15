@@ -107,6 +107,8 @@ namespace TOS_WF
                     strl.Add(btn.Text);
                     ticketID.Add(btn.Name);
                     btn.BackColor = Color.Yellow;//da chon ghe
+                                                 //pbNext.Enabled = true;
+                    pbNext.Visible = true;
                     dem++;
                 }
                 else
@@ -120,12 +122,16 @@ namespace TOS_WF
                 int getprice = new TicketDAO().GetMaxValue(Convert.ToInt32(btn.Name));
                 if (getprice == tempprice)
                 {
+                   
                     btn.BackColor = Color.Red;//chua chon ghe dac biet
                 }
                 else
                 {
+                   
                     btn.BackColor = Color.White;//chua chon
                 }
+                //pbNext.Enabled = false;
+                pbNext.Visible = false;
                 dem--;
                 strl.Remove(btn.Text);
                 ticketID.Remove(btn.Name);
